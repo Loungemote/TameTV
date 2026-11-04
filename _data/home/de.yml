@@ -1,5 +1,5 @@
 # Home page copy. Keep release status, platform features and privacy facts in step across all languages.
-title: "Loungemote: TV-Fernbedienung als App für Samsung, LG, Sony & Fire TV"
+title: "TameTV: TV-Fernbedienung als App für Samsung, LG, Sony & Fire TV"
 description: TV-Fernbedienung für Android, iPhone und iPad, auf Google Play und im App Store. Samsung, LG, Roku, Apple TV und mehr per WLAN. Ohne Werbung oder Konto.
 nav:
   features: Funktionen
@@ -10,8 +10,8 @@ nav:
   support: Hilfe
   get: App laden
 badge:
-  play_label: Loungemote für Android auf Google Play laden
-  app_store_label: Loungemote für iPhone und iPad im App Store laden
+  play_label: TameTV für Android auf Google Play laden
+  app_store_label: TameTV für iPhone und iPad im App Store laden
   ios_soon: Version für iPhone und iPad folgt bald
 hero:
   eyebrow: Für Android, iPhone und iPad
@@ -20,7 +20,7 @@ hero:
   how_link: So funktioniert's
   works_with: Funktioniert mit
   trust: ["3 Tage gratis", "Keine Werbung", "Kein Konto"]
-  alt: "Die Loungemote-Fernbedienung: Steuerkreuz mit OK-Taste, Medientasten, Lautstärke und Sender."
+  alt: "Die TameTV-Fernbedienung: Steuerkreuz mit OK-Taste, Medientasten, Lautstärke und Sender."
 features:
   title: Alles, was deine Fernbedienung kann. Und mehr.
   lead: Die komplette Tasten-Fernbedienung, dazu Touchpad, Handytastatur, Apps mit einem Tipp und Streaming.
@@ -36,12 +36,12 @@ how:
   title: In Sekunden bereit.
   lead: Keine Anmeldung, keine Zusatzgeräte. Ist der Fernseher im WLAN, bist du fast fertig.
   steps:
-    - { screen: "choose-tv", title: "App im WLAN öffnen", text: "Loungemote durchsucht dein Netzwerk und zeigt die gefundenen Fernseher und Streaming-Geräte.", alt: "Fernseher wählen: die in diesem WLAN gefundenen Fernseher." }
+    - { screen: "choose-tv", title: "App im WLAN öffnen", text: "TameTV durchsucht dein Netzwerk und zeigt die gefundenen Fernseher und Streaming-Geräte.", alt: "Fernseher wählen: die in diesem WLAN gefundenen Fernseher." }
     - { screen: "pair", title: "Einmal am Fernseher bestätigen", text: "Wähle am Fernseher „Zulassen“ oder gib den angezeigten Code ein. Nur beim ersten Mal.", alt: "Kopplungsvorschau: Der Fernseher fragt, ob er diesem Handy vertrauen soll." }
     - { screen: "apps", title: "Loslegen", text: "Dein Handy ist jetzt die Fernbedienung. Beim nächsten Öffnen verbindet sich die App von selbst.", alt: "Apps mit einem Tipp: die Apps des Fernsehers im Wohnzimmer." }
 devices:
   title: Elf TV-Plattformen. Eine App.
-  lead: Loungemote nutzt das Netzwerkprotokoll des Fernsehers und braucht keinen Infrarot-Adapter oder Hub. Handy oder Tablet und Fernseher müssen im selben WLAN sein.
+  lead: TameTV nutzt das Netzwerkprotokoll des Fernsehers und braucht keinen Infrarot-Adapter oder Hub. Handy oder Tablet und Fernseher müssen im selben WLAN sein.
   footnote: Roku-TV- und Google-TV-Modelle anderer Marken wie TCL funktionieren ebenfalls. Streaming auf Fire TV wird nicht unterstützt; Apple TV empfängt Fotos und Videos über AirPlay. Reine Infrarot-Fernseher werden nicht unterstützt.
   items:
     - { name: "Samsung", detail: "Smart TVs mit Tizen, ab 2016" }
@@ -57,7 +57,7 @@ devices:
     - { name: "Apple TV", detail: "Apple TV HD und Apple TV 4K" }
 privacy:
   title: Privat <em>von Anfang an</em>.
-  lead: Eine Fernbedienung muss nicht wissen, wer du bist. Loungemote hat keine Konten und keine eigenen Server, und Befehle gehen direkt vom Handy zum Fernseher.
+  lead: Eine Fernbedienung muss nicht wissen, wer du bist. TameTV hat keine Konten und keine eigenen Server, und Befehle gehen direkt vom Handy zum Fernseher.
   link: Datenschutzerklärung lesen (Englisch)
   items:
     - { icon: "useroff", title: "Kein Konto", text: "Keine Registrierung, keine E-Mail-Adresse, keine Anmeldung." }
@@ -69,24 +69,24 @@ faq:
   title: Häufige Fragen
   more: Noch Fragen? Schreib uns an
   items:
-    - q: Ist Loungemote kostenlos?
-      a: Download, Einrichtung, der erste Tastendruck zum Prüfen der Verbindung und Demo TV sind kostenlos und ohne Werbung. TV-Steuerung, Touchpad, Tastatur, App-Start und Medien-Streaming benötigen Loungemote Pro. Es gibt ein Wochenabo mit 3 Tagen Probezeit für berechtigte Neukunden, ein Jahresabo ohne Probezeit oder einen einmaligen Kauf. Preise und Angebote werden vor der Zahlung angezeigt. Android nutzt Google Play, iOS den App Store. Siri und Kurzbefehle sind nur für iOS.
+    - q: Ist TameTV kostenlos?
+      a: Download, Einrichtung, der erste Tastendruck zum Prüfen der Verbindung und Demo TV sind kostenlos und ohne Werbung. TV-Steuerung, Touchpad, Tastatur, App-Start und Medien-Streaming benötigen TameTV Pro. Es gibt ein Wochenabo mit 3 Tagen Probezeit für berechtigte Neukunden, ein Jahresabo ohne Probezeit oder einen einmaligen Kauf. Preise und Angebote werden vor der Zahlung angezeigt. Android nutzt Google Play, iOS den App Store. Siri und Kurzbefehle sind nur für iOS.
     - q: Welche Fernseher werden unterstützt?
       a: Samsung Smart TVs mit Tizen (ab 2016), LG mit webOS, Sony Bravia, Amazon Fire TV, Android TV und Google TV, Philips mit Titan OS oder Saphi, Hisense mit VIDAA, Xiaomi mit PatchWall, Roku, Vizio SmartCast sowie Apple TV HD und Apple TV 4K. Roku-TV- und Google-TV-Modelle anderer Marken wie TCL funktionieren ebenfalls. Reine Infrarot-Fernseher werden nicht unterstützt.
-    - q: Funktioniert Loungemote mit Apple TV?
-      a: Ja, mit Apple TV HD und Apple TV 4K, unter Android genauso wie auf iPhone und iPad. Du koppelst einmal mit dem Code, den das Apple TV anzeigt. Dann hast du die Fernbedienungstasten, die Eingabe mit der Handytastatur, Apps und das, was gerade läuft, mit Cover, Wiedergabe, Pause, Springen und Stummschalten. Fotos und Videos empfängt das Apple TV über AirPlay, nicht über Loungemote.
+    - q: Funktioniert TameTV mit Apple TV?
+      a: Ja, mit Apple TV HD und Apple TV 4K, unter Android genauso wie auf iPhone und iPad. Du koppelst einmal mit dem Code, den das Apple TV anzeigt. Dann hast du die Fernbedienungstasten, die Eingabe mit der Handytastatur, Apps und das, was gerade läuft, mit Cover, Wiedergabe, Pause, Springen und Stummschalten. Fotos und Videos empfängt das Apple TV über AirPlay, nicht über TameTV.
     - q: Brauche ich einen Infrarot-Adapter oder eine Universalfernbedienung?
-      a: Nein. Loungemote steuert Smart TVs über dein WLAN. Infrarot wird nicht genutzt, daher lassen sich ältere Fernseher, die nur auf Infrarot reagieren, nicht steuern.
+      a: Nein. TameTV steuert Smart TVs über dein WLAN. Infrarot wird nicht genutzt, daher lassen sich ältere Fernseher, die nur auf Infrarot reagieren, nicht steuern.
     - q: Die App findet meinen Fernseher nicht. Was tun?
-      a: Der Fernseher muss eingeschaltet und im selben WLAN wie dein Handy sein; Gastnetzwerke können Geräte trennen. Erlaube unter Android Geräte in der Nähe, wenn die App danach fragt. Aktiviere unter iOS Einstellungen > Datenschutz & Sicherheit > Lokales Netzwerk für Loungemote. Du kannst den Fernseher auch per IP-Adresse hinzufügen.
+      a: Der Fernseher muss eingeschaltet und im selben WLAN wie dein Handy sein; Gastnetzwerke können Geräte trennen. Erlaube unter Android Geräte in der Nähe, wenn die App danach fragt. Aktiviere unter iOS Einstellungen > Datenschutz & Sicherheit > Lokales Netzwerk für TameTV. Du kannst den Fernseher auch per IP-Adresse hinzufügen.
     - q: Kann ich den Fernseher mit dem Handy einschalten?
       a: Bei vielen Fernsehern ja. Schalte vorher am Fernseher das Einschalten über das Netzwerk ein, zum Beispiel Power On with Mobile bei Samsung, Turn on via Wi-Fi bei LG oder Fast TV start bei Roku TV. Die Namen können je nach Modell und Sprache abweichen.
-    - q: Welche Daten erhebt Loungemote?
+    - q: Welche Daten erhebt TameTV?
       a: Kein Konto und keine Werbung. Befehle gehen direkt vom Handy zum TV, Kopplungsdaten bleiben auf dem Gerät. Die aktuelle Android-Version hat keine Firebase-Konfiguration. iOS hat optionale Firebase-Nutzungsstatistiken und Absturzberichte, standardmäßig an. Google Cast erhebt separate SDK-Diagnosedaten. Details stehen in der Datenschutzerklärung.
-    - q: Ist Loungemote für Android und iPhone erhältlich?
+    - q: Ist TameTV für Android und iPhone erhältlich?
       a: Ja. Android ist auf Google Play für Handys und Tablets mit Android 8.0 oder neuer erhältlich. iPhone und iPad sind im App Store erhältlich und benötigen iOS 17 oder iPadOS 17 oder neuer. Die App unterstützt Deutsch, Englisch, Chinesisch (vereinfacht und traditionell), Japanisch, Koreanisch, Französisch, Spanisch, Portugiesisch (Brasilien), Russisch und Indonesisch.
     - q: Spiegelt Streaming den Handybildschirm?
-      a: "Medien-Streaming sendet ausgewählte Fotos, Videos, Dateien oder unterstützte Links an einen kompatiblen Empfänger. Bildschirmspiegelung nutzt die Systemfunktion: Android-Bildschirmübertragung oder AirPlay unter iOS. Die Verfügbarkeit hängt von Handy und Fernseher ab. Loungemote bietet keinen eigenen Dienst zur Bildschirmspiegelung."
+      a: "Medien-Streaming sendet ausgewählte Fotos, Videos, Dateien oder unterstützte Links an einen kompatiblen Empfänger. Bildschirmspiegelung nutzt die Systemfunktion: Android-Bildschirmübertragung oder AirPlay unter iOS. Die Verfügbarkeit hängt von Handy und Fernseher ab. TameTV bietet keinen eigenen Dienst zur Bildschirmspiegelung."
     - q: Wie stelle ich Pro wieder her oder kündige es?
       a: Nutze Käufe wiederherstellen in der App mit dem Konto, mit dem du bezahlt hast. Android-Abos verwaltest du in Google Play, iOS-Abos in den Apple-Einstellungen. Das Löschen der App kündigt kein Abo. Käufe werden nicht zwischen Google Play und dem App Store übertragen.
 cta:

@@ -1,4 +1,4 @@
-// Loungemote site: progressive enhancement only. Every page works without this file.
+// TameTV site: progressive enhancement only. Every page works without this file.
 (function () {
   "use strict";
 

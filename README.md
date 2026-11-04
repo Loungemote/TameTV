@@ -1,13 +1,15 @@
-# Loungemote site
+# TameTV site
 
-The official website for Loungemote: the product home page and the public pages used by Google Play and the App Store. It is a static Jekyll site with no theme, no JavaScript framework and no third-party requests. GitHub Pages builds it from the `main` branch.
+The official website for TameTV: the product home page and its public support and legal pages. It is a static Jekyll site with no theme, no JavaScript framework and no third-party requests. GitHub Pages builds it from the `main` branch.
 
-| Page | URL | Store listing field |
+| Page | URL | Purpose |
 |---|---|---|
-| Home | https://loungemote.github.io/loungemote-site/ | Marketing URL |
-| Support | https://loungemote.github.io/loungemote-site/support/ | Support URL |
-| Privacy | https://loungemote.github.io/loungemote-site/privacy/ | Privacy Policy URL |
-| Terms | https://loungemote.github.io/loungemote-site/terms/ | Link in the app description and the paywall (Terms of Use / EULA) |
+| Home | https://loungemote.github.io/TameTV/ | Marketing URL |
+| Support | https://loungemote.github.io/TameTV/support/ | Support page |
+| Privacy | https://loungemote.github.io/TameTV/privacy/ | Privacy Policy |
+| Terms | https://loungemote.github.io/TameTV/terms/ | Terms of Use / EULA |
+
+Existing app releases and store listings may still link to the previous `loungemote-site` pages. Keep those pages available until those links have been updated and verified.
 
 Both apps open the same privacy, terms and support URLs. Keep the iOS `Links.swift` and Android link constants in step with this site.
 
@@ -80,7 +82,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Then open http://localhost:4000/loungemote-site/.
+Then open http://localhost:4000/TameTV/.
 
 ## Checks
 
@@ -88,21 +90,22 @@ Then open http://localhost:4000/loungemote-site/.
 bundle exec jekyll build
 python3 tools/check_site.py
 python3 tools/test_store_availability.py
+python3 tools/test_site_branding.py
 ```
 
-`check_site.py` checks every internal link, anchor, image and script in `_site/`, the meta tags of each page, and the structured data. `test_store_availability.py` builds each combination of store availability in temporary directories. It checks download links on all product pages, accessible iOS placeholders, separate app metadata, the Smart App Banner and QR visibility when the store URL changes.
+`check_site.py` checks every internal link, anchor, image and script in `_site/`, the meta tags of each page, and the structured data. `test_store_availability.py` builds each combination of store availability in temporary directories. It checks download links on all product pages, accessible iOS placeholders, separate app metadata, the Smart App Banner and QR visibility when the store URL changes. `test_site_branding.py` checks the published brand and canonical URLs on every built page and in the web manifest.
 
 ## Images
 
 The app screens, icons and social image retain the original iOS design mockups, with the same brand-neutral text as the App Store screenshots:
 
 ```bash
-python3 tools/render_assets.py ../Loungemote
+python3 tools/render_assets.py /path/to/app-repo
 ```
 
 It needs Google Chrome, `beautifulsoup4` and `Pillow`. The device frame around each screen is CSS (`.phone` in `main.css`).
 
-The website Apps preview uses category glyphs for the fictional demo apps, such as a film strip for Cinemo and a music note for Soundwave. `tools/render_assets.py` replaces the board's initials during rendering. To update only this image, run `python3 tools/render_assets.py ../Loungemote apps`.
+The website Apps preview uses category glyphs for the fictional demo apps, such as a film strip for Cinemo and a music note for Soundwave. `tools/render_assets.py` replaces the board's initials during rendering. To update only this image, run `python3 tools/render_assets.py /path/to/app-repo apps`.
 
 ## Download QR code
 

@@ -4,7 +4,7 @@
 Screens come from the same boards as the App Store screenshots (brand names neutralised,
 1.0 features only), without a device frame: the site draws the frame in CSS (`.phone`).
 
-    python3 tools/render_assets.py [path/to/Loungemote [screens] [apps] [icons] [og]]
+    python3 tools/render_assets.py [path/to/app-repo [screens] [apps] [pair] [icons] [og]]
 
 Needs Google Chrome, beautifulsoup4 and Pillow. The app repo defaults to ../Loungemote.
 """
@@ -72,6 +72,8 @@ def screen(name, inner, extra=""):
     """One app screen at 390 x 844 pt @2x, with the status bar, Dynamic Island and home indicator but no bezel."""
     if name == "apps":
         inner = app_icons(inner)
+    if name == "pair":
+        inner = inner.replace("Loungemote", "TameTV")
     css = shots.CSS % {"w": 390, "h": 844, "tint": "rgba(0,0,0,0)"} + "body{background:#07080C}.grid{display:none}"
     html = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{css}</style></head><body>{inner}{extra}'
             f'{shots.status_bar()}<span class="island"></span><span class="homebar"></span></body></html>')
@@ -118,7 +120,7 @@ def og():
     icon = shots.ICON.replace("width:30px;height:30px;border-radius:7px", "width:52px;height:52px;border-radius:12px") \
                      .replace('width="30" height="30"', 'width="52" height="52"')
     body = ('<span class="grid"></span>' + shots.halo(930, 420, 430)
-            + f'<div class="og"><span class="brand">{icon}Loungemote</span>'
+            + f'<div class="og"><span class="brand">{icon}TameTV</span>'
             '<h1>One remote for <em>every&nbsp;TV</em> at&nbsp;home.</h1>'
             '<p>A private Wi‑Fi TV remote for Android, iPhone&nbsp;and&nbsp;iPad. No account, no ads.</p></div>'
             + shots.phone(shots.board("08-remote-buttons"), 0.92, 58, left=742))
@@ -139,6 +141,8 @@ if __name__ == "__main__":
         screens()
     elif "apps" in only:
         screen("apps", shots.board("16-apps"))
+    if "pair" in only and "screens" not in only:
+        screen("pair", shots.board("04-pairing-allow-on-tv"))
     if "icons" in only:
         icons()
     if "og" in only:

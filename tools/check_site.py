@@ -12,7 +12,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 SITE = Path(__file__).resolve().parents[1] / "_site"
-BASEURL = "/loungemote-site"
+BASEURL = ""
 for line in (SITE.parent / "_config.yml").read_text(encoding="utf-8").splitlines():
     if line.startswith("baseurl:"):
         BASEURL = line.split(":", 1)[1].split("#")[0].strip().strip('"')

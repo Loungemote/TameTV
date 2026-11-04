@@ -3,8 +3,8 @@ layout: page
 title: Support
 permalink: /support/
 eyebrow: Help
-lead: Answers to the most common questions about Loungemote, and how to reach us when you need a person.
-description: Get help with Loungemote. Supported TVs, fixes for discovery, pairing and power-on problems, purchases and how to contact support.
+lead: Answers to the most common questions about TameTV, and how to reach us when you need a person.
+description: Get help with TameTV. Supported TVs, fixes for discovery, pairing and power-on problems, purchases and how to contact support.
 ---
 
 <div class="contact-card">
@@ -25,7 +25,7 @@ In the app, **Contact Support** writes this email for you and can attach a diagn
   {%- endfor %}
 </ul>
 
-Philips TVs with Google TV connect as Google TV. Casting is available on compatible TVs, Chromecast and DLNA devices; formats and playback features depend on the receiver. Casting to Fire TV is not supported. Apple TV takes photos and videos over AirPlay instead of casting from Loungemote.
+Philips TVs with Google TV connect as Google TV. Casting is available on compatible TVs, Chromecast and DLNA devices; formats and playback features depend on the receiver. Casting to Fire TV is not supported. Apple TV takes photos and videos over AirPlay instead of casting from TameTV.
 
 Your phone or tablet and your TV must be on the same Wi-Fi network. Android requires Android 8.0 or later. iPhone and iPad require iOS 17 or iPadOS 17 or later.
 {% include store-badge.html %}
@@ -34,7 +34,7 @@ Your phone or tablet and your TV must be on the same Wi-Fi network. Android requ
 
 1. Make sure that the TV is on.
 2. Connect your phone or tablet and your TV to the same Wi-Fi network. Guest networks often block the connection between devices.
-3. **Android:** allow **Nearby devices** when requested. **iOS:** open **Settings > Privacy & Security > Local Network** and turn on **Loungemote**.
+3. **Android:** allow **Nearby devices** when requested. **iOS:** open **Settings > Privacy & Security > Local Network** and turn on **TameTV**.
 4. On a Roku device, open **Settings > System > Advanced system settings > Control by mobile apps** and set **Network access** to **Default** or **Permissive**.
 5. Close and open the app again. If the problem continues, restart the TV and your Wi-Fi router.
 
@@ -58,11 +58,11 @@ The setting names and menu locations can be different on your TV model.
 
 ## Casting stops when I close the app
 
-Local photos and videos play from a temporary server on your phone or tablet. Keep Loungemote in the foreground during playback. A receiver can load supported internet links directly, so playback may continue after you close the app.
+Local photos and videos play from a temporary server on your phone or tablet. Keep TameTV in the foreground during playback. A receiver can load supported internet links directly, so playback may continue after you close the app.
 
 ## Screen mirroring
 
-Media casting sends selected media to the TV. Screen mirroring uses Android’s system screen-casting settings or AirPlay on iOS. Compatibility depends on your phone and TV. Loungemote provides a guide, not its own screen-mirroring service.
+Media casting sends selected media to the TV. Screen mirroring uses Android’s system screen-casting settings or AirPlay on iOS. Compatibility depends on your phone and TV. TameTV provides a guide, not its own screen-mirroring service.
 
 ## Restore purchases
 
@@ -70,9 +70,9 @@ In the app, open **Settings** and tap **Restore Purchases**. **Android:** use th
 
 ## Cancel a subscription
 
-**Android:** open **Google Play > Profile > Payments & subscriptions > Subscriptions**, select **Loungemote**, then cancel. See [Google Play’s instructions](https://support.google.com/googleplay/answer/7018481?hl=en).
+**Android:** open **Google Play > Profile > Payments & subscriptions > Subscriptions**, select **TameTV**, then cancel. See [Google Play’s instructions](https://support.google.com/googleplay/answer/7018481?hl=en).
 
-**iOS:** open **Settings > [your name] > Subscriptions**, then select **Loungemote**. See [Apple’s instructions](https://support.apple.com/en-us/118428).
+**iOS:** open **Settings > [your name] > Subscriptions**, then select **TameTV**. See [Apple’s instructions](https://support.apple.com/en-us/118428).
 
 Deleting the app does not cancel a subscription. Cancel before the trial or subscription renews.
 
@@ -82,7 +82,7 @@ Use the store that processed your payment: [Google Play refund help](https://sup
 
 ## Privacy and terms
 
-Loungemote has no accounts and no ads, and remote commands stay on your local network. The iOS version has optional usage and crash reports controlled by **Share Usage Data**. The Android release has no Firebase configuration. Google Cast processing is separate from that switch. Read the [Privacy Policy]({{ '/privacy/' | relative_url }}) and the [Terms of Use]({{ '/terms/' | relative_url }}).
+TameTV has no accounts and no ads, and remote commands stay on your local network. The iOS version has optional usage and crash reports controlled by **Share Usage Data**. The Android release has no Firebase configuration. Google Cast processing is separate from that switch. Read the [Privacy Policy]({{ '/privacy/' | relative_url }}) and the [Terms of Use]({{ '/terms/' | relative_url }}).
 
 ---
 

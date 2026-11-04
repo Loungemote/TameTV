@@ -4,15 +4,15 @@ title: Privacy Policy
 permalink: /privacy/
 eyebrow: Legal
 dated: true
-lead: Loungemote is a TV remote for iPhone, iPad and Android. This policy explains the data used by each version.
-description: Privacy information for Loungemote on iOS and Android, including local TV data, casting, purchases and optional analytics.
+lead: TameTV is a TV remote for iPhone, iPad and Android. This policy explains the data used by each version.
+description: Privacy information for TameTV on iOS and Android, including local TV data, casting, purchases and optional analytics.
 ---
 
 ## Summary
 
 <div class="summary" markdown="1">
 
-- Loungemote has no app accounts or advertising.
+- TameTV has no app accounts or advertising.
 - Remote commands go directly from your phone to the selected TV on your local network. We do not relay them through our servers.
 - The iOS version has optional Firebase usage and crash reporting. The Android release described below has no Firebase configuration, and its Share Usage Data setting is off by default.
 - Google Cast has its own diagnostic collection. Share Usage Data does not control that SDK data.
@@ -20,7 +20,7 @@ description: Privacy information for Loungemote on iOS and Android, including lo
 
 </div>
 
-This policy covers Loungemote on iOS and Android. The Android package is `com.pesafy.loungemote`, distributed through the Google Play developer account Saleslify Technologies. In this policy, "we" means the developer of Loungemote.
+This policy covers TameTV on iOS and Android. The Android package is `com.pesafy.loungemote`, distributed through the Google Play developer account Saleslify Technologies. In this policy, "we" means the developer of TameTV.
 
 ## Android privacy
 
@@ -77,7 +77,7 @@ When it is on, the app sends:
 
 - events about how you use the app, for example which screen you open, whether a connection to a TV succeeds or fails and with which error, how many remote keys you press in a session (the total, not which keys), and whether a cast starts,
 - the TV platform, for example Roku or Samsung, and the model number that the TV reports, for example QN65Q80,
-- app settings, for example the remote layout and the app language, and whether you use the free version or Loungemote Pro, with which plan,
+- app settings, for example the remote layout and the app language, and whether you use the free version or TameTV Pro, with which plan,
 - purchases that you make in the app: the product, price and currency,
 - crash reports: the crash location in the code, the app and iOS versions, your device model, and the app events just before the crash,
 - data that the Firebase SDK adds by itself: an app instance identifier created at random for this installation, your device model and iOS version, and a coarse location (country or region) that Google derives from your IP address.

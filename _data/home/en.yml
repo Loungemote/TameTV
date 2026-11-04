@@ -14,7 +14,7 @@ hero:
   how_link: See how it works
   works_with: Works with
   trust: ["3 days free", "No ads", "No account"]
-  alt: "The Loungemote remote: a directional pad with an OK button, media keys, volume and channel controls."
+  alt: "The TameTV remote: a directional pad with an OK button, media keys, volume and channel controls."
 features:
   title: Everything your remote does, and more.
   lead: The full button remote, plus a touchpad, your phone's keyboard, apps in one tap and casting.
@@ -30,16 +30,16 @@ how:
   title: Ready in seconds.
   lead: No sign-in and no extra hardware. If your TV is on your Wi-Fi, you're most of the way there.
   steps:
-    - { screen: "choose-tv", title: "Open the app on your Wi-Fi", text: "Loungemote scans your network and lists the TVs and streaming devices it finds.", alt: "Choose your TV: the TVs found on this Wi-Fi network." }
+    - { screen: "choose-tv", title: "Open the app on your Wi-Fi", text: "TameTV scans your network and lists the TVs and streaming devices it finds.", alt: "Choose your TV: the TVs found on this Wi-Fi network." }
     - { screen: "pair", title: "Approve it once on the TV", text: "Select Allow on the TV, or type the code it shows. You only do this the first time.", alt: "Pairing preview: the TV asks whether to trust this phone." }
     - { screen: "apps", title: "Start pressing", text: "Your phone is now the remote. Next time, the app reconnects as soon as you open it.", alt: "Apps in one tap: the apps on the Living Room TV." }
 devices:
   title: Eleven TV platforms. One app.
-  lead: Loungemote uses each TV’s own network protocol, so it needs no infrared blaster or hub. Your phone or tablet and your TV must be on the same Wi-Fi network.
+  lead: TameTV uses each TV’s own network protocol, so it needs no infrared blaster or hub. Your phone or tablet and your TV must be on the same Wi-Fi network.
   footnote: Roku TV and Google TV models from other brands, such as TCL, work too. Casting isn't available on Fire TV; Apple TV takes photos and videos over AirPlay. Infrared-only TVs are not supported. Select a platform for its setup guide.
 privacy:
   title: Private <em>by design</em>.
-  lead: A remote has no reason to know who you are. Loungemote has no accounts and no servers of its own, and remote commands go straight from your phone to your TV.
+  lead: A remote has no reason to know who you are. TameTV has no accounts and no servers of its own, and remote commands go straight from your phone to your TV.
   link: Read the privacy policy
   items:
     - { icon: "useroff", title: "No account", text: "No sign-up, no email address, nothing to log in to." }
@@ -51,24 +51,24 @@ faq:
   title: Questions, answered.
   more: Something else? Email us at
   items:
-    - q: Is Loungemote free?
-      a: Download, setup, your first key press to check the connection and Demo TV are free, with no ads. TV control, touchpad, keyboard, app launch and media casting need Loungemote Pro. Choose a weekly subscription with a 3-day trial for eligible new subscribers, a yearly subscription with no trial, or a one-time Lifetime purchase. Prices and offers appear before payment. Android purchases use Google Play; iOS purchases use the App Store. Siri and Shortcuts are for iOS only.
-    - q: Which TVs work with Loungemote?
+    - q: Is TameTV free?
+      a: Download, setup, your first key press to check the connection and Demo TV are free, with no ads. TV control, touchpad, keyboard, app launch and media casting need TameTV Pro. Choose a weekly subscription with a 3-day trial for eligible new subscribers, a yearly subscription with no trial, or a one-time Lifetime purchase. Prices and offers appear before payment. Android purchases use Google Play; iOS purchases use the App Store. Siri and Shortcuts are for iOS only.
+    - q: Which TVs work with TameTV?
       a: Samsung smart TVs with Tizen (2016 and later), LG webOS TVs, Sony Bravia, Xiaomi TVs with PatchWall, Hisense TVs with VIDAA, Philips TVs with Titan OS or Saphi, Android TV and Google TV devices, Roku, Amazon Fire TV, Vizio SmartCast, and Apple TV HD and Apple TV 4K. Roku TV and Google TV models from other brands, such as TCL, work too. Infrared-only TVs are not supported.
-    - q: Does Loungemote work with Apple TV?
-      a: Yes, with Apple TV HD and Apple TV 4K, on Android as well as iPhone and iPad. Pair once with the code that the Apple TV shows. You get the remote keys, typing with your phone keyboard, apps, and what's playing with its artwork, play, pause, skip and mute. Apple TV takes photos and videos over AirPlay rather than from Loungemote.
+    - q: Does TameTV work with Apple TV?
+      a: Yes, with Apple TV HD and Apple TV 4K, on Android as well as iPhone and iPad. Pair once with the code that the Apple TV shows. You get the remote keys, typing with your phone keyboard, apps, and what's playing with its artwork, play, pause, skip and mute. Apple TV takes photos and videos over AirPlay rather than from TameTV.
     - q: Do I need an IR blaster or a universal remote?
-      a: No. Loungemote controls smart TVs over your home Wi-Fi. It does not use infrared, so it cannot control older TVs that only accept an infrared remote.
+      a: No. TameTV controls smart TVs over your home Wi-Fi. It does not use infrared, so it cannot control older TVs that only accept an infrared remote.
     - q: The app can't find my TV. What should I do?
-      a: Keep the TV on and connect it to the same Wi-Fi as your phone; guest networks can block discovery. On Android, allow Nearby devices when requested. On iOS, enable Loungemote in Settings > Privacy & Security > Local Network. You can also add a TV by its IP address.
+      a: Keep the TV on and connect it to the same Wi-Fi as your phone; guest networks can block discovery. On Android, allow Nearby devices when requested. On iOS, enable TameTV in Settings > Privacy & Security > Local Network. You can also add a TV by its IP address.
     - q: Can I turn my TV on with my phone?
       a: On many TVs, yes. First turn on the TV's network wake setting, such as Power On with Mobile on Samsung, Turn on via Wi-Fi on LG or Fast TV start on Roku TV.
-    - q: What data does Loungemote collect?
+    - q: What data does TameTV collect?
       a: No account or ads. Remote commands go directly from your phone to the TV. Pairing records stay on your device. Android has no Firebase configuration in the current release. iOS has optional Firebase usage and crash reports, on by default. Google Cast collects separate SDK diagnostics. See the privacy policy for details.
-    - q: Is Loungemote available for Android and iPhone?
+    - q: Is TameTV available for Android and iPhone?
       a: Yes. Android is on Google Play for phones and tablets running Android 8.0 or later. iPhone and iPad are on the App Store and require iOS 17 or iPadOS 17 or later. The app supports English, Chinese (Simplified and Traditional), Japanese, Korean, German, French, Spanish, Portuguese (Brazil), Russian and Indonesian.
     - q: Does casting mirror my phone screen?
-      a: "Media casting sends selected photos, videos, files or supported links to a compatible receiver. Screen mirroring uses your phone’s system feature: Android system screen casting or AirPlay on iOS. Availability depends on your phone and TV; Loungemote does not provide its own screen-mirroring service."
+      a: "Media casting sends selected photos, videos, files or supported links to a compatible receiver. Screen mirroring uses your phone’s system feature: Android system screen casting or AirPlay on iOS. Availability depends on your phone and TV; TameTV does not provide its own screen-mirroring service."
     - q: How do I restore or cancel Pro?
       a: Use Restore Purchases in the app with the store account used for payment. Manage Android subscriptions in Google Play and iOS subscriptions in Apple Settings. Deleting the app does not cancel a subscription. Purchases do not transfer between Google Play and the App Store.
 cta:
@@ -78,6 +78,6 @@ cta:
   meta: Android 8.0+ · iOS 17+ / iPadOS 17+
 description: Wi-Fi TV remote for Android, iPhone and iPad, on Google Play and the App Store. Control Samsung, LG, Roku, Apple TV and more. No ads or account.
 badge:
-  play_label: Get Loungemote for Android on Google Play
-  app_store_label: Download Loungemote for iPhone and iPad on the App Store
+  play_label: Get TameTV for Android on Google Play
+  app_store_label: Download TameTV for iPhone and iPad on the App Store
   ios_soon: iPhone and iPad version coming soon
