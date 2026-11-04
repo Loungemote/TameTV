@@ -63,10 +63,10 @@ story:
   title: Gemacht für jeden Abend.
   chapters:
     - { screen: "remote", title: "Alle Grundtasten sind kostenlos.", text: "Steuerkreuz, OK, Zurück, Home, Lautstärke, Stumm, Sender, Ein/Aus und Wiedergabe. Ohne Testzeitraum.", alt: "Die Fernbedienung: Name des Fernsehers, was gerade läuft, das Steuerkreuz und Tasten für Lautstärke, Sender und Wiedergabe." }
-    - { screen: "talk", pro: true, title: "Sag, was du sehen willst.", text: "Tippe einmal aufs Mikrofon und sprich. TameTV tippt es in die Suche des Fernsehers.", alt: "Die Sprachsuche hört zu: Die Worte erscheinen, während sie erkannt werden." }
-    - { screen: "keyboard", pro: true, title: "Die Tastatur öffnet sich, wenn der Fernseher fragt.", text: "Suchbegriffe, Passwörter und Codes auf dem Handy tippen, mit automatischem Ausfüllen.", alt: "Die Handytastatur hat sich von selbst geöffnet, als die Suche des Fernsehers nach Text gefragt hat." }
-    - { screen: "lock-screen", pro: true, title: "Eine Fernbedienung auf dem Sperrbildschirm.", text: "Pause, Lautstärke und Stumm ohne Entsperren, auch in der Dynamic Island. Auf dem iPhone.", alt: "Eine Mini-Fernbedienung auf dem Sperrbildschirm des iPhone mit Stumm, Lautstärke und Wiedergabe." }
-    - { screen: "quiet-ads", pro: true, title: "Laute Werbung? TameTV macht den Fernseher leiser.", text: "Leise Werbung achtet nur auf die Lautstärke, auf deinem Handy, und nimmt nichts auf.", alt: "Leise Werbung: eine Lautstärkekurve und die Werbung, die zwei Stufen leiser gestellt wurde." }
+    - { screen: "talk", title: "Sag, was du sehen willst.", text: "Tippe einmal aufs Mikrofon und sprich. TameTV tippt es in die Suche des Fernsehers.", alt: "Die Sprachsuche hört zu: Die Worte erscheinen, während sie erkannt werden." }
+    - { screen: "keyboard", title: "Die Tastatur öffnet sich, wenn der Fernseher fragt.", text: "Suchbegriffe, Passwörter und Codes auf dem Handy tippen, mit automatischem Ausfüllen.", alt: "Die Handytastatur hat sich von selbst geöffnet, als die Suche des Fernsehers nach Text gefragt hat." }
+    - { screen: "lock-screen", title: "Eine Fernbedienung auf dem Sperrbildschirm.", text: "Pause, Lautstärke und Stumm ohne Entsperren, auch in der Dynamic Island. Auf dem iPhone.", alt: "Eine Mini-Fernbedienung auf dem Sperrbildschirm des iPhone mit Stumm, Lautstärke und Wiedergabe." }
+    - { screen: "quiet-ads", title: "Laute Werbung? TameTV macht den Fernseher leiser.", text: "Leise Werbung achtet nur auf die Lautstärke, auf deinem Handy, und nimmt nichts auf.", alt: "Leise Werbung: eine Lautstärkekurve und die Werbung, die zwei Stufen leiser gestellt wurde." }
 tune:
   title: Dein Fernseher muss nicht alles wissen.
   lead: Die Optimierung führt dich durch die Menüs deines Fernsehers, damit er deine Sehdaten nicht mehr teilt, weniger Werbe-Tracking erlaubt und ohne Bewegungsglättung läuft. Kostenlos für Samsung, LG, Roku, Google TV und mehr.

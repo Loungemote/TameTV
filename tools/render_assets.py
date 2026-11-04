@@ -6,7 +6,8 @@ Screens: the TameTV 1.5.0 design boards, drawn by the app repo's store screensho
 frame: the site draws the frame in CSS (`.phone`). TVs are named by their kind (OLED TV, 4K TV, HD TV), never by a
 room, as everywhere on the site. The pipeline builds English only until the app has the 1.5.0 strings, so every home
 page language shows these English screens. The pipeline has no after-cleanup screen, so this file draws it from the
-board "AfterClean", changed to what the app shows.
+board "AfterClean", changed to what the app shows. The site shows no PRO marks, so the screens drop the ones the
+store screenshots draw for a free user.
 Social image: the home page's English hero line next to the remote screen, 1200 x 630.
 
     python3 tools/render_assets.py [path/to/app-repo [screens] [icons] [og]]
@@ -15,6 +16,7 @@ Needs what the pipeline needs (Node with Playwright and its Chromium), PyYAML an
 ../TameTV.
 """
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -118,6 +120,21 @@ def after_cleanup(p):
     return build
 
 
+# The PRO marks the store screenshots put on what needs Pro (screens.PRO_PILL, the dock's marks).
+PRO_MARK = re.compile(r'<span aria-hidden="true" style="position: absolute;[^"]*">PRO</span>')
+
+
+def without_pro(build):
+    """A screen builder that draws the screen without PRO marks: the site shows none."""
+    def web(platform):
+        style, h = build(platform)
+        h = PRO_MARK.sub("", h)
+        assert ">PRO<" not in h
+        return style, h
+
+    return web
+
+
 def screens():
     sys.path.insert(0, str(PIPELINE))
     import l10n  # noqa: E402  (the pipeline's text and made-up names)
@@ -132,6 +149,8 @@ def screens():
 
     l10n.names = site_names
     pipeline.SCREENS.setdefault("after-cleanup", after_cleanup(pipeline))
+    for name in SCREENS:
+        pipeline.SCREENS[name] = without_pro(pipeline.SCREENS[name])
     pipeline.DEVICES["web"] = (390, 844, 2, "ios")
     with tempfile.TemporaryDirectory() as tmp:
         pipeline.CAPTURES = Path(tmp) / "captures"

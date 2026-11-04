@@ -60,10 +60,10 @@ story:
   title: Made for every evening.
   chapters:
     - { screen: "remote", title: "Every basic key is free.", text: "D-pad, OK, Back, Home, volume, mute, channel, power and playback. No trial clock.", alt: "The remote: the TV's name, what's playing, the D-pad and the volume, channel and playback keys." }
-    - { screen: "talk", pro: true, title: "Say what you want to watch.", text: "Tap the mic once and speak. TameTV types it into the TV's search.", alt: "Voice search listening: the words appear as they're heard." }
-    - { screen: "keyboard", pro: true, title: "The keyboard opens when the TV asks.", text: "Type searches, passwords and codes on your phone, with AutoFill.", alt: "The phone keyboard, opened by itself when the TV's search asked for text." }
-    - { screen: "lock-screen", pro: true, title: "A remote on your Lock Screen.", text: "Pause, volume and mute without unlocking, and in the Dynamic Island. On iPhone.", alt: "A mini remote on the iPhone Lock Screen with mute, volume and play." }
-    - { screen: "quiet-ads", pro: true, title: "Loud ad? It turns the TV down.", text: "Quiet Ads listens for loudness only, on your phone, and records nothing.", alt: "Quiet Ads: a loudness graph and the ad it turned down two steps." }
+    - { screen: "talk", title: "Say what you want to watch.", text: "Tap the mic once and speak. TameTV types it into the TV's search.", alt: "Voice search listening: the words appear as they're heard." }
+    - { screen: "keyboard", title: "The keyboard opens when the TV asks.", text: "Type searches, passwords and codes on your phone, with AutoFill.", alt: "The phone keyboard, opened by itself when the TV's search asked for text." }
+    - { screen: "lock-screen", title: "A remote on your Lock Screen.", text: "Pause, volume and mute without unlocking, and in the Dynamic Island. On iPhone.", alt: "A mini remote on the iPhone Lock Screen with mute, volume and play." }
+    - { screen: "quiet-ads", title: "Loud ad? It turns the TV down.", text: "Quiet Ads listens for loudness only, on your phone, and records nothing.", alt: "Quiet Ads: a loudness graph and the ad it turned down two steps." }
 tune:
   title: Make your TV mind its own business.
   lead: Tune-up walks you through your TV's own menus to stop it sharing what you watch, limit ad tracking and turn off motion smoothing. Free on Samsung, LG, Roku, Google TV and more.

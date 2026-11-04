@@ -62,10 +62,10 @@ story:
   title: 为每一个晚上<wbr>而做。
   chapters:
     - { screen: "remote", title: "基础按键<wbr>全部免费。", text: "方向键、OK、返回、主页、音量、静音、频道、电源和播放键，没有试用期限。", alt: "遥控器：电视名称、正在播放的内容、方向键，以及音量、频道和播放键。" }
-    - { screen: "talk", pro: true, title: "说出<wbr>你想看的。", text: "点一下麦克风，开口说就行。TameTV 会把它输入电视的搜索框。", alt: "语音搜索正在聆听：听到的字词会实时出现。" }
-    - { screen: "keyboard", pro: true, title: "电视要你输入时，<wbr>键盘自己弹出来。", text: "在手机上输入搜索词、密码和验证码，支持自动填充。", alt: "电视的搜索框需要输入文字时，手机键盘自动打开。" }
-    - { screen: "lock-screen", pro: true, title: "锁定屏幕上的<wbr>遥控器。", text: "不用解锁就能暂停、调音量和静音，灵动岛里也能用。仅限 iPhone。", alt: "iPhone 锁定屏幕上的迷你遥控器，带静音、音量和播放键。" }
-    - { screen: "quiet-ads", pro: true, title: "广告太吵？<wbr>它帮你把电视调小。", text: "广告降音只在手机上听响度，不做任何录音。", alt: "广告降音：响度曲线，以及被调低两格的广告。" }
+    - { screen: "talk", title: "说出<wbr>你想看的。", text: "点一下麦克风，开口说就行。TameTV 会把它输入电视的搜索框。", alt: "语音搜索正在聆听：听到的字词会实时出现。" }
+    - { screen: "keyboard", title: "电视要你输入时，<wbr>键盘自己弹出来。", text: "在手机上输入搜索词、密码和验证码，支持自动填充。", alt: "电视的搜索框需要输入文字时，手机键盘自动打开。" }
+    - { screen: "lock-screen", title: "锁定屏幕上的<wbr>遥控器。", text: "不用解锁就能暂停、调音量和静音，灵动岛里也能用。仅限 iPhone。", alt: "iPhone 锁定屏幕上的迷你遥控器，带静音、音量和播放键。" }
+    - { screen: "quiet-ads", title: "广告太吵？<wbr>它帮你把电视调小。", text: "广告降音只在手机上听响度，不做任何录音。", alt: "广告降音：响度曲线，以及被调低两格的广告。" }
 tune:
   title: 让电视<wbr>管好自己的事。
   lead: 调校带你一步步走进电视自己的菜单：停止分享你的观看内容，限制广告跟踪，关闭动态平滑。在 Samsung、LG、Roku、Google TV 等电视上免费使用。

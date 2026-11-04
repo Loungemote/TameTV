@@ -107,7 +107,7 @@ layout: default
           <div class="chapter__media">{% include phone.html screen=c.screen alt=c.alt %}</div>
           <div class="chapter__copy">
             <span class="chapter__num" aria-hidden="true">{{ forloop.index | prepend: "0" }}</span>
-            <h3>{{ c.title }}{% if c.pro %} <span class="pro-badge">PRO</span>{% endif %}</h3>
+            <h3>{{ c.title }}</h3>
             <p>{{ c.text }}</p>
           </div>
         </li>
@@ -167,7 +167,7 @@ layout: default
             <span class="sleep"><svg viewBox="0 0 120 120"><circle class="sleep__track" cx="60" cy="60" r="50"/><circle class="sleep__fill" cx="60" cy="60" r="50" pathLength="100"/></svg><span class="sleep__label">{% include icon.html name="moon" %}<b>{{ card.time }}</b></span></span>
             {%- endcase %}
           </div>
-          <h3>{{ card.title }}{% if card.kind == "help" or card.kind == "find" or card.kind == "sleep" %} <span class="pro-badge pro-badge--day">PRO</span>{% endif %}</h3>
+          <h3>{{ card.title }}</h3>
           <p>{{ card.text }}</p>
           {%- if card.note %}<span class="fcard__note">{{ card.note }}</span>{% endif %}
         </li>
@@ -191,7 +191,7 @@ layout: default
         </ul>
       </article>
       <article class="plan plan--pro" style="--i: 1">
-        <h3>{{ t.pro.pro_title }} <span class="pro-badge">PRO</span></h3>
+        <h3>{{ t.pro.pro_title }}</h3>
         <ul>
           {%- for item in t.pro.pro %}<li>{% include icon.html name="plus" %}{{ item }}</li>{%- endfor %}
         </ul>

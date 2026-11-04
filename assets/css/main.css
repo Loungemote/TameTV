@@ -324,28 +324,6 @@ ol {
   transform: translateX(3px);
 }
 
-.pro-badge,
-.pro-mark {
-  display: inline-flex;
-  align-items: center;
-  height: 18px;
-  padding: 0 6px;
-  border-radius: 6px;
-  background: #2b2117;
-  color: var(--ember-text);
-  font-size: 10.5px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  vertical-align: 0.2em;
-  font-style: normal;
-}
-
-.pro-badge--day {
-  background: #fbe9d6;
-  color: var(--ember-ink);
-}
-
 .tile-icon {
   display: inline-grid;
   place-items: center;
@@ -1688,17 +1666,6 @@ ol {
   box-shadow: var(--key-shadow), inset 0 0 0 1px rgba(255, 154, 61, 0.22);
 }
 
-.pro-mark {
-  position: absolute;
-  top: calc(-7 * var(--px));
-  right: calc(-9 * var(--px));
-  height: calc(16 * var(--px));
-  padding: 0 calc(5 * var(--px));
-  border-radius: calc(8 * var(--px));
-  font-size: calc(9.5 * var(--px));
-  box-shadow: 0 0 0 calc(2 * var(--px)) #0c0e14;
-}
-
 .remote__playing {
   display: flex;
   align-items: center;
@@ -2021,11 +1988,6 @@ ol {
 .dock__pair .is-on {
   background: rgba(255, 255, 255, 0.12);
   color: var(--text);
-}
-
-.remote__dock .pro-mark {
-  top: calc(-4 * var(--px));
-  right: calc(-6 * var(--px));
 }
 
 .remote.is-muted [data-key="mute"] {
@@ -2546,11 +2508,6 @@ ol {
   font-size: clamp(28px, 3.4vw, 44px);
   line-height: 1.06;
   letter-spacing: -0.03em;
-}
-
-.chapter h3 .pro-badge {
-  vertical-align: 0.42em;
-  margin-left: 4px;
 }
 
 .chapter p {
