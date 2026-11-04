@@ -1,5 +1,5 @@
 # Home page copy. Keep release status, platform features and privacy facts in step across all languages.
-title: Loungemote - テレビリモコンアプリ｜ソニー・LG・Fire TV対応
+title: TameTV - テレビリモコンアプリ｜ソニー・LG・Fire TV対応
 description: Android・iPhone・iPad用テレビリモコン。Google PlayとApp Storeで公開中。ソニー、LG、Roku、Apple TVなどをWi-Fiで操作。広告もアカウントも不要。
 nav:
   features: 機能
@@ -10,8 +10,8 @@ nav:
   support: サポート
   get: アプリを入手
 badge:
-  play_label: Google PlayでLoungemote Android版を入手
-  app_store_label: App StoreでLoungemote iPhone・iPad版をダウンロード
+  play_label: Google PlayでTameTV Android版を入手
+  app_store_label: App StoreでTameTV iPhone・iPad版をダウンロード
   ios_soon: iPhone・iPad版は近日公開
 hero:
   eyebrow: Android・iPhone・iPad対応
@@ -20,7 +20,7 @@ hero:
   how_link: 使い方を見る
   works_with: 対応
   trust: ["3日間無料", "広告なし", "アカウント不要"]
-  alt: Loungemoteのリモコン画面：方向キーと決定ボタン、再生キー、音量とチャンネル。
+  alt: TameTVのリモコン画面：方向キーと決定ボタン、再生キー、音量とチャンネル。
 features:
   title: いつものリモコン操作を、すべてスマホで。
   lead: ボタン操作のリモコンに加えて、タッチパッド、スマホのキーボード、アプリ起動、キャストまで。
@@ -36,12 +36,12 @@ how:
   title: 数秒で使い始められます。
   lead: 登録も追加機器も不要。テレビがWi-Fiにつながっていれば、準備はほぼ完了です。
   steps:
-    - { screen: "choose-tv", title: "Wi-Fiでアプリを開く", text: "Loungemoteがネットワークを探して、見つかったテレビやストリーミング端末を表示します。", alt: "テレビを選択：このWi-Fiで見つかったテレビ。" }
+    - { screen: "choose-tv", title: "Wi-Fiでアプリを開く", text: "TameTVがネットワークを探して、見つかったテレビやストリーミング端末を表示します。", alt: "テレビを選択：このWi-Fiで見つかったテレビ。" }
     - { screen: "pair", title: "テレビで一度だけ許可", text: "テレビで「許可」を選ぶか、表示されたコードを入力します。初回だけです。", alt: "ペアリング画面プレビュー：テレビがこのスマホを信頼するか確認しています。" }
     - { screen: "apps", title: "操作を始める", text: "スマホがリモコンになりました。次回からはアプリを開くと自動で再接続します。", alt: "アプリをワンタップで：リビングのテレビのアプリ。" }
 devices:
   title: 11のテレビプラットフォームに、ひとつのアプリで。
-  lead: Loungemoteは各テレビのネットワーク通信で操作するため、赤外線アダプタやハブは不要です。スマホまたはタブレットとテレビを同じWi-Fiに接続してください。
+  lead: TameTVは各テレビのネットワーク通信で操作するため、赤外線アダプタやハブは不要です。スマホまたはタブレットとテレビを同じWi-Fiに接続してください。
   footnote: TCLなど他ブランドのRoku TVやGoogle TV搭載モデルにも対応します。Fire TVへのキャストには対応していません。Apple TVはAirPlayで写真や動画を受け取ります。赤外線操作のみのテレビには対応していません。
   items:
     - { name: "ソニー Sony", detail: "ブラビア" }
@@ -57,7 +57,7 @@ devices:
     - { name: "Apple TV", detail: "Apple TV HDとApple TV 4K" }
 privacy:
   title: <em>プライバシー</em>を最初から大切に。
-  lead: リモコンがあなたのことを知る必要はありません。Loungemoteにはアカウントも専用サーバーもなく、操作はスマホからテレビへ直接届きます。
+  lead: リモコンがあなたのことを知る必要はありません。TameTVにはアカウントも専用サーバーもなく、操作はスマホからテレビへ直接届きます。
   link: プライバシーポリシー（英語）
   items:
     - { icon: "useroff", title: "アカウント不要", text: "登録もメールアドレスもログインもありません。" }
@@ -69,16 +69,16 @@ faq:
   title: よくある質問
   more: ほかにご質問があれば、こちらへメールでどうぞ：
   items:
-    - q: Loungemoteは無料ですか？
-      a: ダウンロード、設定、接続確認のための最初のキー操作、デモテレビは無料で、広告もありません。テレビ操作、タッチパッド、キーボード、アプリ起動、メディアキャストにはLoungemote Proが必要です。対象の新規ユーザーは週額プランを3日間無料で試せます。無料期間のない年額プランと買い切りもあり、価格や特典は支払い前に表示されます。AndroidはGoogle Play、iOSはApp Storeで購入します。SiriとショートカットはiOS専用です。
+    - q: TameTVは無料ですか？
+      a: ダウンロード、設定、接続確認のための最初のキー操作、デモテレビは無料で、広告もありません。テレビ操作、タッチパッド、キーボード、アプリ起動、メディアキャストにはTameTV Proが必要です。対象の新規ユーザーは週額プランを3日間無料で試せます。無料期間のない年額プランと買い切りもあり、価格や特典は支払い前に表示されます。AndroidはGoogle Play、iOSはApp Storeで購入します。SiriとショートカットはiOS専用です。
     - q: どのテレビに対応していますか？
       a: ソニー ブラビア、LG（webOS）、Amazon Fire TV、Android TVとGoogle TVの端末、ハイセンス（VIDAA）、シャオミ（PatchWall）、Samsung（Tizen、2016年以降）、フィリップス（Titan OS、Saphi）、Roku、Vizio SmartCast、Apple TV HDとApple TV 4K。TCLなどのRoku TVやGoogle TV搭載モデルにも対応します。赤外線操作のみのテレビには対応していません。
     - q: Apple TVで使えますか？
-      a: はい。Apple TV HDとApple TV 4Kに、AndroidでもiPhone・iPadでも対応します。Apple TVに表示されるコードを一度入力すればペアリングできます。リモコンキー、スマホのキーボードでの入力、アプリ起動に加え、再生中の作品をアートワーク付きで表示し、再生、一時停止、スキップ、消音ができます。写真や動画はLoungemoteではなく、AirPlayでApple TVに送ります。
+      a: はい。Apple TV HDとApple TV 4Kに、AndroidでもiPhone・iPadでも対応します。Apple TVに表示されるコードを一度入力すればペアリングできます。リモコンキー、スマホのキーボードでの入力、アプリ起動に加え、再生中の作品をアートワーク付きで表示し、再生、一時停止、スキップ、消音ができます。写真や動画はTameTVではなく、AirPlayでApple TVに送ります。
     - q: 赤外線アダプタや学習リモコンは必要ですか？
-      a: 不要です。Loungemoteはご家庭のWi-Fiでスマートテレビを操作します。赤外線は使わないため、赤外線リモコンでしか操作できない古いテレビには使えません。
+      a: 不要です。TameTVはご家庭のWi-Fiでスマートテレビを操作します。赤外線は使わないため、赤外線リモコンでしか操作できない古いテレビには使えません。
     - q: テレビが見つからないときは？
-      a: テレビの電源を入れ、スマホと同じWi-Fiに接続してください。ゲストネットワークは機器間の接続を妨げることがあります。Androidでは求められたときに付近のデバイス権限を許可します。iOSでは「設定 > プライバシーとセキュリティ > ローカルネットワーク」でLoungemoteをオンにします。IPアドレスでテレビを追加することもできます。
+      a: テレビの電源を入れ、スマホと同じWi-Fiに接続してください。ゲストネットワークは機器間の接続を妨げることがあります。Androidでは求められたときに付近のデバイス権限を許可します。iOSでは「設定 > プライバシーとセキュリティ > ローカルネットワーク」でTameTVをオンにします。IPアドレスでテレビを追加することもできます。
     - q: スマホでテレビの電源を入れられますか？
       a: 多くのテレビで可能です。先にテレビでネットワーク経由の起動設定をオンにしてください。例：SamsungのPower On with Mobile、LGのTurn on via Wi-Fi、Roku TVのFast TV start。
     - q: どんなデータを収集しますか？
@@ -86,7 +86,7 @@ faq:
     - q: Android版とiPhone版は公開されていますか？
       a: はい。Android版はGoogle Playで公開中で、Android 8.0以降のスマホとタブレットに対応します。iPhone・iPad版はApp Storeで公開中で、iOS 17またはiPadOS 17以降が必要です。日本語、英語、中国語（簡体字・繁体字）、韓国語、ドイツ語、フランス語、スペイン語、ポルトガル語（ブラジル）、ロシア語、インドネシア語に対応します。
     - q: キャストは画面ミラーリングですか？
-      a: メディアキャストは選択した写真、動画、ファイルや対応リンクを互換性のある受信機に送ります。画面ミラーリングにはAndroidのシステム画面キャストやiOSのAirPlayを使います。利用できるかはスマホとテレビによって異なり、Loungemote独自の画面ミラーリング機能はありません。
+      a: メディアキャストは選択した写真、動画、ファイルや対応リンクを互換性のある受信機に送ります。画面ミラーリングにはAndroidのシステム画面キャストやiOSのAirPlayを使います。利用できるかはスマホとテレビによって異なり、TameTV独自の画面ミラーリング機能はありません。
     - q: Proの復元や解約はどうしますか？
       a: 支払いに使ったストアアカウントで、アプリの「購入を復元」を使ってください。Androidの定期購入はGoogle Play、iOSはAppleの設定で管理します。アプリを削除しても定期購入は解約されません。Google PlayとApp Storeの間で購入は引き継げません。
 cta:

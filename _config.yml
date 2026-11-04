@@ -1,6 +1,6 @@
-title: Loungemote
+title: TameTV
 tagline: Your phone is the TV remote
-# The home page title is `seo_title` in index.html; other pages use "Title · Loungemote".
+# The home page title is `seo_title` in index.html; other pages use "Title · TameTV".
 description: >-
   Wi-Fi TV remote for Android, iPhone and iPad, on Google Play and the App Store.
   Control Samsung, LG, Roku, Google TV, Apple TV and more. No ads or account.
@@ -9,7 +9,7 @@ lang: en
 # Every contact link uses this address. It must match `supportEmail` in the app's Links.swift.
 email: loungemote@outlook.com
 # Shown on the Privacy Policy and the Terms of Use. Change it whenever one of them changes.
-effective_date: October 12, 2026
+effective_date: November 4, 2026
 
 # Store availability is independent for each platform. Only set a URL when that app is live.
 google_play_url: "https://play.google.com/store/apps/details?id=com.pesafy.loungemote"
@@ -20,7 +20,7 @@ app_store_id: "6817682889"
 
 # With a custom domain: set `url` to it, set `baseurl` to "", and add a CNAME file.
 url: https://loungemote.github.io
-baseurl: /loungemote-site
+baseurl: /TameTV
 
 permalink: pretty
 markdown: kramdown

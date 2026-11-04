@@ -3,9 +3,9 @@
   <div class="container">
     <div class="site-footer__grid">
       <div class="site-footer__brand">
-        <a class="brand" href="{{ home }}" aria-label="Loungemote home">
+        <a class="brand" href="{{ home }}" aria-label="{{ site.title | escape }} home">
           {% include logo.html id="footer" size=30 %}
-          <span>Loungemote</span>
+          <span>{{ site.title | escape }}</span>
         </a>
         <p>A Wi-Fi TV remote for Android, iPhone and iPad.</p>
       </div>
@@ -47,6 +47,6 @@
       {%- endfor %}
     </nav>
     <p class="site-footer__legal">{% include trademarks.html %}</p>
-    <p class="site-footer__legal">&copy; {{ site.time | date: "%Y" }} Loungemote. Apple, iPhone, iPad and App Store are trademarks of Apple Inc.</p>
+    <p class="site-footer__legal">&copy; {{ site.time | date: "%Y" }} {{ site.title | escape }}. Apple, iPhone, iPad and App Store are trademarks of Apple Inc.</p>
   </div>
 </footer>

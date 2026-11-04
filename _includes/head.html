@@ -37,7 +37,7 @@
 <meta property="og:image" content="{{ page.image | absolute_url }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Loungemote TV remote shown in an iOS preview.">
+<meta property="og:image:alt" content="TameTV TV remote shown in an iOS preview.">
 <meta property="og:locale" content="{{ page.og_locale | default: 'en_US' }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ full_title | escape }}">
@@ -79,7 +79,7 @@
       "@type": "MobileApplication",
       "@id": "{{ '/' | absolute_url }}#android-app",
       "name": "{{ site.title }}",
-      "alternateName": "Loungemote TV Remote",
+      "alternateName": "TameTV TV Remote",
       "description": {{ description | jsonify }},
       "url": "{{ '/' | absolute_url }}",
       "image": "{{ '/assets/img/icon-512.png' | absolute_url }}",
@@ -92,7 +92,7 @@
       "downloadUrl": {{ site.google_play_url | jsonify }},
       "installUrl": {{ site.google_play_url | jsonify }},
       "sameAs": [{{ site.google_play_url | jsonify }}],
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free download on Google Play. Continued TV control needs Loungemote Pro; the weekly plan offers a 3-day trial for eligible new subscribers." }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free download on Google Play. Continued TV control needs TameTV Pro; the weekly plan offers a 3-day trial for eligible new subscribers." }
     },
     {%- endif %}
     {%- if site.app_store_url and site.app_store_url != "" %}
@@ -100,7 +100,7 @@
       "@type": "MobileApplication",
       "@id": "{{ '/' | absolute_url }}#ios-app",
       "name": "{{ site.title }}",
-      "alternateName": "Loungemote - TV Remote Control",
+      "alternateName": "TameTV - TV Remote Control",
       "description": {{ description | jsonify }},
       "url": "{{ '/' | absolute_url }}",
       "image": "{{ '/assets/img/icon-512.png' | absolute_url }}",
@@ -113,7 +113,7 @@
       "sameAs": [{{ site.app_store_url | jsonify }}],
       "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
       "isAccessibleForFree": false,
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free download on the App Store. Continued TV control needs Loungemote Pro; the weekly plan offers a 3-day trial for eligible new subscribers." }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free download on the App Store. Continued TV control needs TameTV Pro; the weekly plan offers a 3-day trial for eligible new subscribers." }
     },
     {%- endif %}
     {

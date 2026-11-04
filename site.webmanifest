@@ -2,8 +2,8 @@
 layout: null
 ---
 {
-  "name": "Loungemote",
-  "short_name": "Loungemote",
+  "name": {{ site.title | jsonify }},
+  "short_name": {{ site.title | jsonify }},
   "description": {{ site.tagline | jsonify }},
   "start_url": "{{ '/' | relative_url }}",
   "display": "browser",

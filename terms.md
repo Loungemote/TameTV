@@ -4,23 +4,23 @@ title: Terms of Use
 permalink: /terms/
 eyebrow: Legal
 dated: true
-lead: These terms apply when you download or use Loungemote. They cover your license, Loungemote Pro purchases and what to expect from the app.
-description: The terms for using Loungemote, including the license, Loungemote Pro subscriptions and purchases, supported devices and trademarks.
+lead: These terms apply when you download or use TameTV. They cover your license, TameTV Pro purchases and what to expect from the app.
+description: The terms for using TameTV, including the license, TameTV Pro subscriptions and purchases, supported devices and trademarks.
 ---
 
 ## Agreement
 
-By downloading or using Loungemote ("the app"), you agree to these terms. If you do not agree, do not use the app. In these terms, "we" means the developer of Loungemote.
+By downloading or using TameTV ("the app"), you agree to these terms. If you do not agree, do not use the app. In these terms, "we" means the developer of TameTV.
 
 ## License
 
-For Android, we grant you a personal, non-exclusive, non-transferable license to use Loungemote on your own compatible devices under these terms and applicable Google Play terms.
+For Android, we grant you a personal, non-exclusive, non-transferable license to use TameTV on your own compatible devices under these terms and applicable Google Play terms.
 
-For the iOS version, Apple's [Licensed Application End User License Agreement (Standard EULA)](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) applies to your use of Loungemote. It sets out your license to use the app, the warranty disclaimer and the limits of liability. The terms on this page add information about purchases, supported devices and acceptable use.
+For the iOS version, Apple's [Licensed Application End User License Agreement (Standard EULA)](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) applies to your use of TameTV. It sets out your license to use the app, the warranty disclaimer and the limits of liability. The terms on this page add information about purchases, supported devices and acceptable use.
 
-## Loungemote Pro
+## TameTV Pro
 
-Loungemote is free to download. Setting up a TV, a first key press to check the connection, and the Demo TV are free. Controlling a TV and the other features need Loungemote Pro. You can get Loungemote Pro as:
+TameTV is free to download. Setting up a TV, a first key press to check the connection, and the Demo TV are free. Controlling a TV and the other features need TameTV Pro. You can get TameTV Pro as:
 
 - an auto-renewable weekly subscription, which starts with a 3-day free trial for eligible new subscribers,
 - an auto-renewable yearly subscription,
@@ -52,7 +52,7 @@ Google Play processes Android payments. Subscriptions renew unless cancelled thr
 
 ## Supported devices
 
-Loungemote works only with TVs and streaming devices on the same local network as your phone or tablet. Some features depend on the TV model and its software version. TV makers can change their software at any time, and a change can stop a feature from working. We try to fix these problems quickly, but we cannot guarantee that every feature works with every TV.
+TameTV works only with TVs and streaming devices on the same local network as your phone or tablet. Some features depend on the TV model and its software version. TV makers can change their software at any time, and a change can stop a feature from working. We try to fix these problems quickly, but we cannot guarantee that every feature works with every TV.
 
 ## Third-party services
 
