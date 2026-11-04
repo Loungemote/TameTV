@@ -1,96 +1,176 @@
-# Home page copy. Keep release status, platform features and privacy facts in step across all languages.
-title: TameTV - テレビリモコンアプリ｜ソニー・LG・Fire TV対応
-description: Android・iPhone・iPad用テレビリモコン。Google PlayとApp Storeで公開中。ソニー、LG、Roku、Apple TVなどをWi-Fiで操作。広告もアカウントも不要。
+# ホームページの文言（日本語）、TameTV 1.5.0。キーは en.yml とまったく同じです。リリース状況、プラットフォームの機能、
+# プライバシーの事実は、他の言語や 1.5.0 のストア文言（アプリ側の docs/app-store/metadata.json と android/docs/play-store）と揃えてください。
+# 本文のブランド名はアプリと同じくラテン文字です。検索用の title と description だけ、従来どおりカタカナ（ソニー）を使います。
+title: TameTV：無料のテレビリモコンアプリ｜ソニー・LG・Fire TV対応
+description: Android・iPhone・iPad用の無料Wi-Fiテレビリモコン。ソニー、LG、Fire TV、Google TV、Roku、Apple TVなどを操作できます。広告なし、アカウント不要。
+skip: 本文へスキップ
 nav:
-  features: 機能
-  how: 使い方
-  devices: 対応テレビ
-  privacy: プライバシー
+  remote: リモコン
+  tune: チューンアップ
+  tvs: テレビ
+  pro: 無料とPro
   faq: よくある質問
   support: サポート
   get: アプリを入手
-badge:
-  play_label: Google PlayでTameTV Android版を入手
-  app_store_label: App StoreでTameTV iPhone・iPad版をダウンロード
-  ios_soon: iPhone・iPad版は近日公開
+  menu: メニュー
 hero:
-  eyebrow: Android・iPhone・iPad対応
-  title: スマホが<br><em>リモコン</em>に。
-  lead: スマホやタブレットから、Wi-Fiでスマートテレビを操作。赤外線アダプタもアカウントも不要、広告もありません。
-  how_link: 使い方を見る
+  title: スマホが、<wbr><em>リモコン</em>に。
+  lead: Sony、LG、Fire&nbsp;TV、Google&nbsp;TV、Rokuなどに使える、無料のWi-Fiリモコン。
   works_with: 対応
-  trust: ["3日間無料", "広告なし", "アカウント不要"]
-  alt: TameTVのリモコン画面：方向キーと決定ボタン、再生キー、音量とチャンネル。
-features:
-  title: いつものリモコン操作を、すべてスマホで。
-  lead: ボタン操作のリモコンに加えて、タッチパッド、スマホのキーボード、アプリ起動、キャストまで。
-  footnote: 機能はテレビの機種、ソフトウェア、スマホのOSにより異なります。Siri、ショートカット、AirPlayガイドはiOS専用です。
-  items:
-    - { icon: "dpad", title: "完全なリモコン", text: "方向キー、決定、戻る、ホーム、音量、チャンネル、再生操作、電源。Wi-Fi上のテレビを自動で見つけ、アプリを開くと再接続します。" }
-    - { icon: "hand", title: "スワイプ式タッチパッド", text: "片手でメニューを移動し、タップで決定。LGテレビではポインターも操作できます。" }
-    - { icon: "keyboard", title: "スマホのキーボード", text: "対応テレビでは、スマホのキーボードで検索語やログイン情報を入力できます。" }
-    - { icon: "grid", title: "アプリをワンタップで", text: "テレビのアプリを一覧にして、スマホからすぐに開けます。" }
-    - { icon: "cast", title: "テレビにキャスト", text: "写真、スライドショー、動画、ファイル、リンクをテレビ、Chromecast、Rokuへ。" }
-    - { icon: "bolt", title: "Wi-Fiで電源オン", text: "対応テレビなら、スタンバイ中のテレビをスマホから起動できます。" }
-how:
-  title: 数秒で使い始められます。
-  lead: 登録も追加機器も不要。テレビがWi-Fiにつながっていれば、準備はほぼ完了です。
+  trust: ["基本キーは無料", "広告なし", "アカウント不要"]
+  alt: "TameTVのリモコン：OKボタン付きの方向キーと、音量、チャンネル、再生のキー。"
+# ヒーローの遊べるリモコン。テレビは部屋ではなく種類で呼びます（たいていの家にテレビは1台）。実在ブランドの型番も使いません。
+demo:
+  label: リモコンを試す
+  tv_label: リモコンに反応するテレビ
+  tv: 有機ELテレビ
+  status: 接続済み
+  model: 4K
+  heard: テレビに届きました
+  volume: 音量 {n}
+  muted: 消音中
+  asleep: スタンバイ
+  press: OKを押してみて
+  keys:
+    power: 電源
+    back: 戻る
+    home: ホーム
+    channel: 次のチャンネル
+    mute: 消音
+    up: 上
+    down: 下
+    left: 左
+    right: 右
+    ok: OK
+    voldown: 音量を下げる
+    volup: 音量を上げる
+    rewind: 早戻し
+    playpause: 再生または一時停止
+    forward: 早送り
+connect:
+  title: テレビは自動で<wbr>見つかります。
+  lead: テレビと同じWi-FiでTameTVを開きます。一度許可すれば、あとはどのキーもすぐに効きます。
+  searching: このWi-Fiを検索中
+  awake: 電源オン
+  others: ["4Kテレビ", "HDテレビ"]
   steps:
-    - { screen: "choose-tv", title: "Wi-Fiでアプリを開く", text: "TameTVがネットワークを探して、見つかったテレビやストリーミング端末を表示します。", alt: "テレビを選択：このWi-Fiで見つかったテレビ。" }
-    - { screen: "pair", title: "テレビで一度だけ許可", text: "テレビで「許可」を選ぶか、表示されたコードを入力します。初回だけです。", alt: "ペアリング画面プレビュー：テレビがこのスマホを信頼するか確認しています。" }
-    - { screen: "apps", title: "操作を始める", text: "スマホがリモコンになりました。次回からはアプリを開くと自動で再接続します。", alt: "アプリをワンタップで：リビングのテレビのアプリ。" }
-devices:
-  title: 11のテレビプラットフォームに、ひとつのアプリで。
-  lead: TameTVは各テレビのネットワーク通信で操作するため、赤外線アダプタやハブは不要です。スマホまたはタブレットとテレビを同じWi-Fiに接続してください。
-  footnote: TCLなど他ブランドのRoku TVやGoogle TV搭載モデルにも対応します。Fire TVへのキャストには対応していません。Apple TVはAirPlayで写真や動画を受け取ります。赤外線操作のみのテレビには対応していません。
+    - { icon: "wifi", title: "同じWi-Fiで", text: "赤外線アダプタも、ハブも、登録もいりません。" }
+    - { icon: "tv", title: "一度だけ許可", text: "テレビで「許可」を選ぶか、表示されたコードをカメラで読み取ります。" }
+    - { icon: "dpad", title: "キーを押す", text: "届いたことを、テレビがスマホに知らせます。" }
+  note: 見つからないときは、テレビのブランドを選んでください。オンにする設定をTameTVが案内します。
+story:
+  title: 毎晩のために<wbr>作りました。
+  chapters:
+    - { screen: "remote", title: "基本キーは<wbr>すべて無料。", text: "方向キー、OK、戻る、ホーム、音量、消音、チャンネル、電源、再生キー。お試し期間の制限もありません。", alt: "リモコン：テレビの名前、再生中の作品、方向キー、音量・チャンネル・再生のキー。" }
+    - { screen: "talk", pro: true, title: "観たいものを、<wbr>話すだけ。", text: "マイクを一度タップして話します。TameTVがテレビの検索に入力します。", alt: "音声検索で聞き取り中：聞こえた言葉がその場で表示されます。" }
+    - { screen: "keyboard", pro: true, title: "テレビが求めると、<wbr>キーボードが開きます。", text: "検索語、パスワード、コードをスマホで入力。自動入力にも対応します。", alt: "テレビの検索が文字を求めたときに、自動で開いたスマホのキーボード。" }
+    - { screen: "lock-screen", pro: true, title: "ロック画面に<wbr>リモコンを。", text: "ロックを解除せずに一時停止、音量、消音。Dynamic Islandでも使えます。iPhoneのみ。", alt: "iPhoneのロック画面にあるミニリモコン：消音、音量、再生。" }
+    - { screen: "quiet-ads", pro: true, title: "広告がうるさい？<wbr>テレビの音を下げます。", text: "広告音量ダウンは、スマホの上で音の大きさだけを聞き取り、何も録音しません。", alt: "広告音量ダウン：音量のグラフと、2段階下げた広告。" }
+tune:
+  title: テレビに、<wbr>のぞき見させない。
+  lead: チューンアップは、テレビ自身のメニューを順に案内して、視聴内容の共有の停止、広告トラッキングの制限、動きの補間のオフを手伝います。Samsung、LG、Roku、Google TVなどで無料です。
+  checks: ["視聴内容の共有を停止", "広告トラッキングを制限", "動きの補間をオフ", "ネットワークデバッグはオフです"]
+  alt: "チューンアップ：10項目中7項目が完了。プライバシー、画質、音のチェックと、次にやること。"
   items:
-    - { name: "ソニー Sony", detail: "ブラビア" }
-    - { name: "LG", detail: "webOS搭載スマートテレビ" }
-    - { name: "Amazon Fire TV", detail: "Fire TV Stick、Fire TV Cube、Fire TV搭載テレビ" }
-    - { name: "Android TV・Google TV", detail: "テレビとストリーミング端末（Chromecast with Google TVを含む）" }
-    - { name: "ハイセンス Hisense", detail: "VIDAA搭載テレビ" }
-    - { name: "シャオミ Xiaomi", detail: "PatchWall搭載テレビ" }
-    - { name: "Samsung", detail: "Tizen搭載スマートテレビ（2016年以降）" }
-    - { name: "フィリップス Philips", detail: "Titan OS・Saphi搭載テレビ" }
-    - { name: "Roku", detail: "Roku TVとRokuプレーヤー" }
-    - { name: "Vizio", detail: "SmartCast搭載テレビ" }
-    - { name: "Apple TV", detail: "Apple TV HDとApple TV 4K" }
+    - { icon: "camera", title: "カメラアシスト", text: "スマホをテレビのメニューに向けると、次に押すキーを示します。" }
+    - { icon: "shield", title: "テレビの<wbr>クリーンアップ後", text: "ADBツールでテレビを整理しましたか？キャストとリモコンがまだ使えるか確認します。" }
+    - { icon: "bell", title: "大事なときだけ<wbr>お知らせ", text: "ネットワークデバッグがオンのままのときや、アップデートで設定が元に戻ったときに。" }
+family:
+  title: 家族のだれでも<wbr>使いやすく。
+  cards:
+    - { kind: "help", title: "FaceTimeで<wbr>家族をサポート", text: "通話中に、離れて暮らす家族のテレビをスマホから操作できます。サポートを受ける側は無料です。", note: "iPhone・iPad" }
+    - { kind: "simple", title: "シンプルな<wbr>リモコン", text: "大きなキーだけ。どなたでも無料です。", key: "音を大きく" }
+    - { kind: "find", title: "リモコンを探す", text: "なくしたRokuのリモコンを鳴らします。スピーカー付きのリモコンが対象です。" }
+    - { kind: "sleep", title: "スリープタイマー", text: "TameTVを開いたままにすると、時間になったらテレビを消します。Roku TV、LG、Google TVで使えます。", time: "30:00" }
+pro:
+  title: 大事なところは<wbr>無料。
+  lead: 毎晩押すキーは無料です。TameTV Proで、さらに便利に。
+  free_title: 無料
+  free:
+    - 方向キー、OK、戻る、ホーム
+    - 音量、消音、チャンネル
+    - 電源と再生キー
+    - 大きなキーのシンプルな配置
+    - 家じゅうのテレビを、タップで切り替え
+    - チューンアップとカメラアシストのガイド
+    - 問題があるときのお知らせ
+  pro_title: TameTV Pro
+  pro:
+    - 音声検索
+    - 自動入力に対応したスマホのキーボード
+    - ワンタップでアプリ
+    - スワイプ式タッチパッド
+    - 写真・動画・リンクのキャスト
+    - 広告音量ダウン
+    - ロック画面のリモコン
+    - FaceTimeで家族をサポート
+    - 数字キーと入力切替
+    - リモコンを探す、スリープタイマーなど
+  note: ロック画面のリモコン、家族をサポート、Siri、ショートカットはiPhoneとiPadで使えます。Proは週額プラン（対象の新規登録者は3日間無料）、年額プラン、買い切りから選べます。価格はお支払い前に表示されます。
 privacy:
-  title: <em>プライバシー</em>を最初から大切に。
-  lead: リモコンがあなたのことを知る必要はありません。TameTVにはアカウントも専用サーバーもなく、操作はスマホからテレビへ直接届きます。
-  link: プライバシーポリシー（英語）
+  title: アカウント不要。<wbr><em>広告なし。</em>
+  lead: リモコンが、あなたのことを知る必要はありません。
+  link: プライバシーポリシーを読む（英語）
   items:
-    - { icon: "useroff", title: "アカウント不要", text: "登録もメールアドレスもログインもありません。" }
-    - { icon: "eyeoff", title: "広告なし", text: "広告コードも広告識別子も使いません。" }
-    - { icon: "wifi", title: "ご家庭のネットワーク内で", text: "操作はWi-Fiで選んだテレビへ直接送られます。" }
-    - { icon: "lock", title: "鍵は端末内に", text: "ペアリング情報はAndroid KeystoreまたはiOSキーチェーンで保護され、私たちには送信されません。" }
-  note: Androidでは「使用状況データを共有」は初期設定でオフで、現在の公開版にFirebaseの設定はありません。iOSではFirebaseの利用統計とクラッシュレポートが初期設定でオンです。「設定 > プライバシー > 使用状況データを共有」でオフにできます。テレビ名、ネットワークアドレス、入力した文字、キャストした内容は含まれません。Google Castの独立した診断データ収集は、このスイッチでは制御できません。
+    - { icon: "wifi", title: "キー操作は<wbr>Wi-Fiの中だけ", text: "スマホからテレビへ直接届きます。FaceTimeで家族をサポートしているときを除きます。" }
+    - { icon: "mic", title: "カメラとマイクは<wbr>スマホの中で", text: "カメラアシストと広告音量ダウンはスマホの中で動き、映像も音声も保存しません。音声検索には、スマホ本体の音声認識を使います。" }
+    - { icon: "lock", title: "ペアリング情報は<wbr>手元に", text: "ペアリングの鍵はiOSのキーチェーンかAndroid Keystoreに保管され、私たちに送られることはありません。" }
+  note: iPhoneとiPadでは、利用統計とクラッシュレポートが初期設定でオンです。「設定 > プライバシー > 使用状況データを共有」でオフにできます。Androidでは、この設定をオンにした場合にだけ送信されます。Google Castと、Androidで使うGoogleの文字認識は、それぞれの診断データをGoogleに送信します。
+tvs:
+  title: いまのテレビで<wbr>使えます。
+  lead: TameTVはテレビごとのネットワーク通信で話すので、つなぐ機器は何もいりません。
+  footnote: TCL、Insignia、Toshiba、Sharpなど他ブランドのRoku TV、Google TV、Fire TV搭載モデルにも対応します。Fire TVはキャストに対応していません。Apple TVはAirPlayで写真と動画を受け取ります。赤外線操作のみのテレビには対応していません。
+  # _data/platforms.yml と同じ順番です。
+  items:
+    - { name: "Roku", detail: "Roku TVとRokuプレーヤー", pairing: "そのまま接続" }
+    - { name: "Samsung", detail: "Tizen搭載スマートテレビ（2016年以降）", pairing: "テレビで「許可」" }
+    - { name: "LG", detail: "webOS搭載スマートテレビ", pairing: "テレビで「許可」" }
+    - { name: "Android TV・Google TV", detail: "テレビとストリーミング端末（Google TV搭載のPhilipsテレビを含む）", pairing: "テレビにコード表示" }
+    - { name: "Amazon Fire TV", detail: "Fire TVのストリーミング端末とテレビ", pairing: "テレビにコード表示" }
+    - { name: "Vizio", detail: "SmartCast搭載テレビ", pairing: "テレビにコード表示" }
+    - { name: "Sony", detail: "Braviaテレビ", pairing: "テレビにコード表示" }
+    - { name: "Xiaomi", detail: "PatchWall搭載テレビ", pairing: "そのまま接続" }
+    - { name: "Hisense", detail: "VIDAA搭載テレビ", pairing: "テレビにコード表示" }
+    - { name: "Philips", detail: "Titan OS・Saphi搭載テレビ", pairing: "Titan OSにコード表示" }
+    - { name: "Apple TV", detail: "Apple TV HDとApple TV 4K", pairing: "テレビにコード表示" }
 faq:
   title: よくある質問
   more: ほかにご質問があれば、こちらへメールでどうぞ：
   items:
     - q: TameTVは無料ですか？
-      a: ダウンロード、設定、接続確認のための最初のキー操作、デモテレビは無料で、広告もありません。テレビ操作、タッチパッド、キーボード、アプリ起動、メディアキャストにはTameTV Proが必要です。対象の新規ユーザーは週額プランを3日間無料で試せます。無料期間のない年額プランと買い切りもあり、価格や特典は支払い前に表示されます。AndroidはGoogle Play、iOSはApp Storeで購入します。SiriとショートカットはiOS専用です。
+      a: はい。基本のリモコンは無料で、広告もお試し期間の制限もありません。方向キー、OK、戻る、ホーム、音量、消音、チャンネル、電源、再生キー、シンプルな配置、チューンアップ、カメラアシストのガイドモードは無料です。TameTV Proでは、音声検索、スマホのキーボード、アプリ、タッチパッド、キャスト、広告音量ダウンなどが使えます。週額プラン（対象の新規登録者は3日間無料）、年額プラン、買い切りから選べます。価格や特典はお支払い前に表示されます。
     - q: どのテレビに対応していますか？
-      a: ソニー ブラビア、LG（webOS）、Amazon Fire TV、Android TVとGoogle TVの端末、ハイセンス（VIDAA）、シャオミ（PatchWall）、Samsung（Tizen、2016年以降）、フィリップス（Titan OS、Saphi）、Roku、Vizio SmartCast、Apple TV HDとApple TV 4K。TCLなどのRoku TVやGoogle TV搭載モデルにも対応します。赤外線操作のみのテレビには対応していません。
+      a: Samsung（Tizen、2016年以降）、LG（webOS）、Sony Bravia、Xiaomi（PatchWall）、Hisense（VIDAA）、Philips（Titan OS、Saphi）、Android TVとGoogle TVの端末、Roku、Amazon Fire TV、Vizio SmartCast、Apple TV HDとApple TV 4Kに対応します。TCL、Insignia、Toshiba、Sharpなど他ブランドのRoku TV、Google TV、Fire TV搭載モデルにも対応します。赤外線操作のみのテレビには対応していません。
     - q: Apple TVで使えますか？
-      a: はい。Apple TV HDとApple TV 4Kに、AndroidでもiPhone・iPadでも対応します。Apple TVに表示されるコードを一度入力すればペアリングできます。リモコンキー、スマホのキーボードでの入力、アプリ起動に加え、再生中の作品をアートワーク付きで表示し、再生、一時停止、スキップ、消音ができます。写真や動画はTameTVではなく、AirPlayでApple TVに送ります。
+      a: はい。Apple TV HDとApple TV 4Kに、AndroidでもiPhone・iPadでも対応します。Apple TVに表示されるコードで一度ペアリングするだけです。リモコンキー、文字入力、アプリに加えて、再生中の作品の表示と、再生、一時停止、スキップ、消音ができます。写真や動画はTameTVではなく、AirPlayでApple TVに送ります。
     - q: 赤外線アダプタや学習リモコンは必要ですか？
       a: 不要です。TameTVはご家庭のWi-Fiでスマートテレビを操作します。赤外線は使わないため、赤外線リモコンでしか操作できない古いテレビには使えません。
     - q: テレビが見つからないときは？
-      a: テレビの電源を入れ、スマホと同じWi-Fiに接続してください。ゲストネットワークは機器間の接続を妨げることがあります。Androidでは求められたときに付近のデバイス権限を許可します。iOSでは「設定 > プライバシーとセキュリティ > ローカルネットワーク」でTameTVをオンにします。IPアドレスでテレビを追加することもできます。
+      a: テレビの電源を入れたまま、スマホと同じWi-Fiに接続してください。ゲストネットワークでは見つからないことがあります。Androidでは、求められたら「付近のデバイス」を許可します。iOSでは「設定 > プライバシーとセキュリティ > ローカルネットワーク」でTameTVをオンにします。それでも見つからないときは、アプリでテレビのブランドを選ぶとオンにする設定が表示されます。IPアドレスで追加することもできます。
     - q: スマホでテレビの電源を入れられますか？
       a: 多くのテレビで可能です。先にテレビでネットワーク経由の起動設定をオンにしてください。例：SamsungのPower On with Mobile、LGのTurn on via Wi-Fi、Roku TVのFast TV start。
+    - q: チューンアップはテレビの何を変えますか？
+      a: 勝手には何も変えません。チューンアップは、視聴内容の共有などの設定ごとにメニューの場所と、オフにすると何ができなくなるかを示します。変更はご自身でリモコンを使って行い、カメラアシストが次に押すキーを示します。Proの自動モードでは、TameTVがキーを押し、最後の変更の前に確認します。
     - q: どんなデータを収集しますか？
-      a: アカウントも広告もありません。操作はスマホからテレビへ直接届き、ペアリング情報は端末内に保存されます。現在のAndroid版にFirebaseの設定はありません。iOSでは任意のFirebase利用統計とクラッシュレポートが初期設定でオンです。Google Castは別途SDK診断データを収集します。詳しくはプライバシーポリシーをご覧ください。
-    - q: Android版とiPhone版は公開されていますか？
-      a: はい。Android版はGoogle Playで公開中で、Android 8.0以降のスマホとタブレットに対応します。iPhone・iPad版はApp Storeで公開中で、iOS 17またはiPadOS 17以降が必要です。日本語、英語、中国語（簡体字・繁体字）、韓国語、ドイツ語、フランス語、スペイン語、ポルトガル語（ブラジル）、ロシア語、インドネシア語に対応します。
-    - q: キャストは画面ミラーリングですか？
-      a: メディアキャストは選択した写真、動画、ファイルや対応リンクを互換性のある受信機に送ります。画面ミラーリングにはAndroidのシステム画面キャストやiOSのAirPlayを使います。利用できるかはスマホとテレビによって異なり、TameTV独自の画面ミラーリング機能はありません。
+      a: アカウントも広告もありません。リモコン操作はスマホからテレビへ直接届き、ペアリング情報は端末内に残ります。iOSでは、Firebaseの利用統計とクラッシュレポートが初期設定でオンで、「設定 > プライバシー > 使用状況データを共有」でオフにできます。Androidでは、その設定をオンにしない限り送信されません。Google Castは別途、診断データを収集します。詳しくはプライバシーポリシーをご覧ください。
+    - q: Android版とiPhone版はありますか？
+      a: はい。Android版はGoogle Playで、Android 8.0以降のスマホとタブレットに対応します。iPhone・iPad版はApp Storeで、iOS 17またはiPadOS 17以降が必要です。アプリは日本語、英語、中国語（簡体字・繁体字）、韓国語、ドイツ語、フランス語、スペイン語、ポルトガル語（ブラジル）、ロシア語、インドネシア語に対応しています。
     - q: Proの復元や解約はどうしますか？
-      a: 支払いに使ったストアアカウントで、アプリの「購入を復元」を使ってください。Androidの定期購入はGoogle Play、iOSはAppleの設定で管理します。アプリを削除しても定期購入は解約されません。Google PlayとApp Storeの間で購入は引き継げません。
+      a: 支払いに使ったストアアカウントで、アプリの「購入を復元」を使ってください。Androidの定期購入はGoogle Play、iOSの定期購入はAppleの設定で管理します。アプリを削除しても定期購入は解約されません。Google PlayとApp Storeの間で購入は引き継げません。
 cta:
+  title: リモコンは、<wbr>もう<wbr>探さなくていい。
+  meta: Android 8.0以降 · iOS 17以降 · iPadOS 17以降
   scan_android: Android · スキャンして入手
   scan_ios: iPhone・iPad · スキャンして入手
-  title: リモコンは、もう探さなくていい。
-  meta: Android 8.0以降 · iOS 17 / iPadOS 17以降
+badge:
+  stores_label: アプリのダウンロード
+  play_label: Google PlayでTameTV Android版を入手
+  app_store_label: App StoreでTameTV iPhone・iPad版をダウンロード
+  ios_soon: iPhone・iPad版は近日公開
+footer:
+  tagline: Android・iPhone・iPad用の、無料のWi-Fiリモコン。
+  product: 製品
+  help: ヘルプ
+  legal: 規約
+  language: 言語
+  all_tvs: すべてのテレビ

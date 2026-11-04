@@ -2,7 +2,6 @@
 layout: page
 title: Privacy Policy
 permalink: /privacy/
-eyebrow: Legal
 dated: true
 lead: TameTV is a TV remote for iPhone, iPad and Android. This policy explains the data used by each version.
 description: Privacy information for TameTV on iOS and Android, including local TV data, the camera and microphone, casting, FaceTime help, purchases and optional analytics.

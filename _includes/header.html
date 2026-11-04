@@ -1,29 +1,27 @@
 {%- comment -%} On a translated home page (page.i18n) the menu uses that page's text and its own sections. {%- endcomment -%}
-{%- assign t = site.data.home[page.i18n].nav -%}
+{%- assign t = site.data.home[page.i18n].nav | default: site.data.home.en.nav -%}
 {%- assign home = '/' | relative_url -%}
 {%- assign here = home -%}
 {%- if page.i18n %}{% assign here = page.url | relative_url %}{% endif -%}
 <header class="site-header" data-header>
   <div class="container site-header__inner">
-    <a class="brand" href="{{ home }}" aria-label="{{ site.title | escape }} home">
+    <a class="brand" href="{{ here }}" aria-label="{{ site.title | escape }}">
       {% include logo.html id="header" size=30 %}
       <span>{{ site.title | escape }}</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
-      <span class="visually-hidden">Menu</span>
-      {% include icon.html name="menu" class="nav-toggle__open" %}
-      {% include icon.html name="x" class="nav-toggle__close" %}
+      <span class="visually-hidden">{{ t.menu | default: "Menu" }}</span>
+      <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i></span>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Main" data-nav>
       <ul>
-        <li><a href="{{ here }}#features">{{ t.features | default: "Features" }}</a></li>
-        <li><a href="{{ here }}#how-it-works">{{ t.how | default: "How it works" }}</a></li>
-        <li><a href="{{ here }}#devices">{{ t.devices | default: "Devices" }}</a></li>
-        <li><a href="{{ here }}#privacy">{{ t.privacy | default: "Privacy" }}</a></li>
-        <li><a href="{{ here }}#faq">{{ t.faq | default: "FAQ" }}</a></li>
-        <li><a href="{{ '/support/' | relative_url }}"{% if page.url == '/support/' %} aria-current="page"{% endif %}>{{ t.support | default: "Support" }}</a></li>
+        <li><a href="{{ here }}#remote">{{ t.remote }}</a></li>
+        <li><a href="{{ here }}#tune-up">{{ t.tune }}</a></li>
+        <li><a href="{{ here }}#tvs">{{ t.tvs }}</a></li>
+        <li><a href="{{ here }}#pro">{{ t.pro }}</a></li>
+        <li><a href="{{ '/support/' | relative_url }}"{% if page.url == '/support/' %} aria-current="page"{% endif %}{% if page.i18n and page.i18n != "en" %} hreflang="en"{% endif %}>{{ t.support }}</a></li>
       </ul>
-      <a class="button button--small button--ember" href="{{ here }}#download">{{ t.get | default: "Get the app" }}</a>
+      <a class="button button--ember button--small" href="{{ here }}#download">{{ t.get }}</a>
     </nav>
   </div>
 </header>

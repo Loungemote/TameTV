@@ -2,7 +2,6 @@
 layout: page
 title: Support
 permalink: /support/
-eyebrow: Help
 lead: Answers to the most common questions about TameTV, and how to reach us when you need a person.
 description: Get help with TameTV. Supported TVs, fixes for discovery, pairing and power-on problems, purchases and how to contact support.
 ---
@@ -82,7 +81,7 @@ Use the store that processed your payment: [Google Play refund help](https://sup
 
 ## Privacy and terms
 
-TameTV has no accounts and no ads, and remote commands stay on your local network. The iOS version has optional usage and crash reports controlled by **Share Usage Data**. The Android release has no Firebase configuration. Google Cast processing is separate from that switch. Read the [Privacy Policy]({{ '/privacy/' | relative_url }}) and the [Terms of Use]({{ '/terms/' | relative_url }}).
+TameTV has no accounts and no ads. Remote commands go from your phone to the TV on your local network, except while you help family over FaceTime. On iPhone and iPad, usage statistics and crash reports are on by default; turn them off in **Settings > Privacy > Share Usage Data**. On Android they're sent only if you turn that setting on. Google Cast and Google's text recognition send their own diagnostics to Google. Read the [Privacy Policy]({{ '/privacy/' | relative_url }}) and the [Terms of Use]({{ '/terms/' | relative_url }}).
 
 ---
 

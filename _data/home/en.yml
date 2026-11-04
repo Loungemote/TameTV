@@ -1,83 +1,162 @@
-# Home page copy. Keep release status, platform features and privacy facts in step across all languages.
+# Home page copy for TameTV 1.5.0. Keep release status, platform features and privacy facts in step across all
+# languages, and with the 1.5.0 store copy (docs/app-store/metadata.json and android/docs/play-store in the app repo).
+# Every language has the same keys. Brand names stay in Latin script, as in the app.
 nav:
-  features: Features
-  how: How it works
-  devices: Devices
-  privacy: Privacy
+  remote: Remote
+  tune: Tune-up
+  tvs: TVs
+  pro: Free & Pro
   faq: FAQ
   support: Support
   get: Get the app
+  menu: Menu
 hero:
-  eyebrow: For Android, iPhone and iPad
   title: Your phone is <em>the&nbsp;TV&nbsp;remote</em>.
-  lead: Control your smart TV from your phone or tablet over Wi-Fi. No infrared blaster, no account, no ads.
-  how_link: See how it works
+  lead: A free Wi-Fi remote for Samsung, LG, Roku, Fire&nbsp;TV, Google&nbsp;TV and more.
   works_with: Works with
-  trust: ["3 days free", "No ads", "No account"]
-  alt: "The TameTV remote: a directional pad with an OK button, media keys, volume and channel controls."
-features:
-  title: Everything your remote does, and more.
-  lead: The full button remote, plus a touchpad, your phone's keyboard, apps in one tap and casting.
-  footnote: Features depend on your TV model, software and phone platform. Siri, Shortcuts and AirPlay guides are for iOS only.
-  items:
-    - { icon: "dpad", title: "A full remote", text: "Directional pad, OK, Back, Home, volume, channels, playback and power. Finds the TVs on your Wi-Fi and reconnects when you open the app." }
-    - { icon: "hand", title: "Swipe touchpad", text: "Glide through menus with your thumb and tap for OK. On LG TVs it moves the pointer." }
-    - { icon: "keyboard", title: "Phone keyboard", text: "Type searches and sign-ins with your phone keyboard on supported TVs." }
-    - { icon: "grid", title: "Apps in one tap", text: "Every app on your TV in one grid. Open one straight from your phone." }
-    - { icon: "cast", title: "Cast to the big screen", text: "Photos, slideshows, videos, files and links to your TV, Chromecast or Roku." }
-    - { icon: "bolt", title: "Power on over Wi-Fi", text: "Wake a TV from standby with your phone, on TVs that support it." }
-how:
-  title: Ready in seconds.
-  lead: No sign-in and no extra hardware. If your TV is on your Wi-Fi, you're most of the way there.
+  trust: ["Basic keys free", "No ads", "No account"]
+  alt: "The TameTV remote: a directional pad with an OK button, and volume, channel and playback keys."
+# The playable remote in the hero. TVs are named by kind, not by room (most homes have one TV) and not by a real
+# brand's model, since the TV beside the remote is made up; the same names are on the site's app screens.
+demo:
+  label: Try the remote
+  tv_label: A TV that answers the remote
+  tv: OLED TV
+  status: Connected
+  model: 4K
+  heard: TV heard that
+  volume: Volume is {n}
+  muted: Muted
+  asleep: Asleep
+  press: Press OK
+  keys:
+    power: Power
+    back: Back
+    home: Home
+    channel: Channel up
+    mute: Mute
+    up: Up
+    down: Down
+    left: Left
+    right: Right
+    ok: OK
+    voldown: Volume down
+    volup: Volume up
+    rewind: Rewind
+    playpause: Play or pause
+    forward: Fast forward
+connect:
+  title: It finds your TV by itself.
+  lead: Open TameTV on the same Wi-Fi as your TV. Approve it once, and every key after that just works.
+  searching: Searching this Wi-Fi
+  awake: On now
+  others: ["4K TV", "HD TV"]
   steps:
-    - { screen: "choose-tv", title: "Open the app on your Wi-Fi", text: "TameTV scans your network and lists the TVs and streaming devices it finds.", alt: "Choose your TV: the TVs found on this Wi-Fi network." }
-    - { screen: "pair", title: "Approve it once on the TV", text: "Select Allow on the TV, or type the code it shows. You only do this the first time.", alt: "Pairing preview: the TV asks whether to trust this phone." }
-    - { screen: "apps", title: "Start pressing", text: "Your phone is now the remote. Next time, the app reconnects as soon as you open it.", alt: "Apps in one tap: the apps on the Living Room TV." }
-devices:
-  title: Eleven TV platforms. One app.
-  lead: TameTV uses each TV’s own network protocol, so it needs no infrared blaster or hub. Your phone or tablet and your TV must be on the same Wi-Fi network.
-  footnote: Roku TV and Google TV models from other brands, such as TCL, work too. Casting isn't available on Fire TV; Apple TV takes photos and videos over AirPlay. Infrared-only TVs are not supported. Select a platform for its setup guide.
+    - { icon: "wifi", title: "Same Wi-Fi", text: "No infrared blaster, no hub, no sign-up." }
+    - { icon: "tv", title: "Approve it once", text: "Select Allow on the TV, or scan the code it shows with your camera." }
+    - { icon: "dpad", title: "Press a key", text: "The TV tells your phone it heard you." }
+  note: Can't find it? Pick your brand, and TameTV shows you the setting to turn on.
+story:
+  title: Made for every evening.
+  chapters:
+    - { screen: "remote", title: "Every basic key is free.", text: "D-pad, OK, Back, Home, volume, mute, channel, power and playback. No trial clock.", alt: "The remote: the TV's name, what's playing, the D-pad and the volume, channel and playback keys." }
+    - { screen: "talk", pro: true, title: "Say what you want to watch.", text: "Tap the mic once and speak. TameTV types it into the TV's search.", alt: "Voice search listening: the words appear as they're heard." }
+    - { screen: "keyboard", pro: true, title: "The keyboard opens when the TV asks.", text: "Type searches, passwords and codes on your phone, with AutoFill.", alt: "The phone keyboard, opened by itself when the TV's search asked for text." }
+    - { screen: "lock-screen", pro: true, title: "A remote on your Lock Screen.", text: "Pause, volume and mute without unlocking, and in the Dynamic Island. On iPhone.", alt: "A mini remote on the iPhone Lock Screen with mute, volume and play." }
+    - { screen: "quiet-ads", pro: true, title: "Loud ad? It turns the TV down.", text: "Quiet Ads listens for loudness only, on your phone, and records nothing.", alt: "Quiet Ads: a loudness graph and the ad it turned down two steps." }
+tune:
+  title: Make your TV mind its own business.
+  lead: Tune-up walks you through your TV's own menus to stop it sharing what you watch, limit ad tracking and turn off motion smoothing. Free on Samsung, LG, Roku, Google TV and more.
+  checks: ["Stop sharing what you watch", "Limit ad tracking", "Turn off motion smoothing", "Network debugging is off"]
+  alt: "Tune-up: seven of ten things done, with privacy, picture and sound checks and what to do next."
+  items:
+    - { icon: "camera", title: "Camera Assist", text: "Point your phone at the TV's menu. It shows which key to press next." }
+    - { icon: "shield", title: "After a TV cleanup", text: "Cleaned up your TV with an ADB tool? Check that casting and the remote still work." }
+    - { icon: "bell", title: "A heads-up when it matters", text: "Network debugging left on, or an update that undid your settings." }
+family:
+  title: Easy for everyone at home.
+  cards:
+    - { kind: "help", title: "Help family over FaceTime", text: "On a call, press keys on a relative's TV from your phone. Being helped is free.", note: "iPhone and iPad" }
+    - { kind: "simple", title: "A simple remote", text: "Big keys and nothing else. Free for everyone.", key: "Louder" }
+    - { kind: "find", title: "Find the remote", text: "Make a lost Roku remote ring, if it has a speaker." }
+    - { kind: "sleep", title: "A sleep timer", text: "Leave TameTV open, and the TV turns off when the timer ends. On Roku TV, LG and Google TV.", time: "30:00" }
+pro:
+  title: Free where it counts.
+  lead: The keys you press every night are free. TameTV Pro adds the extras.
+  free_title: Free
+  free:
+    - D-pad, OK, Back and Home
+    - Volume, mute and channel
+    - Power and playback keys
+    - A simple layout with big keys
+    - Every TV at home, a tap apart
+    - Tune-up and Camera Assist guides
+    - Alerts when something's off
+  pro_title: TameTV Pro
+  pro:
+    - Voice search
+    - Phone keyboard with AutoFill
+    - Apps in one tap
+    - Swipe touchpad
+    - Casting photos, videos and links
+    - Quiet Ads
+    - Lock Screen remote
+    - Help Family over FaceTime
+    - Number keys and inputs
+    - Find Remote, sleep timer and more
+  note: Lock Screen remote, Help Family, Siri and Shortcuts are on iPhone and iPad. Pro is a weekly plan with a 3-day free trial for eligible new subscribers, a yearly plan or a one-time lifetime purchase. Prices appear before you pay.
 privacy:
-  title: Private <em>by design</em>.
-  lead: A remote has no reason to know who you are. TameTV has no accounts and no servers of its own, and remote commands go straight from your phone to your TV.
+  title: No account. <em>No ads.</em>
+  lead: A remote has no reason to know who you are.
   link: Read the privacy policy
   items:
-    - { icon: "useroff", title: "No account", text: "No sign-up, no email address, nothing to log in to." }
-    - { icon: "eyeoff", title: "No ads", text: "No advertising code and no advertising identifier." }
-    - { icon: "wifi", title: "Stays on your network", text: "Commands travel over your Wi-Fi, directly to the TV you selected." }
-    - { icon: "lock", title: "Keys stay on your device", text: "Pairing records use Android Keystore protection or the iOS Keychain. They are not sent to us." }
-  note: On Android, Share Usage Data is off by default and the current release has no Firebase configuration. On iOS, Firebase usage statistics and crash reports are on by default; turn them off in Settings > Privacy > Share Usage Data. These reports exclude TV names, network addresses, typed text and cast content. Google Cast has separate diagnostic collection that this switch does not control.
+    - { icon: "wifi", title: "Keys stay on your Wi-Fi", text: "They go straight from your phone to your TV, except while you help family over FaceTime." }
+    - { icon: "mic", title: "Camera and mic work on your phone", text: "Camera Assist and Quiet Ads work on the phone and save no images or sound. Voice search uses your phone's own speech recognition." }
+    - { icon: "lock", title: "Pairing stays with you", text: "Pairing keys live in the iOS Keychain or Android Keystore. They're never sent to us." }
+  note: On iPhone and iPad, usage statistics and crash reports are on by default; turn them off in Settings > Privacy > Share Usage Data. On Android they're sent only if you turn that setting on. Google Cast and, on Android, Google's text recognition send their own diagnostics to Google.
+tvs:
+  title: Works with the TV you have.
+  lead: TameTV speaks each TV's own network language, so there's nothing to plug in.
+  footnote: Roku TV, Google TV and Fire TV models from TCL, Insignia, Toshiba, Sharp and others work too. Casting isn't available on Fire TV; Apple TV takes photos and videos over AirPlay. Infrared-only TVs aren't supported.
 faq:
   title: Questions, answered.
   more: Something else? Email us at
   items:
     - q: Is TameTV free?
-      a: Download, setup, your first key press to check the connection and Demo TV are free, with no ads. TV control, touchpad, keyboard, app launch and media casting need TameTV Pro. Choose a weekly subscription with a 3-day trial for eligible new subscribers, a yearly subscription with no trial, or a one-time Lifetime purchase. Prices and offers appear before payment. Android purchases use Google Play; iOS purchases use the App Store. Siri and Shortcuts are for iOS only.
+      a: Yes, the basic remote is free and has no ads, with no trial clock. The D-pad, OK, Back, Home, volume, mute, channel, power and playback keys, the simple layout, Tune-up and Camera Assist's guided mode are free. TameTV Pro adds voice search, the phone keyboard, apps, the touchpad, casting, Quiet Ads and more. Choose a weekly plan with a 3-day trial for eligible new subscribers, a yearly plan or a one-time lifetime purchase. Prices and offers appear before payment.
     - q: Which TVs work with TameTV?
-      a: Samsung smart TVs with Tizen (2016 and later), LG webOS TVs, Sony Bravia, Xiaomi TVs with PatchWall, Hisense TVs with VIDAA, Philips TVs with Titan OS or Saphi, Android TV and Google TV devices, Roku, Amazon Fire TV, Vizio SmartCast, and Apple TV HD and Apple TV 4K. Roku TV and Google TV models from other brands, such as TCL, work too. Infrared-only TVs are not supported.
+      a: Samsung smart TVs with Tizen (2016 and later), LG webOS TVs, Sony Bravia, Xiaomi TVs with PatchWall, Hisense TVs with VIDAA, Philips TVs with Titan OS or Saphi, Android TV and Google TV devices, Roku, Amazon Fire TV, Vizio SmartCast, and Apple TV HD and Apple TV 4K. Roku TV, Google TV and Fire TV models from other brands, such as TCL, Insignia, Toshiba and Sharp, work too. Infrared-only TVs are not supported.
     - q: Does TameTV work with Apple TV?
-      a: Yes, with Apple TV HD and Apple TV 4K, on Android as well as iPhone and iPad. Pair once with the code that the Apple TV shows. You get the remote keys, typing with your phone keyboard, apps, and what's playing with its artwork, play, pause, skip and mute. Apple TV takes photos and videos over AirPlay rather than from TameTV.
+      a: Yes, with Apple TV HD and Apple TV 4K, on Android as well as iPhone and iPad. Pair once with the code that the Apple TV shows. You get the remote keys, typing, apps, and what's playing with play, pause, skip and mute. Apple TV takes photos and videos over AirPlay rather than from TameTV.
     - q: Do I need an IR blaster or a universal remote?
       a: No. TameTV controls smart TVs over your home Wi-Fi. It does not use infrared, so it cannot control older TVs that only accept an infrared remote.
     - q: The app can't find my TV. What should I do?
-      a: Keep the TV on and connect it to the same Wi-Fi as your phone; guest networks can block discovery. On Android, allow Nearby devices when requested. On iOS, enable TameTV in Settings > Privacy & Security > Local Network. You can also add a TV by its IP address.
+      a: Keep the TV on and connect it to the same Wi-Fi as your phone; guest networks can block discovery. On Android, allow Nearby devices when asked. On iOS, turn on TameTV in Settings > Privacy & Security > Local Network. If the TV still doesn't show up, pick its brand in the app to see the setting to turn on, or add the TV by its IP address.
     - q: Can I turn my TV on with my phone?
       a: On many TVs, yes. First turn on the TV's network wake setting, such as Power On with Mobile on Samsung, Turn on via Wi-Fi on LG or Fast TV start on Roku TV.
+    - q: What does Tune-up change on my TV?
+      a: Nothing by itself. Tune-up shows the menu path for each setting, such as the one that shares what you watch, and says what you lose by turning it off. You make the change with the remote, and Camera Assist can show the next key. In Pro's automatic mode, TameTV presses the keys and asks before the final change.
     - q: What data does TameTV collect?
-      a: No account or ads. Remote commands go directly from your phone to the TV. Pairing records stay on your device. Android has no Firebase configuration in the current release. iOS has optional Firebase usage and crash reports, on by default. Google Cast collects separate SDK diagnostics. See the privacy policy for details.
+      a: There's no account and no ads. Remote commands go directly from your phone to the TV, and pairing records stay on your device. On iOS, Firebase usage and crash reports are on by default and can be turned off in Settings > Privacy > Share Usage Data; on Android they're off unless you turn that setting on. Google Cast collects separate diagnostics. See the privacy policy for details.
     - q: Is TameTV available for Android and iPhone?
-      a: Yes. Android is on Google Play for phones and tablets running Android 8.0 or later. iPhone and iPad are on the App Store and require iOS 17 or iPadOS 17 or later. The app supports English, Chinese (Simplified and Traditional), Japanese, Korean, German, French, Spanish, Portuguese (Brazil), Russian and Indonesian.
-    - q: Does casting mirror my phone screen?
-      a: "Media casting sends selected photos, videos, files or supported links to a compatible receiver. Screen mirroring uses your phone’s system feature: Android system screen casting or AirPlay on iOS. Availability depends on your phone and TV; TameTV does not provide its own screen-mirroring service."
+      a: Yes. Android is on Google Play for phones and tablets running Android 8.0 or later. iPhone and iPad are on the App Store and need iOS 17 or iPadOS 17 or later. The app speaks English, Chinese (Simplified and Traditional), Japanese, Korean, German, French, Spanish, Portuguese (Brazil), Russian and Indonesian.
     - q: How do I restore or cancel Pro?
-      a: Use Restore Purchases in the app with the store account used for payment. Manage Android subscriptions in Google Play and iOS subscriptions in Apple Settings. Deleting the app does not cancel a subscription. Purchases do not transfer between Google Play and the App Store.
+      a: Use Restore Purchases in the app with the store account you paid with. Manage Android subscriptions in Google Play and iOS subscriptions in Apple Settings. Deleting the app does not cancel a subscription. Purchases do not transfer between Google Play and the App Store.
 cta:
+  title: Put the remote away.
+  meta: Android 8.0+ · iOS 17+ · iPadOS 17+
   scan_android: Android · Scan to download
   scan_ios: iPhone and iPad · Scan to download
-  title: Put the remote away.
-  meta: Android 8.0+ · iOS 17+ / iPadOS 17+
-description: Wi-Fi TV remote for Android, iPhone and iPad, on Google Play and the App Store. Control Samsung, LG, Roku, Apple TV and more. No ads or account.
+description: Free Wi-Fi TV remote for Android, iPhone and iPad. Control Samsung, LG, Roku, Fire TV, Google TV, Apple TV and more. No ads, no account.
 badge:
+  stores_label: App downloads
   play_label: Get TameTV for Android on Google Play
   app_store_label: Download TameTV for iPhone and iPad on the App Store
   ios_soon: iPhone and iPad version coming soon
+footer:
+  tagline: A free Wi-Fi remote for Android, iPhone and iPad.
+  product: Product
+  help: Help
+  legal: Legal
+  language: Language
+  all_tvs: All TVs

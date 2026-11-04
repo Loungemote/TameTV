@@ -1,0 +1,113 @@
+{%- comment -%}
+  The hero's playable remote and the TV it controls: a web version of the app's Demo TV (DemoTVScreen in the app's
+  DemoAndSimple.swift: the same made-up apps, colours and keys). The remote is the free remote from the 1.5.0 Remote
+  board. Without JavaScript it is a still picture; assets/js/main.js makes every free key work.
+  Usage: {% include demo.html %} on a home page (it reads the page's `demo` text).
+{%- endcomment -%}
+{%- assign d = site.data.home[page.i18n].demo | default: site.data.home.en.demo -%}
+{%- assign apps = "Streamly|Tubeview|Cinemo|Kidzone" | split: "|" -%}
+<div class="demo" data-demo data-heard="{{ d.heard | escape }}" data-volume="{{ d.volume | escape }}" data-muted="{{ d.muted | escape }}" data-asleep="{{ d.asleep | escape }}" data-status="{{ d.status | escape }}">
+  <div class="tv" data-tv role="img" aria-label="{{ d.tv_label | escape }}">
+    <div class="tv__light" aria-hidden="true"></div>
+    <div class="tv__frame" aria-hidden="true">
+      <div class="tv__screen" data-screen>
+        <div class="tvh">
+          <div class="tvh__rail">
+            <span class="tvh__avatar"></span>
+            <span class="tvh__menu is-on">{% include icon.html name="home" %}<i></i></span>
+            <span class="tvh__menu">{% include icon.html name="search" %}<i></i></span>
+            <span class="tvh__menu">{% include icon.html name="grid" %}<i></i></span>
+            <span class="tvh__menu">{% include icon.html name="star" %}<i></i></span>
+          </div>
+          <div class="tvh__main">
+            <div class="tvh__bar"><span class="tvh__pill"></span><span class="tvh__pill tvh__pill--short"></span><span class="tvh__clock">9:41</span></div>
+            <div class="tvh__feature" data-feature>
+              <span class="tvh__sun"></span><span class="tvh__hill tvh__hill--back"></span><span class="tvh__hill tvh__hill--front"></span>
+              <span class="tvh__caption"><i></i><i></i><i></i></span>
+            </div>
+            <ul class="tvh__apps">
+              {%- for app in apps %}
+              <li class="tvh__app tvh__app--{{ forloop.index0 }}{% if forloop.first %} is-focus{% endif %}" data-tile="{{ forloop.index0 }}">{% include app-glyph.html name=app %}<span>{{ app }}</span></li>
+              {%- endfor %}
+            </ul>
+            <ul class="tvh__row">
+              <li class="tvh__next tvh__next--0" data-next="0"><i></i></li>
+              <li class="tvh__next tvh__next--1" data-next="1"><i></i></li>
+              <li class="tvh__next tvh__next--2" data-next="2"><i></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tvp" data-player>
+          <div class="tvp__art"><span></span><span></span><span></span></div>
+          <div class="tvp__info"><span class="tvp__app" data-player-app></span><span class="tvp__track"><i data-progress></i></span><span class="tvp__time" data-player-time>42:10</span></div>
+          <span class="tvp__state" data-player-state>{% include icon.html name="pause" class="icon--pause" %}{% include icon.html name="play" class="icon--play" %}</span>
+        </div>
+        <div class="osd osd--volume" data-osd="volume"><span class="osd__icon">{% include icon.html name="speaker" class="icon--on" %}{% include icon.html name="mute" class="icon--off" %}</span><span class="osd__bar"><i data-osd-level></i></span><span class="osd__num" data-osd-num>18</span></div>
+        <div class="osd osd--channel" data-osd="channel"><span>CH</span><b data-osd-channel>1</b></div>
+        <div class="osd osd--seek" data-osd="seek"><span data-osd-seek></span></div>
+        <div class="tv__off"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phone phone--remote">
+    <div class="phone__screen">
+      <div class="phone__status" aria-hidden="true"><span>9:41</span><span class="phone__island"></span><span class="phone__icons"><i></i><i></i><i></i></span></div>
+      <div class="remote" data-remote role="group" aria-label="{{ d.label | escape }}">
+        <div class="remote__head">
+          <span class="remote__tile" aria-hidden="true">{% include icon.html name="tv" %}</span>
+          <span class="remote__who">
+            <strong>{{ d.tv }}{% include icon.html name="chev-down" %}</strong>
+            <span class="remote__line">
+              <span class="remote__status" data-status-line><i class="remote__dot"></i><span data-status-text>{{ d.status }}</span> · {{ d.model }}</span>
+              <span class="remote__receipt" data-receipt aria-hidden="true">{% include icon.html name="check" %}<span data-receipt-text>{{ d.heard }}</span></span>
+            </span>
+          </span>
+          <button class="rkey rkey--power" type="button" data-key="power" aria-label="{{ d.keys.power | escape }}">{% include icon.html name="power" %}</button>
+        </div>
+        <div class="remote__playing" data-playing aria-hidden="true">
+          <span class="remote__app" data-playing-tile>{% include app-glyph.html name="Streamly" %}</span>
+          <span class="remote__track"><b data-playing-app>Streamly</b><span class="remote__bar"><i data-playing-progress></i></span></span>
+          <span class="remote__time" data-playing-time>42:10</span>
+          <span class="remote__pp">{% include icon.html name="pause" class="icon--pause" %}{% include icon.html name="play" class="icon--play" %}</span>
+        </div>
+        <div class="remote__row">
+          <button class="rkey" type="button" data-key="back" aria-label="{{ d.keys.back | escape }}">{% include icon.html name="back" %}</button>
+          <button class="rkey" type="button" data-key="home" aria-label="{{ d.keys.home | escape }}">{% include icon.html name="home" %}</button>
+          <button class="rkey rkey--text" type="button" data-key="channel" aria-label="{{ d.keys.channel | escape }}">CH</button>
+          <button class="rkey" type="button" data-key="mute" aria-label="{{ d.keys.mute | escape }}">{% include icon.html name="mute" %}</button>
+        </div>
+        <div class="dpad" data-dpad>
+          <span class="dpad__glow" data-glow aria-hidden="true"></span>
+          <button class="dpad__key dpad__key--up" type="button" data-key="up" aria-label="{{ d.keys.up | escape }}">{% include icon.html name="chev-up" %}</button>
+          <button class="dpad__key dpad__key--left" type="button" data-key="left" aria-label="{{ d.keys.left | escape }}">{% include icon.html name="chev-left" %}</button>
+          <button class="dpad__key dpad__key--right" type="button" data-key="right" aria-label="{{ d.keys.right | escape }}">{% include icon.html name="chev-right" %}</button>
+          <button class="dpad__key dpad__key--down" type="button" data-key="down" aria-label="{{ d.keys.down | escape }}">{% include icon.html name="chev-down" %}</button>
+          <button class="dpad__ok" type="button" data-key="ok" aria-label="{{ d.keys.ok | escape }}"><span>OK</span></button>
+          <span class="bubble" data-bubble aria-hidden="true">{{ d.press }}</span>
+        </div>
+        <div class="remote__rockers">
+          <div class="rocker">
+            <button type="button" data-key="voldown" aria-label="{{ d.keys.voldown | escape }}">{% include icon.html name="minus" %}</button>
+            <span class="rocker__mid" aria-hidden="true">{% include icon.html name="speaker" %}</span>
+            <button type="button" data-key="volup" aria-label="{{ d.keys.volup | escape }}">{% include icon.html name="plus" %}</button>
+          </div>
+          <span class="rkey rkey--mic" aria-hidden="true">{% include icon.html name="mic" %}<b class="pro-mark">PRO</b></span>
+          <div class="rocker">
+            <button type="button" data-key="rewind" aria-label="{{ d.keys.rewind | escape }}">{% include icon.html name="rewind" %}</button>
+            <button type="button" data-key="playpause" aria-label="{{ d.keys.playpause | escape }}">{% include icon.html name="playpause" %}</button>
+            <button type="button" data-key="forward" aria-label="{{ d.keys.forward | escape }}">{% include icon.html name="forward" %}</button>
+          </div>
+        </div>
+        <div class="remote__dock" aria-hidden="true">
+          <span class="dock__pair"><i class="is-on">{% include icon.html name="dpad" %}</i><i>{% include icon.html name="touchpad" %}<b class="pro-mark">PRO</b></i></span>
+          <i>{% include icon.html name="keyboard" %}<b class="pro-mark">PRO</b></i>
+          <i>{% include icon.html name="grid" %}<b class="pro-mark">PRO</b></i>
+          <i>{% include icon.html name="more" %}</i>
+        </div>
+        <span class="finger" data-finger aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+  <p class="visually-hidden" aria-live="polite" data-live></p>
+</div>

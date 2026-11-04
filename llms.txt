@@ -4,7 +4,7 @@ layout: null
 {%- comment -%} A plain summary for AI assistants and search tools (llmstxt.org). Keep it in step with the home page. {%- endcomment -%}
 # TameTV
 
-> TameTV is a Wi-Fi TV remote app for Android, iPhone and iPad. It controls smart TVs and streaming devices over the home Wi-Fi network, with no infrared blaster, no account and no ads. Setup, a first key press to check the connection, and the Demo TV are free; controlling a TV needs TameTV Pro, an in-app purchase whose weekly plan starts with a 3-day free trial for eligible new subscribers.
+> TameTV is a Wi-Fi TV remote app for Android, iPhone and iPad. It controls smart TVs and streaming devices over the home Wi-Fi network, with no infrared blaster, no account and no ads. The basic remote is free. TameTV Pro, an in-app purchase, adds voice search, the phone keyboard, apps, the touchpad, casting, Quiet Ads and more; its weekly plan starts with a 3-day free trial for eligible new subscribers.
 
 ## Key facts
 
@@ -12,9 +12,9 @@ layout: null
 - Supported TVs: Samsung smart TVs with Tizen (2016 and later), LG webOS TVs, Roku TVs and Roku players, Android TV and Google TV devices (including Chromecast with Google TV), Amazon Fire TV, Vizio SmartCast, Sony Bravia, Xiaomi TVs with PatchWall, Hisense TVs with VIDAA, Philips TVs with Titan OS or Saphi, and Apple TV HD and Apple TV 4K. Roku TV and Google TV models from other brands, such as TCL, work too.
 - Not supported: infrared-only TVs, Apple TV models before Apple TV HD, casting to Fire TV or Apple TV (Apple TV takes photos and videos over AirPlay), and control from outside the home network.
 - How it works: the phone or tablet and the TV must be on the same Wi-Fi network. The app finds TVs automatically; Samsung and LG TVs ask the user to select Allow once, and Android TV, Google TV, Fire TV, Vizio, Sony, Hisense and Philips Titan OS TVs and Apple TV show a code to type once. Roku, Xiaomi and Philips Saphi need no pairing.
-- Free: finding and pairing TVs, a first key press to check that the TV responds, and the Demo TV with every feature unlocked.
-- TameTV Pro (weekly subscription with a 3-day free trial for eligible new subscribers, yearly subscription, or one-time lifetime purchase): directional pad, OK, Back, Home, volume, mute, channels, playback and power keys; turning the TV on over Wi-Fi (Wake-on-LAN) on TVs that support it; input switching on LG, Sony, Vizio and Hisense; a simple layout with big buttons; phone keyboard, apps in one tap, swipe touchpad (with the pointer on LG), casting photos, slideshows, videos, files and links to TVs, Chromecast, Roku and DLNA devices; on Apple TV, what's playing with its artwork, play/pause, skip, seek and mute; Siri, Shortcuts and the iPad layout on iOS only.
-- Privacy: no app account, ads or advertising identifier. Remote commands go directly to the selected TV on the local network. Pairing records are protected with Android Keystore or iOS Keychain. The current Android release has no Firebase configuration and Share Usage Data is off by default. iOS has Firebase usage and crash reporting, on by default and controlled by Settings > Privacy > Share Usage Data. Google Cast has separate SDK diagnostic collection that this switch does not control.
+- Free: the directional pad, OK, Back, Home, volume, mute, channel, power and playback keys; turning the TV on over Wi-Fi on TVs that support it; on Apple TV, what's playing with play/pause, skip and seek; a simple layout with big keys; switching between saved TVs; Tune-up, step-by-step guides to the TV's own privacy, ad, picture and sound settings (Samsung, LG, Roku, Google TV and Android TV, Fire TV, Sony, Vizio, Hisense), with Camera Assist's guided mode; a check after cleaning up a TV with an ADB tool (Google TV and Android TV, Fire TV, Sony, Philips, Xiaomi); alerts such as network debugging left on; being helped over FaceTime; and the Demo TV.
+- TameTV Pro (weekly subscription with a 3-day free trial for eligible new subscribers, yearly subscription, or one-time lifetime purchase): voice search and the phone keyboard with AutoFill on TVs that take text; apps in one tap; swipe touchpad (with the pointer on LG); casting photos, slideshows, videos, files and links to TVs, Chromecast, Roku and DLNA devices; Quiet Ads, which turns the TV down during loud ads; number keys and HDMI inputs (LG, Sony, Vizio, Hisense); Find Remote on Roku; a sleep timer on Roku TV, LG and Google TV while TameTV stays open; video links in the TV's own app; Camera Assist's automatic mode; on iPhone and iPad only, a Lock Screen remote, Help Family over FaceTime, Siri and Shortcuts.
+- Privacy: no app account, ads or advertising identifier. Remote commands go directly to the selected TV on the local network, except while helping family over FaceTime. Pairing records are protected with Android Keystore or iOS Keychain. Camera Assist and Quiet Ads work on the phone and save no images or sound; voice search uses the phone's own speech recognition. iOS sends Firebase usage and crash reports by default, controlled by Settings > Privacy > Share Usage Data; Android sends them only after the user turns that setting on. Google Cast and, on Android, Google's text recognition (ML Kit) have separate diagnostics that this switch does not control.
 - Screen mirroring: guides for Android system screen casting and iOS AirPlay, subject to phone and TV compatibility. TameTV does not provide its own mirroring service.
 - Purchases: weekly (3-day trial for eligible new subscribers), yearly (no trial) or Lifetime. Android uses Google Play; iOS uses the App Store. Restore with the account used for purchase. Purchases do not transfer between stores. Deleting the app does not cancel a subscription.
 - Languages: English, Chinese (Simplified and Traditional), Japanese, Korean, German, French, Spanish, Portuguese (Brazil), Russian and Indonesian.
@@ -22,10 +22,11 @@ layout: null
 
 ## Pages
 
-- [Home]({{ '/' | absolute_url }}): features, supported devices, FAQ
+- [Home]({{ '/' | absolute_url }}): the remote, Tune-up, free and Pro, supported TVs, FAQ
 {%- for p in site.data.platforms %}
 - [{{ p.name }}]({{ p.page | absolute_url }}): {{ p.detail }}, setup and power-on
 {%- endfor %}
+- [After a TV cleanup]({{ '/after-a-tv-cleanup/' | absolute_url }}): checking a Google TV, Android TV or Fire TV after an ADB cleanup tool, such as CleanYourTV: casting, the remote service and network debugging
 - [Support]({{ '/support/' | absolute_url }}): discovery, pairing and power-on fixes, purchases, contact
 - [Privacy Policy]({{ '/privacy/' | absolute_url }})
 - [Terms of Use]({{ '/terms/' | absolute_url }})

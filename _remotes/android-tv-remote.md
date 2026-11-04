@@ -16,23 +16,31 @@ faq:
 
 ## What you can do
 
-Free:
+Free, with no ads:
 
-- Find and pair your TV, then press a first key to check that it responds
-- Demo TV to try every feature without a TV
-
-With TameTV Pro (eligible new subscribers can try the weekly plan free for 3 days):
-
-- Directional pad, OK, Back and Home, volume, mute, channels and playback keys
+- D-pad, OK, Back and Home, volume, mute, channel, power and playback keys
 - Turn the TV on over Wi-Fi, on TVs that support it
-- Simple layout with big buttons
-- Apps in one tap: open the apps on the TV from your phone
-- Swipe touchpad for one-handed navigation
-- Every TV at home: save several TVs and switch in a tap
-- Casting: photos, slideshows, videos, files and links
-- Siri and Shortcuts (iOS only): turn the TV on or off, mute it or open an app by voice
+- A simple layout with big keys
+- Every TV at home, a tap apart
+- Tune-up: delete the advertising ID and turn off network debugging, step by step in the TV's own menus
+- Camera Assist: point your phone at the TV's menu and it shows which key to press next
+- After a TV cleanup: a check that casting and the remote still work after an ADB tool
+- A heads-up when network debugging is left on
+- Demo TV, to try the remote without a TV
 
-Some features depend on the TV model and its software.
+With TameTV Pro:
+
+- Voice search: tap the mic once and say what to watch, and TameTV types it into the TV's search
+- Phone keyboard with AutoFill for searches, passwords and codes
+- Apps in one tap: open the TV's apps from your phone
+- Swipe touchpad for one-handed navigation
+- Casting: photos, slideshows, videos, files and links
+- Quiet Ads: turns the TV down when a loud ad starts, listening for loudness only
+- Sleep timer: the TV turns off when it ends, while TameTV stays open
+- Links to videos open in the TV's own app
+- On iPhone and iPad: a Lock Screen remote, Help Family over FaceTime, and Siri and Shortcuts to turn the TV on or off, mute it or open an app by voice
+
+TameTV Pro is a weekly plan with a 3-day free trial for eligible new subscribers, a yearly plan or a one-time lifetime purchase. Prices appear before you pay. Some features depend on the TV model and its software.
 
 ## Set up in three steps
 
@@ -50,4 +58,5 @@ Many Google TV and Android TV devices can start from the network. Look for a net
 
 - Typing on the TV with the phone keyboard comes in a later update.
 - Sony Bravia TVs with Google TV can also connect as Sony. See the [Sony page](../sony-tv-remote/).
+- Cleaned up the TV with an ADB tool to stop the ads? [Check that nothing broke](../after-a-tv-cleanup/): casting, the remote service and network debugging.
 - Your phone and the TV must be on the same Wi-Fi network. TameTV does not use infrared, and it cannot control the TV from outside your home.

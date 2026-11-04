@@ -18,25 +18,28 @@ faq:
 
 ## What you can do
 
-Free:
+Free, with no ads:
 
-- Find and pair your Apple TV, then press a first key to check that it responds
-- Demo TV to try every feature without a TV
-
-With TameTV Pro (eligible new subscribers can try the weekly plan free for 3 days):
-
-- Directional pad, OK, Back and Home, volume, mute, channels and playback keys
-- Skip back or forward 10 seconds, and open Settings on the Apple TV
+- D-pad, OK, Back and Home, volume, mute, channel, power and playback keys
+- Skip back or forward 10 seconds
 - What's playing: the title and artwork, then play, pause, skip or seek
 - Power: wake the Apple TV or put it to sleep
-- Simple layout with big buttons
-- Phone keyboard: type searches and sign-ins with your phone keyboard
-- Apps in one tap: open the apps on the Apple TV from your phone
-- Swipe touchpad for one-handed navigation
-- Every TV at home: save several TVs and switch in a tap
-- Siri and Shortcuts (iOS only): turn the TV on or off, mute it or open an app by voice
+- A simple layout with big keys
+- Every TV at home, a tap apart
+- Demo TV, to try the remote without a TV
 
-Some features depend on the Apple TV's software and the app that is playing.
+With TameTV Pro:
+
+- Voice search: tap the mic once and say what to watch, and TameTV types it into the TV's search
+- Phone keyboard with AutoFill for searches, passwords and codes
+- Apps in one tap: open the TV's apps from your phone
+- Swipe touchpad for one-handed navigation
+- Quiet Ads: turns the TV down when a loud ad starts, listening for loudness only
+- Open Settings on the Apple TV
+- Links to videos open in the Apple TV's own app
+- On iPhone and iPad: a Lock Screen remote, Help Family over FaceTime, and Siri and Shortcuts to turn the TV on or off, mute it or open an app by voice
+
+TameTV Pro is a weekly plan with a 3-day free trial for eligible new subscribers, a yearly plan or a one-time lifetime purchase. Prices appear before you pay. Some features depend on the Apple TV's software and the app that is playing.
 
 ## Set up in three steps
 

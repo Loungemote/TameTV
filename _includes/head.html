@@ -37,7 +37,7 @@
 <meta property="og:image" content="{{ page.image | absolute_url }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="TameTV TV remote shown in an iOS preview.">
+<meta property="og:image:alt" content="{{ site.title }}: your phone is the TV remote.">
 <meta property="og:locale" content="{{ page.og_locale | default: 'en_US' }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ full_title | escape }}">
@@ -51,8 +51,9 @@
 {%- if page.preload_image %}
 <link rel="preload" as="image" href="{{ page.preload_image | relative_url }}" type="image/webp" fetchpriority="high">
 {%- endif %}
+<link rel="preload" href="{{ '/assets/fonts/inter-latin-opsz.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M' }}">
-<script>document.documentElement.classList.add("js")</script>
+<script>(function(r){r.classList.add("js");setTimeout(function(){if(!r.classList.contains("is-live"))r.classList.remove("js")},4000)})(document.documentElement)</script>
 {%- if page.alternates %}
 {%- assign faq = t.faq.items %}
 <script type="application/ld+json">
@@ -87,12 +88,12 @@
       "operatingSystem": "Android 8.0 or later",
       "inLanguage": ["en", "zh-Hans", "zh-Hant", "ja", "ko", "de", "fr", "es", "pt-BR", "ru", "id"],
       "featureList": {{ site.data.app.features | concat: site.data.app.android_features | jsonify }},
-      "isAccessibleForFree": false,
+      "isAccessibleForFree": true,
       "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
       "downloadUrl": {{ site.google_play_url | jsonify }},
       "installUrl": {{ site.google_play_url | jsonify }},
       "sameAs": [{{ site.google_play_url | jsonify }}],
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free download on Google Play. Continued TV control needs TameTV Pro; the weekly plan offers a 3-day trial for eligible new subscribers." }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free download on Google Play. The basic remote is free; TameTV Pro adds voice search, the phone keyboard, apps, casting and more, and its weekly plan has a 3-day trial for eligible new subscribers." }
     },
     {%- endif %}
     {%- if site.app_store_url and site.app_store_url != "" %}
@@ -112,8 +113,8 @@
       "installUrl": {{ site.app_store_url | jsonify }},
       "sameAs": [{{ site.app_store_url | jsonify }}],
       "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
-      "isAccessibleForFree": false,
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free download on the App Store. Continued TV control needs TameTV Pro; the weekly plan offers a 3-day trial for eligible new subscribers." }
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free download on the App Store. The basic remote is free; TameTV Pro adds voice search, the phone keyboard, apps, casting and more, and its weekly plan has a 3-day trial for eligible new subscribers." }
     },
     {%- endif %}
     {
@@ -131,7 +132,8 @@
   ]
 }
 </script>
-{%- elsif page.collection == "remotes" %}
+{%- elsif page.collection == "remotes" or page.faq %}
+{%- comment -%} The platform pages, and any other page with a `faq` in its front matter. {%- endcomment %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

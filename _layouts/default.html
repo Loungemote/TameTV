@@ -4,7 +4,7 @@
 {% include head.html %}
 </head>
 <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">{{ site.data.home[page.i18n].skip | default: "Skip to content" }}</a>
 {% include header.html %}
 <main id="main">
 {{ content }}

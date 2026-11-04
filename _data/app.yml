@@ -1,21 +1,22 @@
-# Shared and platform-specific features for MobileApplication structured data.
+# Shared and platform-specific features for MobileApplication structured data (1.5.0: the basic remote is free).
 features:
 - Wi-Fi TV remote for Samsung, LG, Roku, Fire TV, Android TV, Google TV, Vizio, Sony,
   Xiaomi, Hisense and Philips TVs, and Apple TV
-- 'TameTV Pro: directional pad, volume, channels, playback and power keys, with
-  a 3-day weekly trial for eligible new subscribers'
+- 'Free basic remote: directional pad, OK, Back, Home, volume, mute, channel, power
+  and playback keys'
 - Automatic TV discovery on the local network, and adding a TV by IP address
-- Turning a TV on over Wi-Fi with Wake-on-LAN
-- Input switching on LG, Sony, Vizio and Hisense TVs
-- Simple layout with big buttons
+- Turning a TV on over Wi-Fi
+- Tune-up guides for the TV's own privacy, ad, picture and sound settings, with Camera
+  Assist
+- Simple layout with big keys
+- 'TameTV Pro: voice search, phone keyboard, apps in one tap and swipe touchpad'
 - 'TameTV Pro: casting photos, slideshows, videos, files and links'
-- 'TameTV Pro: phone keyboard, apps in one tap and swipe touchpad'
-- 'TameTV Pro: what an Apple TV is playing, with play/pause, skip, seek and mute'
+- 'TameTV Pro: Quiet Ads, number keys and inputs, Find Remote and a sleep timer'
 - No account, no ads and no infrared blaster
 android_features:
 - Demo TV on Android
 - Guide to Android system screen casting on compatible phones and TVs
 ios_features:
 - Demo TV and iPad split-view layout
-- 'TameTV Pro: Siri and Shortcuts'
+- 'TameTV Pro: Lock Screen remote, Help Family over FaceTime, Siri and Shortcuts'
 - Guide to AirPlay mirroring on compatible TVs
