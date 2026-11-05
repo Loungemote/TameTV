@@ -1,7 +1,7 @@
 # Shared and platform-specific features for MobileApplication structured data (1.5.0: the basic remote is free).
 features:
 - Wi-Fi TV remote for Samsung, LG, Roku, Fire TV, Android TV, Google TV, Vizio, Sony,
-  Xiaomi, Hisense and Philips TVs, and Apple TV
+  Panasonic, Xiaomi, Hisense and Philips TVs, and Apple TV
 - 'Free basic remote: directional pad, OK, Back, Home, volume, mute, channel, power
   and playback keys'
 - Automatic TV discovery on the local network, and adding a TV by IP address

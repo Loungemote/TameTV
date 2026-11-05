@@ -31,7 +31,7 @@ PIPELINE = APP / "docs" / "app-store" / "screenshots"
 IMG = SITE / "assets" / "img"
 ICON_PNG = APP / "ios" / "Loungemote" / "Resources" / "Assets.xcassets" / "AppIcon.appiconset" / "AppIcon.png"
 
-# The screens the site shows: the story chapters on the home page, Tune-up, and the head of the platform pages
+# The screens the site shows: the feature grid on the home page, Tune-up, and the head of the platform pages
 # (`hero_screen`: remote, or touchpad for LG) and of the after-cleanup page.
 SCREENS = ("remote", "touchpad", "talk", "keyboard", "lock-screen", "quiet-ads", "tune-up", "after-cleanup")
 

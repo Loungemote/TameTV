@@ -46,13 +46,25 @@
   var toggle = $("[data-nav-toggle]");
   var nav = $("[data-nav]");
 
+  // Over the family section's light sheet the header turns light too, so its links stay readable.
+  var daySheet = $(".family__sheet");
+
   if (header) {
     var scrolled = null;
+    var day = null;
     var onScroll = function () {
       var now = window.scrollY > 8;
       if (now !== scrolled) {
         scrolled = now;
         header.classList.toggle("is-scrolled", now);
+      }
+      if (daySheet) {
+        var box = daySheet.getBoundingClientRect();
+        var under = box.top < 32 && box.bottom > 32;
+        if (under !== day) {
+          day = under;
+          header.classList.toggle("is-day", under);
+        }
       }
     };
     onScroll();
@@ -78,12 +90,39 @@
         toggle.focus();
       }
     });
-    var wide = window.matchMedia("(min-width: 861px)");
+    var wide = window.matchMedia("(min-width: 1081px)");
     if (wide.addEventListener) {
       wide.addEventListener("change", function () {
         if (wide.matches) setNav(false);
       });
     }
+  }
+
+  // On a phone, Get the app opens this phone's store; elsewhere it scrolls to the store badges and QR codes.
+  var agent = navigator.userAgent;
+  var onIOS = /iPhone|iPad|iPod/.test(agent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var onAndroid = /Android/.test(agent);
+  $$("[data-get-app]").forEach(function (link) {
+    var store = onIOS ? link.getAttribute("data-ios") : onAndroid ? link.getAttribute("data-android") : "";
+    if (store) {
+      link.href = store;
+      link.rel = "noopener";
+    }
+  });
+
+  // The language menu closes on a click elsewhere and on Escape.
+  var lang = $("[data-lang]");
+  if (lang) {
+    document.addEventListener("click", function (event) {
+      if (lang.open && !lang.contains(event.target)) lang.open = false;
+    });
+    lang.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && lang.open) {
+        event.stopPropagation();
+        lang.open = false;
+        $("summary", lang).focus();
+      }
+    });
   }
 
   // The menu marks the section on screen (home pages: the links to this page's own sections).
@@ -149,36 +188,6 @@
     );
     revealables.concat($$(".hero, .brands")).forEach(function (el) {
       rester.observe(el);
-    });
-  }
-
-  // ---------------------------------------------------------------- the story: one phone, five evenings
-
-  var story = $("[data-story]");
-  if (story && canObserve) {
-    var chapters = $$("[data-chapter]", story);
-    var shots = $$("[data-shot]", story);
-    var dots = $$(".story__dots li", story);
-    var chapter = 0;
-    var setChapter = function (index) {
-      if (index === chapter || index < 0) return;
-      chapter = index;
-      [chapters, shots, dots].forEach(function (list) {
-        list.forEach(function (el, i) {
-          el.classList.toggle("is-active", i === index);
-        });
-      });
-    };
-    var reader = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) setChapter(chapters.indexOf(entry.target));
-        });
-      },
-      { rootMargin: "-48% 0px -48% 0px" }
-    );
-    chapters.forEach(function (el) {
-      reader.observe(el);
     });
   }
 
@@ -264,6 +273,17 @@
     var finger = $("[data-finger]", demo);
     var live = $("[data-live]", demo);
     var glow = $("[data-glow]", demo);
+    var search = $("[data-search]", demo);
+    var searchText = $("[data-search-text]", demo);
+    var results = $$("[data-result]", demo);
+    var touchpad = $("[data-touchpad]", demo);
+    var appsheet = $("[data-appsheet]", demo);
+    var appButtons = $$("button", appsheet);
+    var tip = $("[data-tip]", demo);
+    var acts = {};
+    $$("[data-act]", demo).forEach(function (button) {
+      acts[button.getAttribute("data-act")] = button;
+    });
     var out = {
       playerApp: $("[data-player-app]", demo),
       playerProgress: $("[data-progress]", demo),
@@ -290,7 +310,13 @@
       volume: demo.getAttribute("data-volume"),
       muted: demo.getAttribute("data-muted"),
       asleep: demo.getAttribute("data-asleep"),
-      connected: demo.getAttribute("data-status")
+      connected: demo.getAttribute("data-status"),
+      listening: demo.getAttribute("data-listening"),
+      said: demo.getAttribute("data-said"),
+      saidNote: demo.getAttribute("data-said-note"),
+      typed: demo.getAttribute("data-typed"),
+      typedNote: demo.getAttribute("data-typed-note"),
+      more: demo.getAttribute("data-more")
     };
     var keys = {};
     $$("[data-key]", demo).forEach(function (button) {
@@ -335,8 +361,11 @@
       featureApp: 0,
       volume: 18,
       muted: false,
-      channel: 1
+      channel: 1,
+      search: false, // the TV's search is open
+      result: 0 // the search result in focus
     };
+    var mode = "dpad"; // what the pad shows: the D-pad, the touchpad or the apps
 
     function clock(seconds) {
       var h = Math.floor(seconds / 3600);
@@ -371,8 +400,8 @@
       if (state.playing < 0) paint(focusedApp());
     }
 
-    function bump(direction) {
-      var el = focused();
+    function bump(direction, el) {
+      el = el || focused();
       var by = { left: ["-0.9cqw", "0"], right: ["0.9cqw", "0"], up: ["0", "-0.9cqw"], down: ["0", "0.9cqw"] }[direction];
       el.style.setProperty("--bx", by[0]);
       el.style.setProperty("--by", by[1]);
@@ -417,11 +446,12 @@
       }
     }
 
-    function open(app) {
-      var from = focused().getBoundingClientRect();
+    function open(app, origin) {
+      var from = (origin || focused()).getBoundingClientRect();
       var box = screen.getBoundingClientRect();
       player.style.setProperty("--ox", (((from.left + from.width / 2 - box.left) / box.width) * 100).toFixed(1) + "%");
       player.style.setProperty("--oy", (((from.top + from.height / 2 - box.top) / box.height) * 100).toFixed(1) + "%");
+      closeSearch();
       state.playing = app;
       state.last = app;
       state.paused = false;
@@ -442,6 +472,62 @@
       remote.classList.add("is-home");
       drawFocus();
       return true;
+    }
+
+    // -------------------------------------------------------------- the TV's search: the mic and the keyboard type into it
+
+    var typing = 0;
+    function type(text, done) {
+      var letters = Array.from(text);
+      var count = 0;
+      clearTimeout(typing);
+      if (calm()) {
+        searchText.textContent = text;
+        return done();
+      }
+      searchText.textContent = "";
+      (function next() {
+        searchText.textContent = letters.slice(0, ++count).join("");
+        if (count < letters.length) typing = setTimeout(next, 45 + Math.random() * 45);
+        else typing = setTimeout(done, 220);
+      })();
+    }
+
+    function drawResult() {
+      results.forEach(function (el, i) {
+        el.classList.toggle("is-focus", i === state.result);
+      });
+      paint(state.result);
+    }
+
+    function openSearch(text, note) {
+      close();
+      state.search = true;
+      state.result = 0;
+      drawResult();
+      tv.classList.remove("is-found");
+      tv.classList.add("is-search");
+      type(text, function () {
+        tv.classList.add("is-found");
+      });
+      receipt(note, 2400);
+      return note;
+    }
+
+    function closeSearch() {
+      if (!state.search) return false;
+      state.search = false;
+      clearTimeout(typing);
+      tv.classList.remove("is-search", "is-found");
+      if (state.playing < 0) paint(focusedApp());
+      return true;
+    }
+
+    function moveResult(direction) {
+      var next = state.result + (direction === "right" ? 1 : -1);
+      if (next < 0 || next >= results.length) return bump(direction, results[state.result]);
+      state.result = next;
+      drawResult();
     }
 
     function pause() {
@@ -508,8 +594,11 @@
       tv.classList.toggle("is-waking", state.on);
       if (!state.on) {
         // Back on, the TV starts on its home screen.
+        clearTimeout(micTimer);
+        remote.classList.remove("is-listening");
         powerTimer = setTimeout(function () {
           close();
+          closeSearch();
           Object.keys(osd).forEach(function (name) {
             osd[name].classList.remove("is-on");
           });
@@ -521,13 +610,13 @@
     // -------------------------------------------------------------- what the remote shows
 
     var receiptTimer = 0;
-    function receipt(message) {
+    function receipt(message, ms) {
       out.receipt.textContent = message;
       remote.classList.add("has-receipt");
       clearTimeout(receiptTimer);
       receiptTimer = setTimeout(function () {
         remote.classList.remove("has-receipt");
-      }, 1300);
+      }, ms || 1300);
     }
 
     var liveTimer = 0;
@@ -580,23 +669,26 @@
           return;
         case "up":
         case "down":
-          if (!playing) move(key);
+          if (playing) break;
+          if (state.search) bump(key, results[state.result]);
+          else move(key);
           break;
         case "left":
         case "right":
           if (playing) seek(key === "left" ? -10 : 10);
+          else if (state.search) moveResult(key);
           else move(key);
           break;
         case "ok":
         case "playpause":
           if (playing) pause();
           else {
-            var name = open(focusedApp());
+            var name = state.search ? open(state.result, results[state.result]) : open(focusedApp());
             if (!ghostly) announce(name);
           }
           break;
         case "back":
-          if (!close() && state.row !== 1) {
+          if (!close() && !closeSearch() && state.row !== 1) {
             state.row = 1;
             state.col = state.cols[1];
             drawFocus();
@@ -604,6 +696,7 @@
           break;
         case "home":
           close();
+          closeSearch();
           state.row = 1;
           state.col = 0;
           state.cols[1] = 0;
@@ -629,6 +722,115 @@
       receipt(message);
       if (!ghostly && message !== words.heard) announce(message);
     }
+
+    // -------------------------------------------------------------- the mic, the dock and what the pad shows
+
+    var micTimer = 0;
+    function listen() {
+      remote.classList.add("is-listening");
+      receipt(words.listening, 4000);
+      announce(words.listening);
+      clearTimeout(micTimer);
+      micTimer = setTimeout(
+        function () {
+          remote.classList.remove("is-listening");
+          announce(openSearch(words.said, words.saidNote));
+        },
+        calm() ? 300 : 1400
+      );
+    }
+
+    function setMode(next) {
+      if (appsheet.contains(document.activeElement) && next !== "apps") acts.apps.focus({ preventScroll: true });
+      mode = next;
+      remote.setAttribute("data-mode", next);
+      ["dpad", "touchpad", "apps"].forEach(function (name) {
+        acts[name].setAttribute("aria-pressed", String(name === next));
+      });
+      appButtons.forEach(function (button) {
+        button.setAttribute("tabindex", next === "apps" ? "0" : "-1");
+      });
+    }
+
+    var tipTimer = 0;
+    function showTip() {
+      tip.classList.add("is-on");
+      announce(words.more);
+      clearTimeout(tipTimer);
+      tipTimer = setTimeout(function () {
+        tip.classList.remove("is-on");
+      }, 2600);
+    }
+
+    function asleep() {
+      if (state.on) return false;
+      restart(keys.power, "is-hint");
+      announce(words.asleep);
+      return true;
+    }
+
+    function act(name, button) {
+      visitorPressed();
+      hold(button);
+      letGo(button);
+      if (name === "dpad" || name === "touchpad") return setMode(name);
+      if (name === "apps") return setMode(mode === "apps" ? "dpad" : "apps");
+      if (name === "more") return showTip();
+      if (asleep()) return;
+      if (name === "mic") listen();
+      if (name === "keyboard") announce(openSearch(words.typed, words.typedNote));
+    }
+
+    remote.addEventListener("click", function (event) {
+      var button = event.target.closest("[data-act]");
+      if (button) act(button.getAttribute("data-act"), button);
+    });
+
+    appButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        visitorPressed();
+        if (asleep()) return;
+        var app = Number(button.getAttribute("data-app"));
+        announce(open(app, tiles[app]));
+        receipt(words.heard);
+        setTimeout(function () {
+          if (mode === "apps") setMode("dpad");
+        }, 450);
+      });
+    });
+
+    // The touchpad: a swipe moves one step, a tap is OK.
+    var swipe = null;
+    function drawDot(event) {
+      var box = touchpad.getBoundingClientRect();
+      touchpad.style.setProperty("--tx", event.clientX - box.left + "px");
+      touchpad.style.setProperty("--ty", event.clientY - box.top + "px");
+    }
+    touchpad.addEventListener("pointerdown", function (event) {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+      visitorPressed();
+      swipe = { id: event.pointerId, x: event.clientX, y: event.clientY };
+      if (touchpad.setPointerCapture) touchpad.setPointerCapture(event.pointerId);
+      drawDot(event);
+      touchpad.classList.add("is-touching");
+    });
+    touchpad.addEventListener("pointermove", function (event) {
+      if (swipe && event.pointerId === swipe.id) drawDot(event);
+    });
+    touchpad.addEventListener("pointerup", function (event) {
+      if (!swipe || event.pointerId !== swipe.id) return;
+      var dx = event.clientX - swipe.x;
+      var dy = event.clientY - swipe.y;
+      swipe = null;
+      touchpad.classList.remove("is-touching");
+      if (Math.abs(dx) < 14 && Math.abs(dy) < 14) press("ok");
+      else if (Math.abs(dx) > Math.abs(dy)) press(dx > 0 ? "right" : "left");
+      else press(dy > 0 ? "down" : "up");
+    });
+    touchpad.addEventListener("pointercancel", function () {
+      swipe = null;
+      touchpad.classList.remove("is-touching");
+    });
 
     // -------------------------------------------------------------- playback runs while the demo is on screen
 
@@ -737,6 +939,7 @@
       var key = SHORTCUTS[event.key];
       if (!key || !keys[key]) return;
       event.preventDefault();
+      if (GLOW_AT[key] && mode !== "dpad") setMode("dpad");
       hold(keys[key]);
       press(key);
       if (GLOW_AT[key] && document.activeElement !== keys.ok) keys.ok.focus({ preventScroll: true });
@@ -829,6 +1032,7 @@
     // Quietly put the TV back the way it started (when the ghost is cut off before the visitor has pressed anything).
     function reset() {
       close();
+      closeSearch();
       state.row = 1;
       state.col = 0;
       state.cols = [0, 0, 0];
@@ -928,6 +1132,7 @@
     });
 
     remote.classList.add("is-home");
+    setMode("dpad");
     drawFocus();
     drawPlaying();
     drawVolume();

@@ -1,5 +1,6 @@
 {%- comment -%} On a translated home page (page.i18n) the menu uses that page's text and its own sections. {%- endcomment -%}
 {%- assign t = site.data.home[page.i18n].nav | default: site.data.home.en.nav -%}
+{%- assign f = site.data.home[page.i18n].footer | default: site.data.home.en.footer -%}
 {%- assign home = '/' | relative_url -%}
 {%- assign here = home -%}
 {%- if page.i18n %}{% assign here = page.url | relative_url %}{% endif -%}
@@ -15,13 +16,26 @@
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Main" data-nav>
       <ul>
-        <li><a href="{{ here }}#remote">{{ t.remote }}</a></li>
         <li><a href="{{ here }}#tune-up">{{ t.tune }}</a></li>
+        <li><a href="{{ here }}#family">{{ t.family }}</a></li>
+        <li><a href="{{ here }}#features">{{ t.features }}</a></li>
         <li><a href="{{ here }}#tvs">{{ t.tvs }}</a></li>
         <li><a href="{{ here }}#pro">{{ t.pro }}</a></li>
         <li><a href="{{ '/support/' | relative_url }}"{% if page.url == '/support/' %} aria-current="page"{% endif %}{% if page.i18n and page.i18n != "en" %} hreflang="en"{% endif %}>{{ t.support }}</a></li>
       </ul>
-      <a class="button button--ember button--small" href="{{ here }}#download">{{ t.get }}</a>
+      {%- comment -%} The language menu: each language's home page. English pages without a translation link to them too. {%- endcomment %}
+      {%- assign current = "English" %}{% assign short = "EN" %}
+      {%- for lang in site.data.languages %}{% if page.i18n == lang.i18n %}{% assign current = lang.label %}{% assign short = lang.short %}{% endif %}{% endfor %}
+      <details class="lang" data-lang>
+        <summary aria-label="{{ f.language | escape }}: {{ current }}">{% include icon.html name="globe" %}<span aria-hidden="true">{{ short }}</span></summary>
+        <ul class="lang__menu">
+          <li><a href="{{ home }}" hreflang="en" lang="en"{% if page.i18n == nil or page.i18n == "en" %} aria-current="true"{% endif %}>English</a></li>
+          {%- for lang in site.data.languages %}
+          <li><a href="{{ lang.url | relative_url }}" hreflang="{{ lang.hreflang }}" lang="{{ lang.hreflang }}"{% if page.i18n == lang.i18n %} aria-current="true"{% endif %}>{{ lang.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </details>
+      <a class="button button--ember button--small" href="{{ here }}#download" data-get-app data-ios="{{ site.app_store_url | escape }}" data-android="{{ site.google_play_url | escape }}">{{ t.get }}</a>
     </nav>
   </div>
 </header>

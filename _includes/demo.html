@@ -1,12 +1,13 @@
 {%- comment -%}
   The hero's playable remote and the TV it controls: a web version of the app's Demo TV (DemoTVScreen in the app's
   DemoAndSimple.swift: the same made-up apps, colours and keys). The remote is the free remote from the 1.5.0 Remote
-  board. Without JavaScript it is a still picture; assets/js/main.js makes every free key work.
+  board. Without JavaScript it is a still picture; assets/js/main.js makes every key work: the free keys as in the app, and
+  the mic and the dock show what they do (voice search, the touchpad, typing, apps, More).
   Usage: {% include demo.html %} on a home page (it reads the page's `demo` text).
 {%- endcomment -%}
 {%- assign d = site.data.home[page.i18n].demo | default: site.data.home.en.demo -%}
 {%- assign apps = "Streamly|Tubeview|Cinemo|Kidzone" | split: "|" -%}
-<div class="demo" data-demo data-heard="{{ d.heard | escape }}" data-volume="{{ d.volume | escape }}" data-muted="{{ d.muted | escape }}" data-asleep="{{ d.asleep | escape }}" data-status="{{ d.status | escape }}">
+<div class="demo" data-demo data-heard="{{ d.heard | escape }}" data-volume="{{ d.volume | escape }}" data-muted="{{ d.muted | escape }}" data-asleep="{{ d.asleep | escape }}" data-status="{{ d.status | escape }}" data-listening="{{ d.listening | escape }}" data-said="{{ d.said | escape }}" data-said-note="{{ d.said_note | escape }}" data-typed="{{ d.typed | escape }}" data-typed-note="{{ d.typed_note | escape }}" data-more="{{ d.more | escape }}">
   <div class="tv" data-tv role="img" aria-label="{{ d.tv_label | escape }}">
     <div class="tv__light" aria-hidden="true"></div>
     <div class="tv__frame" aria-hidden="true">
@@ -36,6 +37,14 @@
               <li class="tvh__next tvh__next--2" data-next="2"><i></i></li>
             </ul>
           </div>
+        </div>
+        <div class="tvq" data-search>
+          <div class="tvq__bar">{% include icon.html name="search" %}<span class="tvq__text" data-search-text></span><i class="tvq__caret"></i><span class="tvq__hint">{{ d.search }}</span></div>
+          <ul class="tvq__results">
+            {%- for app in apps %}
+            <li class="tvq__result tvq__result--{{ forloop.index0 }}" data-result="{{ forloop.index0 }}"><i></i><i></i></li>
+            {%- endfor %}
+          </ul>
         </div>
         <div class="tvp" data-player>
           <div class="tvp__art"><span></span><span></span><span></span></div>
@@ -77,6 +86,7 @@
           <button class="rkey rkey--text" type="button" data-key="channel" aria-label="{{ d.keys.channel | escape }}">CH</button>
           <button class="rkey" type="button" data-key="mute" aria-label="{{ d.keys.mute | escape }}">{% include icon.html name="mute" %}</button>
         </div>
+        <div class="remote__pad">
         <div class="dpad" data-dpad>
           <span class="dpad__glow" data-glow aria-hidden="true"></span>
           <button class="dpad__key dpad__key--up" type="button" data-key="up" aria-label="{{ d.keys.up | escape }}">{% include icon.html name="chev-up" %}</button>
@@ -86,24 +96,35 @@
           <button class="dpad__ok" type="button" data-key="ok" aria-label="{{ d.keys.ok | escape }}"><span>OK</span></button>
           <span class="bubble" data-bubble aria-hidden="true">{{ d.press }}</span>
         </div>
+        <div class="touchpad" data-touchpad aria-hidden="true"><span class="touchpad__dot"></span><span class="touchpad__hint">{{ d.touch_hint }}</span></div>
+        <div class="appsheet" data-appsheet role="group" aria-label="{{ d.keys.apps | escape }}">
+          {%- for app in apps %}
+          <button class="appsheet__app" type="button" data-app="{{ forloop.index0 }}" tabindex="-1"><span class="appsheet__icon tvh__app--{{ forloop.index0 }}">{% include app-glyph.html name=app %}</span>{{ app }}</button>
+          {%- endfor %}
+        </div>
+        </div>
         <div class="remote__rockers">
           <div class="rocker">
             <button type="button" data-key="voldown" aria-label="{{ d.keys.voldown | escape }}">{% include icon.html name="minus" %}</button>
             <span class="rocker__mid" aria-hidden="true">{% include icon.html name="speaker" %}</span>
             <button type="button" data-key="volup" aria-label="{{ d.keys.volup | escape }}">{% include icon.html name="plus" %}</button>
           </div>
-          <span class="rkey rkey--mic" aria-hidden="true">{% include icon.html name="mic" %}</span>
+          <button class="rkey rkey--mic" type="button" data-act="mic" aria-label="{{ d.keys.mic | escape }}">{% include icon.html name="mic" %}<span class="rkey__rings" aria-hidden="true"><i></i><i></i></span></button>
           <div class="rocker">
             <button type="button" data-key="rewind" aria-label="{{ d.keys.rewind | escape }}">{% include icon.html name="rewind" %}</button>
             <button type="button" data-key="playpause" aria-label="{{ d.keys.playpause | escape }}">{% include icon.html name="playpause" %}</button>
             <button type="button" data-key="forward" aria-label="{{ d.keys.forward | escape }}">{% include icon.html name="forward" %}</button>
           </div>
         </div>
-        <div class="remote__dock" aria-hidden="true">
-          <span class="dock__pair"><i class="is-on">{% include icon.html name="dpad" %}</i><i>{% include icon.html name="touchpad" %}</i></span>
-          <i>{% include icon.html name="keyboard" %}</i>
-          <i>{% include icon.html name="grid" %}</i>
-          <i>{% include icon.html name="more" %}</i>
+        <div class="remote__dock">
+          <span class="dock__pair">
+            <button type="button" data-act="dpad" aria-label="{{ d.keys.dpad | escape }}" aria-pressed="true">{% include icon.html name="dpad" %}</button>
+            <button type="button" data-act="touchpad" aria-label="{{ d.keys.touchpad | escape }}" aria-pressed="false">{% include icon.html name="touchpad" %}</button>
+          </span>
+          <button type="button" data-act="keyboard" aria-label="{{ d.keys.keyboard | escape }}">{% include icon.html name="keyboard" %}</button>
+          <button type="button" data-act="apps" aria-label="{{ d.keys.apps | escape }}" aria-pressed="false">{% include icon.html name="grid" %}</button>
+          <button type="button" data-act="more" aria-label="{{ d.keys.more | escape }}">{% include icon.html name="more" %}</button>
+          <span class="dock__tip" data-tip aria-hidden="true">{{ d.more }}</span>
         </div>
         <span class="finger" data-finger aria-hidden="true"></span>
       </div>

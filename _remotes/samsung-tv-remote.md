@@ -4,10 +4,12 @@ seo_title: Samsung TV Remote App for Android and iOS · TameTV
 brand: Samsung TVs
 platform: Samsung
 description: Samsung Wi-Fi remote for Android and iOS, on Google Play and the App Store. Setup, pairing, Pro features and TV compatibility.
-lead: TameTV turns your phone or tablet into a remote for Samsung smart TVs with Tizen, from 2016 and later. It works over your Wi-Fi, so you need no infrared blaster and no Samsung account.
+lead: TameTV turns your phone or tablet into a remote for Samsung smart TVs with Tizen, from 2016 on, and for C, D, E and F series smart TVs from 2010 to 2013. It works over your Wi-Fi, so you need no infrared blaster and no Samsung account.
 faq:
 - q: Does TameTV work with Samsung Frame and QLED TVs?
   a: Yes, if the TV runs Tizen, which Samsung smart TVs from 2016 and later do. That includes The Frame, QLED, Neo QLED and Crystal UHD models.
+- q: Does TameTV work with older Samsung TVs?
+  a: Smart TVs from 2010 to 2013 (C, D, E and F series) get the remote keys. They can't take typing or open apps from TameTV, and they can't be turned on over Wi-Fi. Sets from 2014 and 2015 (H and J series) are not supported.
 - q: Is it the same as Samsung SmartThings?
   a: No. TameTV is an independent remote app. It needs no Samsung account and talks to the TV directly over your Wi-Fi.
 - q: Why doesn't my Samsung TV turn on from the app?
@@ -48,9 +50,9 @@ Pairing happens only the first time. Next time, the app reconnects when you open
 
 ## Turn the TV on from your phone
 
-Samsung TVs can start from the network. On the TV, turn on **Power On with Mobile**. On most models it is in **Settings > General > Network > Expert Settings**. Then TameTV can turn the TV on.
+Samsung TVs can start from the network. On the TV, turn on **Power On with Mobile**. On most models it is in **Settings > General > Network > Expert Settings**. Then TameTV can turn the TV on. Sets from 2010 to 2013 can't be turned on over the network.
 
 ## Good to know
 
-- Samsung TVs made before 2016 are not supported.
+- Samsung TVs from 2010 to 2013 get the remote keys only. Sets from 2014 and 2015 are not supported.
 - Your phone and the TV must be on the same Wi-Fi network. TameTV does not use infrared, and it cannot control the TV from outside your home.

@@ -30,20 +30,27 @@ layout: default
   </div>
 </section>
 
-{%- assign names = "Samsung|LG|Roku|Fire TV|Google TV|Android TV|Apple TV|Sony|Vizio|Hisense|Philips|Xiaomi|TCL|Insignia|Toshiba|Sharp|Chromecast" | split: "|" %}
+{%- comment -%}
+  Works with: every brand and system, each linked to its remote page. TV brands that ship Roku TV, Google TV or Fire TV
+  link to the TV list, whose footnote names them. Brand names are plain text, never logos.
+{%- endcomment -%}
+{%- assign brands = "Samsung:/samsung-tv-remote/|LG:/lg-tv-remote/|Roku:/roku-remote/|Fire TV:/fire-tv-remote/|Google TV:/android-tv-remote/|Apple TV:/apple-tv-remote/|Sony:/sony-tv-remote/|Panasonic:/panasonic-tv-remote/|Vizio:/vizio-tv-remote/|Hisense:/hisense-tv-remote/|Philips:/philips-tv-remote/|Xiaomi:/xiaomi-tv-remote/|Android TV:/android-tv-remote/|TCL:#tvs|Insignia:#tvs|Toshiba:#tvs|Sharp:#tvs|Chromecast:/android-tv-remote/" | split: "|" %}
 <section class="brands" aria-label="{{ t.hero.works_with }}">
   <h2 class="brands__label">{{ t.hero.works_with }}</h2>
   <div class="marquee" data-marquee>
-    <ul class="marquee__track">
-      {%- for name in names %}<li>{{ name }}</li>{%- endfor %}
+    {%- for copy in (1..2) %}
+    <ul class="marquee__track"{% if copy == 2 %} aria-hidden="true"{% endif %}>
+      {%- for brand in brands %}
+      {%- assign pair = brand | split: ":" %}
+      {%- if pair[1] contains "#" %}{% assign href = pair[1] %}{% else %}{% assign href = pair[1] | relative_url %}{% endif %}
+      <li><a href="{{ href }}"{% if copy == 2 %} tabindex="-1"{% endif %}{% if page.i18n != "en" and pair[1] contains "/" %} hreflang="en"{% endif %}>{{ pair[0] }}</a></li>
+      {%- endfor %}
     </ul>
-    <ul class="marquee__track" aria-hidden="true">
-      {%- for name in names %}<li>{{ name }}</li>{%- endfor %}
-    </ul>
+    {%- endfor %}
   </div>
 </section>
 
-{%- comment -%} Hidden ids keep links to the old site's sections (#how-it-works, #features, #devices) working. {%- endcomment %}
+{%- comment -%} Hidden ids keep links to the old site's sections (#how-it-works, #features, #devices, #remote) working. {%- endcomment %}
 <section class="section connect" id="connect">
   <span id="how-it-works" aria-hidden="true"></span>
   <div class="container">
@@ -81,42 +88,6 @@ layout: default
   </div>
 </section>
 
-<section class="section story" id="remote" data-story>
-  <span id="features" aria-hidden="true"></span>
-  <div class="container">
-    <header class="section__head" data-reveal>
-      <h2>{{ t.story.title }}</h2>
-    </header>
-    <div class="story__grid">
-      <div class="story__stage" aria-hidden="true">
-        <div class="story__halo"></div>
-        <div class="phone phone--story">
-          <div class="phone__screen">
-            {%- for c in t.story.chapters %}
-            <img class="story__shot{% if forloop.first %} is-active{% endif %}" data-shot="{{ forloop.index0 }}" src="{{ '/assets/img/screens/' | append: c.screen | append: '.webp' | relative_url }}" alt="" width="780" height="1688" loading="lazy" decoding="async">
-            {%- endfor %}
-          </div>
-        </div>
-        <ol class="story__dots">
-          {%- for c in t.story.chapters %}<li{% if forloop.first %} class="is-active"{% endif %}></li>{%- endfor %}
-        </ol>
-      </div>
-      <ol class="story__chapters">
-        {%- for c in t.story.chapters %}
-        <li class="chapter{% if forloop.first %} is-active{% endif %}" data-chapter="{{ forloop.index0 }}">
-          <div class="chapter__media">{% include phone.html screen=c.screen alt=c.alt %}</div>
-          <div class="chapter__copy">
-            <span class="chapter__num" aria-hidden="true">{{ forloop.index | prepend: "0" }}</span>
-            <h3>{{ c.title }}</h3>
-            <p>{{ c.text }}</p>
-          </div>
-        </li>
-        {%- endfor %}
-      </ol>
-    </div>
-  </div>
-</section>
-
 <section class="section tune" id="tune-up">
   <div class="container tune__grid">
     <div class="tune__copy">
@@ -141,7 +112,6 @@ layout: default
         <li style="--i: {{ forloop.index0 }}"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>{{ check }}</li>
         {%- endfor %}
       </ul>
-      </div>
     </div>
   </div>
 </section>
@@ -151,6 +121,7 @@ layout: default
     <div class="container">
       <header class="section__head" data-reveal>
         <h2>{{ t.family.title }}</h2>
+        <p>{{ t.family.lead }}</p>
       </header>
       <ul class="family__grid" data-reveal="group">
         {%- for card in t.family.cards %}
@@ -160,10 +131,8 @@ layout: default
             {%- when "help" %}
             <span class="help"><span class="help__phone">{% include icon.html name="phone" %}</span><svg class="help__arc" viewBox="0 0 200 80" preserveAspectRatio="none"><path d="M18 64 C 60 -10, 140 -10, 182 64"/></svg><span class="help__dot"></span><span class="help__tv">{% include icon.html name="tv" %}</span><span class="help__pill">{% include icon.html name="shareplay" %}FaceTime</span></span>
             {%- when "simple" %}
-            <span class="bigkey">{% include icon.html name="speaker" %}{{ card.key }}</span>
-            {%- when "find" %}
-            <span class="find"><span class="find__ring"></span><span class="find__ring"></span><span class="find__ring"></span><span class="find__remote">{% include icon.html name="remote" %}</span></span>
-            {%- when "sleep" %}
+            <span class="gpa"><span class="bigkey">{% include icon.html name="speaker" %}{{ card.key }}</span><span class="gpa__lock">{% include icon.html name="lock" %}</span></span>
+            {%- when "kids" %}
             <span class="sleep"><svg viewBox="0 0 120 120"><circle class="sleep__track" cx="60" cy="60" r="50"/><circle class="sleep__fill" cx="60" cy="60" r="50" pathLength="100"/></svg><span class="sleep__label">{% include icon.html name="moon" %}<b>{{ card.time }}</b></span></span>
             {%- endcase %}
           </div>
@@ -174,6 +143,64 @@ layout: default
         {%- endfor %}
       </ul>
     </div>
+  </div>
+</section>
+
+<section class="section features" id="features">
+  <span id="remote" aria-hidden="true"></span>
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <h2>{{ t.features.title }}</h2>
+      <p>{{ t.features.lead }}</p>
+    </header>
+    {%- assign w = t.features.watch %}
+    <ul class="bento" data-reveal="group">
+      <li class="bento__cell bento__cell--watch" style="--i: 0">
+        <div class="bento__copy">
+          <h3>{{ w.title }}</h3>
+          <p>{{ w.text }}</p>
+        </div>
+        <div class="watch" aria-hidden="true">
+          <span class="watch__tv"><span class="watch__screen"><i></i></span></span>
+          <span class="watch__box"><i></i></span>
+          <span class="watch__cable"></span>
+          <span class="watch__card">
+            <span class="watch__button">{% include icon.html name="play" %}{{ w.button }}</span>
+            <span class="watch__steps">
+              {%- for step in w.steps %}
+              <span style="--s: {{ forloop.index0 }}"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>{{ step }}</span>
+              {%- endfor %}
+            </span>
+          </span>
+        </div>
+      </li>
+      {%- for c in t.features.cells %}
+      <li class="bento__cell bento__cell--{% if c.screen %}screen bento__cell--{{ c.screen }}{% else %}art{% endif %}" style="--i: {{ forloop.index }}">
+        {%- if c.screen %}
+        <div class="bento__shot">{% include phone.html screen=c.screen alt=c.alt class="phone--bento" %}</div>
+        {%- else %}
+        <div class="bento__art bento__art--{{ c.art }}" aria-hidden="true">
+          {%- case c.art -%}
+          {%- when "scenes" %}
+          <span class="scenes">
+            {%- for pill in c.pills %}
+            <span class="scenes__pill" style="--p: {{ forloop.index0 }}">{% if forloop.index == 1 %}{% include icon.html name="sofa" %}{% elsif forloop.index == 2 %}{% include icon.html name="moon" %}{% else %}{% include icon.html name="power" %}{% endif %}{{ pill }}</span>
+            {%- endfor %}
+          </span>
+          {%- when "link" %}
+          <span class="sendlink"><span class="sendlink__phone">{% include icon.html name="phone" %}</span><span class="sendlink__path"><i></i></span><span class="sendlink__tv">{% include icon.html name="tv" %}<b>{% include icon.html name="f-play" %}</b></span></span>
+          {%- when "devices" %}
+          <span class="devices"><span class="devices__item devices__item--phone">{% include icon.html name="phone" %}</span><span class="devices__item devices__item--tablet">{% include icon.html name="tablet" %}</span><span class="devices__item devices__item--mac"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M1.5 19.5h21"/></svg></span><span class="devices__key">{% include icon.html name="lock" %}</span></span>
+          {%- endcase %}
+        </div>
+        {%- endif %}
+        <div class="bento__copy">
+          <h3>{{ c.title }}</h3>
+          <p>{{ c.text }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
   </div>
 </section>
 
@@ -192,6 +219,7 @@ layout: default
       </article>
       <article class="plan plan--pro" style="--i: 1">
         <h3>{{ t.pro.pro_title }}</h3>
+        <p class="plan__intro">{{ t.pro.pro_intro }}</p>
         <ul>
           {%- for item in t.pro.pro %}<li>{% include icon.html name="plus" %}{{ item }}</li>{%- endfor %}
         </ul>
@@ -203,7 +231,7 @@ layout: default
 
 <section class="section privacy" id="privacy">
   <div class="container">
-    <header class="section__head section__head--big" data-reveal>
+    <header class="section__head" data-reveal>
       <h2>{{ t.privacy.title }}</h2>
       <p>{{ t.privacy.lead }}</p>
     </header>
@@ -234,7 +262,6 @@ layout: default
         <a class="platform" href="{{ p.page | relative_url }}"{% if page.i18n != "en" %} hreflang="en"{% endif %}>
           <span class="platform__name">{{ local.name | default: p.name }}</span>
           <span class="platform__detail">{{ local.detail | default: p.detail }}</span>
-          <span class="platform__tag">{{ local.pairing | default: p.pairing }}</span>
           {% include icon.html name="arrow" class="platform__arrow" %}
         </a>
       </li>
@@ -257,7 +284,7 @@ layout: default
       </details>
       {%- endfor %}
     </div>
-    <p class="footnote footnote--center" data-reveal>{{ t.faq.more }} <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <p class="footnote footnote--center" data-reveal>{{ t.faq.more }} <a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="{{ '/support/' | relative_url }}"{% if page.i18n != "en" %} hreflang="en"{% endif %}>{{ t.nav.support }}{% include icon.html name="arrow" %}</a></p>
   </div>
 </section>
 

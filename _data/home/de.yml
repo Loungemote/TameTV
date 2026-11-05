@@ -2,11 +2,12 @@
 # Plattform und Datenschutz-Fakten mit den anderen Sprachen und den 1.5.0-Storetexten abgleichen (im App-Repo
 # docs/app-store/metadata.json und android/docs/play-store). Markennamen in lateinischer Schrift, wie in der App.
 title: "TameTV: Kostenlose TV-Fernbedienung für Samsung, LG, Sony & Fire TV"
-description: Kostenlose WLAN-Fernbedienung für Android, iPhone und iPad. Steuert Samsung, LG, Sony, Fire TV, Google TV, Apple TV und mehr. Ohne Werbung, ohne Konto.
+description: Kostenlose WLAN-Fernbedienung für Android, iPhone und iPad. Steuert Samsung, LG, Sony, Fire TV, Google TV, Apple TV, Panasonic und mehr. Ohne Werbung, ohne Konto.
 skip: Zum Inhalt springen
 nav:
-  remote: Fernbedienung
   tune: Optimierung
+  family: Familie
+  features: Funktionen
   tvs: Fernseher
   pro: Gratis & Pro
   faq: FAQ
@@ -15,7 +16,7 @@ nav:
   menu: Menü
 hero:
   title: "Dein Handy ist <em>die Fernbedienung</em>."
-  lead: Eine kostenlose WLAN-Fernbedienung für Samsung, LG, Sony, Fire&nbsp;TV, Google&nbsp;TV und mehr.
+  lead: Eine kostenlose WLAN-Fernbedienung für Samsung, LG, Roku, Fire&nbsp;TV, Google&nbsp;TV, Apple&nbsp;TV, Panasonic und mehr.
   works_with: Funktioniert mit
   trust: ["Grundtasten gratis", "Keine Werbung", "Kein Konto"]
   alt: "Die TameTV-Fernbedienung: ein Steuerkreuz mit OK-Taste sowie Tasten für Lautstärke, Sender und Wiedergabe."
@@ -32,6 +33,14 @@ demo:
   muted: Stumm
   asleep: Standby
   press: OK drücken
+  listening: Hört zu …
+  said: Kochsendungen
+  said_note: „Kochsendungen“
+  typed: Dokus
+  typed_note: Auf dem Handy getippt
+  search: Suchen
+  touch_hint: Wischen zum Bewegen · Tippen für OK
+  more: Sleep-Timer, Fernbedienung finden, Szenen und mehr
   keys:
     power: Ein/Aus
     back: Zurück
@@ -48,44 +57,59 @@ demo:
     rewind: Zurückspulen
     playpause: Wiedergabe oder Pause
     forward: Vorspulen
+    mic: Sprachsuche
+    dpad: Steuerkreuz
+    touchpad: Touchpad
+    keyboard: Tastatur
+    apps: Apps
+    more: Mehr
 connect:
-  title: TameTV findet deinen Fernseher von selbst.
-  lead: Öffne TameTV im selben WLAN wie deinen Fernseher. Einmal zulassen, danach funktioniert jede Taste einfach.
+  title: Öffnen. Läuft.
+  lead: TameTV findet deinen Fernseher im WLAN von selbst. Einmal zulassen, und die Tasten, die du jeden Abend drückst, sind kostenlos.
   searching: Suche in diesem WLAN
   awake: An
   others: ["4K-TV", "HD-TV"]
   steps:
-    - { icon: "wifi", title: "Selbes WLAN", text: "Kein Infrarot-Adapter, kein Hub, keine Anmeldung." }
-    - { icon: "tv", title: "Einmal zulassen", text: "Wähle am Fernseher „Zulassen“ oder scanne den angezeigten Code mit der Kamera." }
-    - { icon: "dpad", title: "Taste drücken", text: "Der Fernseher meldet deinem Handy, dass er dich gehört hat." }
+    - { title: "Findet deinen Fernseher", text: "Selbes WLAN, mehr nicht. Kein Infrarot-Adapter, kein Hub, keine Anmeldung." }
+    - { title: "Einmal zulassen", text: "Wähle am Fernseher „Zulassen“ oder scanne den angezeigten Code mit der Kamera." }
+    - { title: "Alle Grundtasten gratis", text: "Steuerkreuz, Lautstärke, Ein/Aus und Wiedergabe, ohne Testphase. Viele Fernseher melden deinem Handy, dass sie dich gehört haben." }
   note: Nicht gefunden? Wähle deine Marke, und TameTV zeigt dir, welche Einstellung du einschalten musst.
-story:
-  title: Gemacht für jeden Abend.
-  chapters:
-    - { screen: "remote", title: "Alle Grundtasten sind kostenlos.", text: "Steuerkreuz, OK, Zurück, Home, Lautstärke, Stumm, Sender, Ein/Aus und Wiedergabe. Ohne Testzeitraum.", alt: "Die Fernbedienung: Name des Fernsehers, was gerade läuft, das Steuerkreuz und Tasten für Lautstärke, Sender und Wiedergabe." }
-    - { screen: "talk", title: "Sag, was du sehen willst.", text: "Tippe einmal aufs Mikrofon und sprich. TameTV tippt es in die Suche des Fernsehers.", alt: "Die Sprachsuche hört zu: Die Worte erscheinen, während sie erkannt werden." }
-    - { screen: "keyboard", title: "Die Tastatur öffnet sich, wenn der Fernseher fragt.", text: "Suchbegriffe, Passwörter und Codes auf dem Handy tippen, mit automatischem Ausfüllen.", alt: "Die Handytastatur hat sich von selbst geöffnet, als die Suche des Fernsehers nach Text gefragt hat." }
-    - { screen: "lock-screen", title: "Eine Fernbedienung auf dem Sperrbildschirm.", text: "Pause, Lautstärke und Stumm ohne Entsperren, auch in der Dynamic Island. Auf dem iPhone.", alt: "Eine Mini-Fernbedienung auf dem Sperrbildschirm des iPhone mit Stumm, Lautstärke und Wiedergabe." }
-    - { screen: "quiet-ads", title: "Laute Werbung? TameTV macht den Fernseher leiser.", text: "Leise Werbung achtet nur auf die Lautstärke, auf deinem Handy, und nimmt nichts auf.", alt: "Leise Werbung: eine Lautstärkekurve und die Werbung, die zwei Stufen leiser gestellt wurde." }
 tune:
-  title: Dein Fernseher muss nicht alles wissen.
-  lead: Die Optimierung führt dich durch die Menüs deines Fernsehers, damit er deine Sehdaten nicht mehr teilt, weniger Werbe-Tracking erlaubt und ohne Bewegungsglättung läuft. Kostenlos für Samsung, LG, Roku, Google TV und mehr.
+  title: Hol dir deinen Fernseher <em>zurück</em>.
+  lead: Smart-TVs teilen, was du schaust, und füllen den Startbildschirm mit Werbung. Die Optimierung führt dich Schritt für Schritt durch die Menüs deines Fernsehers, um das abzuschalten. Kostenlos für Samsung, LG, Roku, Google TV und mehr.
   checks: ["Sehdaten nicht mehr teilen", "Werbe-Tracking einschränken", "Bewegungsglättung ausschalten", "Netzwerk-Debugging ist aus"]
   alt: "Optimierung: sieben von zehn Punkten erledigt, mit Prüfungen für Datenschutz, Bild und Ton und den nächsten Schritten."
   items:
     - { icon: "camera", title: "Kamera-Assistent", text: "Richte dein Handy auf das Menü des Fernsehers. Er zeigt dir, welche Taste als Nächstes kommt." }
-    - { icon: "shield", title: "Nach einer TV-Bereinigung", text: "Fernseher mit einem ADB-Tool aufgeräumt? Prüfe, ob Streamen und Fernbedienung noch funktionieren." }
-    - { icon: "bell", title: "Ein Hinweis, wenn es zählt", text: "Netzwerk-Debugging ist noch an, oder ein Update hat deine Einstellungen zurückgesetzt." }
+    - { icon: "eyeoff", title: "Diesen Fernseher aufräumen", text: "Schalte auf Google TV und Android TV die Werbe- und Tracking-Apps aus, die du nicht nutzt. Nichts wird gelöscht." }
+    - { icon: "shield", title: "Sehen, was dein Router blockiert", text: "Prüfe, welche Tracking-Adressen deines Fernsehers dein Heimnetz schon blockiert, und wie du den Rest blockierst." }
+    - { icon: "bell", title: "Ein Hinweis, wenn es zählt", text: "Nach einer ADB-Bereinigung prüfen, ob Streamen noch geht. Und ein Hinweis, wenn Netzwerk-Debugging an bleibt." }
 family:
   title: Einfach für alle zu Hause.
+  lead: Für alle, die nur fernsehen wollen, und für alle, die dich anrufen, wenn es nicht klappt.
   cards:
     - { kind: "help", title: "Familie helfen per FaceTime", text: "Während eines Anrufs drückst du vom Handy aus Tasten am Fernseher deiner Angehörigen. Wer Hilfe bekommt, zahlt nichts.", note: "iPhone und iPad" }
-    - { kind: "simple", title: "Eine einfache Fernbedienung", text: "Große Tasten und sonst nichts. Kostenlos für alle.", key: "Lauter" }
-    - { kind: "find", title: "Fernbedienung finden", text: "Lass eine verlorene Roku-Fernbedienung klingeln, wenn sie einen Lautsprecher hat." }
-    - { kind: "sleep", title: "Ein Sleep-Timer", text: "Lass TameTV offen, und der Fernseher schaltet sich ab, wenn der Timer abläuft. Bei Roku TV, LG und Google TV.", time: "30:00" }
+    - { kind: "simple", title: "Großelternmodus", text: "Große Tasten mit ihrem Namen darauf, und sonst nichts auf dem Bildschirm, in dem man sich verirrt.", key: "Lauter" }
+    - { kind: "kids", title: "TV-Zeit für Kinder", text: "Eine Schlafenszeit vor Schultagen, eine fürs Wochenende. Der Fernseher geht pünktlich aus.", time: "20:30", note: "Auf dem iPhone mit einer Automation in Kurzbefehle" }
+features:
+  title: Mehr als eine Fernbedienung.
+  lead: TameTV Pro kann, was eine Plastikfernbedienung nie konnte.
+  watch:
+    title: Ein Tipp zum Fernsehen
+    text: TameTV schaltet den Fernseher ein, wählt den richtigen Eingang und weckt dein Apple TV oder Roku. Die Lautstärke bleibt beim Fernseher.
+    button: Ansehen
+    steps: ["Fernseher an", "HDMI 2", "Apple TV wach"]
+  cells:
+    - { screen: "talk", title: "Sprechen per Tippen", text: "Sag eine App, eine Serie oder zwei Dinge auf einmal.", alt: "Sprechen per Tippen: Die Wörter erscheinen, während sie erkannt werden." }
+    - { screen: "keyboard", title: "Die Tastatur öffnet sich selbst", text: "Fragt der Fernseher nach Text, tippst du ihn auf dem Handy, mit automatischem Ausfüllen.", alt: "Die Handytastatur, von selbst geöffnet, als die Suche des Fernsehers nach Text gefragt hat." }
+    - { screen: "lock-screen", title: "Fernbedienung auf dem Sperrbildschirm", text: "Pausieren und leiser stellen, ohne zu entsperren. Unter Android in den Schnelleinstellungen.", alt: "Eine Mini-Fernbedienung auf dem iPhone-Sperrbildschirm mit Stumm, Lautstärke und Wiedergabe." }
+    - { screen: "quiet-ads", title: "Leise Werbung", text: "Laute Werbung stellt den Fernseher leiser, die Sendung wieder lauter. Es hört nur auf die Lautstärke.", alt: "Leise Werbung: ein Lautstärkeverlauf und die Werbung, die zwei Stufen leiser wurde." }
+    - { art: "scenes", title: "Filmabend", text: "Fernseher, Box und auf dem iPhone das Licht, mit einem Tipp.", pills: ["Filmabend", "Schlafenszeit", "Alle Fernseher aus"] }
+    - { art: "link", title: "Ab auf den Fernseher", text: "Teile ein YouTube-Video vom Handy. Es läuft in der App des Fernsehers." }
+    - { art: "devices", title: "Einmal koppeln", text: "Koppel auf dem iPhone, und iPad und Mac haben den Fernseher per iCloud auch." }
 pro:
   title: Gratis, wo es zählt.
-  lead: Die Tasten, die du jeden Abend drückst, sind kostenlos. TameTV Pro bringt die Extras.
+  lead: Die Tasten, die du jeden Abend drückst, sind kostenlos. TameTV Pro bringt den Rest.
   free_title: Gratis
   free:
     - Steuerkreuz, OK, Zurück und Home
@@ -94,20 +118,19 @@ pro:
     - Ein einfaches Layout mit großen Tasten
     - Jeder Fernseher im Haus, einen Tipp entfernt
     - Anleitungen für Optimierung und Kamera-Assistent
-    - Hinweise, wenn etwas nicht stimmt
+    - Hilfe bekommen per FaceTime
   pro_title: TameTV Pro
+  pro_intro: Alles oben, dazu
   pro:
-    - Sprachsuche
-    - Handytastatur mit automatischem Ausfüllen
     - Apps mit einem Tippen
     - Wisch-Touchpad
     - Fotos, Videos und Links streamen
-    - Leise Werbung
-    - Fernbedienung auf dem Sperrbildschirm
-    - Familie helfen per FaceTime
-    - Zifferntasten und Eingänge
-    - Fernbedienung finden, Sleep-Timer und mehr
-  note: Fernbedienung auf dem Sperrbildschirm, Familie helfen, Siri und Kurzbefehle gibt es auf iPhone und iPad. Pro gibt es als Wochenabo mit 3 Tagen gratis für berechtigte Neukunden, als Jahresabo oder als einmaligen Kauf auf Lebenszeit. Die Preise siehst du vor dem Bezahlen.
+    - Zifferntasten, Eingänge und Menüs
+    - Am Handy hören, bei Roku
+    - Siri und Kurzbefehle
+    - Fernbedienung finden und Sleep-Timer
+    - Erinnerungen vor Spiel oder Sendung
+  note: Familie helfen, die Fernbedienung auf dem Sperrbildschirm, Siri und Kurzbefehle gibt es auf iPhone und iPad. Pro gibt es als Wochenabo mit 3 Tagen gratis für berechtigte Neukunden, als Jahresabo oder als einmaligen Kauf auf Lebenszeit. Die Preise siehst du vor dem Bezahlen.
 privacy:
   title: "Kein Konto. <em>Keine Werbung.</em>"
   lead: Eine Fernbedienung muss nicht wissen, wer du bist.
@@ -120,44 +143,37 @@ privacy:
 tvs:
   title: Funktioniert mit deinem Fernseher.
   lead: TameTV spricht die Netzwerksprache jedes Fernsehers, du musst also nichts anschließen.
-  footnote: Roku-TV-, Google-TV- und Fire-TV-Modelle von TCL, Insignia, Toshiba, Sharp und anderen funktionieren ebenfalls. Streamen auf Fire TV ist nicht möglich; Apple TV empfängt Fotos und Videos über AirPlay. Reine Infrarot-Fernseher werden nicht unterstützt.
-  # In der Reihenfolge von _data/platforms.yml.
+  footnote: Roku TV-, Google TV- und Fire TV-Modelle von TCL, Insignia, Toshiba, Sharp und anderen funktionieren auch. Streamen geht nicht auf Fire TV; Apple TV empfängt Fotos und Videos per AirPlay. Samsung-Fernseher von 2014 und 2015 und Fernseher, die nur Infrarot verstehen, werden nicht unterstützt.
+  # In the order of _data/platforms.yml.
   items:
-    - { name: "Roku", detail: "Roku TVs und Roku-Player", pairing: "Verbindet direkt" }
-    - { name: "Samsung", detail: "Smart TVs mit Tizen, ab 2016", pairing: "Am TV „Zulassen“ wählen" }
-    - { name: "LG", detail: "Smart TVs mit webOS", pairing: "Am TV „Zulassen“ wählen" }
-    - { name: "Android TV und Google TV", detail: "Fernseher und Streaming-Geräte, auch Philips-TVs mit Google TV", pairing: "Code am TV" }
-    - { name: "Amazon Fire TV", detail: "Fire-TV-Streaming-Geräte und Fernseher", pairing: "Code am TV" }
-    - { name: "Vizio", detail: "SmartCast-Fernseher", pairing: "Code am TV" }
-    - { name: "Sony", detail: "Bravia-Fernseher", pairing: "Code am TV" }
-    - { name: "Xiaomi", detail: "Fernseher mit PatchWall", pairing: "Verbindet direkt" }
-    - { name: "Hisense", detail: "Fernseher mit VIDAA", pairing: "Code am TV" }
-    - { name: "Philips", detail: "Fernseher mit Titan OS oder Saphi", pairing: "Code bei Titan OS" }
-    - { name: "Apple TV", detail: "Apple TV HD und Apple TV 4K", pairing: "Code am TV" }
+    - { name: "Roku", detail: "Roku TVs und Roku-Player" }
+    - { name: "Samsung", detail: "Smart-TVs ab 2016 und von 2010 bis 2013" }
+    - { name: "LG", detail: "Smart TVs mit webOS" }
+    - { name: "Android TV und Google TV", detail: "Fernseher und Streaming-Geräte, auch Philips-TVs mit Google TV" }
+    - { name: "Amazon Fire TV", detail: "Fire-TV-Streaming-Geräte und Fernseher" }
+    - { name: "Vizio", detail: "SmartCast-Fernseher" }
+    - { name: "Sony", detail: "Bravia-Fernseher" }
+    - { name: "Panasonic", detail: "VIERA-Fernseher ab 2011" }
+    - { name: "Xiaomi", detail: "Fernseher mit PatchWall" }
+    - { name: "Hisense", detail: "Fernseher mit VIDAA" }
+    - { name: "Philips", detail: "Fernseher mit Titan OS oder Saphi" }
+    - { name: "Apple TV", detail: "Apple TV HD und Apple TV 4K" }
 faq:
   title: Häufige Fragen
   more: Noch Fragen? Schreib uns an
   items:
-    - q: Ist TameTV kostenlos?
-      a: Ja. Die Fernbedienung mit allen Grundtasten ist kostenlos, ohne Werbung und ohne Testzeitraum. Steuerkreuz, OK, Zurück, Home, Lautstärke, Stumm, Sender, Ein/Aus und Wiedergabetasten, das einfache Layout, die Optimierung und der geführte Modus des Kamera-Assistenten kosten nichts. TameTV Pro bringt Sprachsuche, Handytastatur, Apps, Touchpad, Streamen, Leise Werbung und mehr. Zur Wahl stehen ein Wochenabo mit 3 Tagen Probezeit für berechtigte Neukunden, ein Jahresabo oder ein einmaliger Kauf auf Lebenszeit. Preise und Angebote werden vor der Zahlung angezeigt.
-    - q: Welche Fernseher werden unterstützt?
-      a: Samsung Smart TVs mit Tizen (ab 2016), LG mit webOS, Sony Bravia, Xiaomi mit PatchWall, Hisense mit VIDAA, Philips mit Titan OS oder Saphi, Android TV und Google TV, Roku, Amazon Fire TV, Vizio SmartCast sowie Apple TV HD und Apple TV 4K. Roku-TV-, Google-TV- und Fire-TV-Modelle anderer Marken wie TCL, Insignia, Toshiba und Sharp funktionieren ebenfalls. Reine Infrarot-Fernseher werden nicht unterstützt.
-    - q: Funktioniert TameTV mit Apple TV?
-      a: Ja, mit Apple TV HD und Apple TV 4K, unter Android genauso wie auf iPhone und iPad. Du koppelst einmal mit dem Code, den das Apple TV anzeigt. Dann hast du die Fernbedienungstasten, Texteingabe, Apps und das, was gerade läuft, mit Wiedergabe, Pause, Springen und Stumm. Fotos und Videos empfängt das Apple TV über AirPlay statt über TameTV.
-    - q: Brauche ich einen Infrarot-Adapter oder eine Universalfernbedienung?
-      a: Nein. TameTV steuert Smart TVs über dein WLAN. Infrarot wird nicht genutzt, daher lassen sich ältere Fernseher, die nur auf Infrarot reagieren, nicht steuern.
-    - q: Die App findet meinen Fernseher nicht. Was tun?
-      a: Lass den Fernseher eingeschaltet und verbinde ihn mit demselben WLAN wie dein Handy; Gastnetzwerke können die Suche blockieren. Erlaube unter Android „Geräte in der Nähe“, wenn die App fragt. Aktiviere unter iOS TameTV in Einstellungen > Datenschutz & Sicherheit > Lokales Netzwerk. Erscheint der Fernseher immer noch nicht, wähle in der App seine Marke, um die passende Einstellung zu sehen, oder füge ihn per IP-Adresse hinzu.
-    - q: Kann ich den Fernseher mit dem Handy einschalten?
-      a: Bei vielen Fernsehern ja. Schalte vorher am Fernseher das Einschalten über das Netzwerk ein, zum Beispiel Power On with Mobile bei Samsung, Turn on via Wi-Fi bei LG oder Fast TV start bei Roku TV. Die Namen können je nach Modell und Sprache abweichen.
-    - q: Was ändert die Optimierung an meinem Fernseher?
-      a: Von selbst nichts. Die Optimierung zeigt dir den Menüpfad für jede Einstellung, etwa die, mit der dein Fernseher teilt, was du siehst, und sagt dir, was du verlierst, wenn du sie ausschaltest. Du änderst sie mit der Fernbedienung, und der Kamera-Assistent kann dir die nächste Taste zeigen. Im automatischen Modus von Pro drückt TameTV die Tasten und fragt vor der letzten Änderung nach.
-    - q: Welche Daten erhebt TameTV?
-      a: Kein Konto und keine Werbung. Befehle gehen direkt vom Handy zum Fernseher, Kopplungsdaten bleiben auf deinem Gerät. Unter iOS sind Firebase-Nutzungsstatistiken und Absturzberichte standardmäßig an und lassen sich unter Einstellungen > Datenschutz > Nutzungsdaten teilen ausschalten; unter Android werden sie nur gesendet, wenn du diese Einstellung einschaltest. Google Cast erhebt eigene Diagnosedaten. Details stehen in der Datenschutzerklärung.
-    - q: Ist TameTV für Android und iPhone erhältlich?
-      a: Ja. Android gibt es auf Google Play für Handys und Tablets mit Android 8.0 oder neuer. iPhone und iPad gibt es im App Store, mit iOS 17 oder iPadOS 17 oder neuer. Die App spricht Deutsch, Englisch, Chinesisch (vereinfacht und traditionell), Japanisch, Koreanisch, Französisch, Spanisch, Portugiesisch (Brasilien), Russisch und Indonesisch.
-    - q: Wie stelle ich Pro wieder her oder kündige es?
-      a: Nutze „Käufe wiederherstellen“ in der App mit dem Store-Konto, mit dem du bezahlt hast. Android-Abos verwaltest du in Google Play, iOS-Abos in den Apple-Einstellungen. Das Löschen der App kündigt kein Abo. Käufe werden nicht zwischen Google Play und dem App Store übertragen.
+    - q: "Ist TameTV kostenlos?"
+      a: "Ja. Die Fernbedienung mit allen Grundtasten ist kostenlos, ohne Werbung und ohne Testzeitraum. Steuerkreuz, OK, Zurück, Home, Lautstärke, Stumm, Sender, Ein/Aus und Wiedergabetasten, das einfache Layout, die Optimierung und der geführte Modus des Kamera-Assistenten kosten nichts. TameTV Pro bringt Sprachsuche, Handytastatur, Apps, Touchpad, Streamen, Leise Werbung und mehr. Zur Wahl stehen ein Wochenabo mit 3 Tagen Probezeit für berechtigte Neukunden, ein Jahresabo oder ein einmaliger Kauf auf Lebenszeit. Preise und Angebote werden vor der Zahlung angezeigt."
+    - q: "Welche Fernseher werden unterstützt?"
+      a: "Samsung-Smart-TVs von 2010 bis 2013 und ab 2016, LG-Fernseher mit webOS, Sony Bravia, Panasonic VIERA ab 2011, Xiaomi-Fernseher mit PatchWall, Hisense-Fernseher mit VIDAA, Philips-Fernseher mit Titan OS oder Saphi, Android-TV- und Google-TV-Geräte, Roku, Amazon Fire TV, Vizio SmartCast sowie Apple TV HD und Apple TV 4K. Roku TV-, Google TV- und Fire TV-Modelle anderer Marken wie TCL, Insignia, Toshiba und Sharp funktionieren auch. Samsung-Fernseher von 2014 und 2015 und Fernseher, die nur Infrarot verstehen, werden nicht unterstützt."
+    - q: "Die App findet meinen Fernseher nicht. Was tun?"
+      a: "Lass den Fernseher eingeschaltet und verbinde ihn mit demselben WLAN wie dein Handy; Gastnetzwerke können die Suche blockieren. Erlaube unter Android „Geräte in der Nähe“, wenn die App fragt. Aktiviere unter iOS TameTV in Einstellungen > Datenschutz & Sicherheit > Lokales Netzwerk. Erscheint der Fernseher immer noch nicht, wähle in der App seine Marke, um die passende Einstellung zu sehen, oder füge ihn per IP-Adresse hinzu."
+    - q: "Kann ich den Fernseher mit dem Handy einschalten?"
+      a: "Bei vielen Fernsehern ja. Schalte vorher am Fernseher das Einschalten über das Netzwerk ein, zum Beispiel Power On with Mobile bei Samsung, Turn on via Wi-Fi bei LG, Fast TV start bei Roku TV oder Powered On by Apps bei Panasonic. Samsung-Fernseher von 2010 bis 2013 lassen sich nicht über das Netzwerk einschalten. Die Namen können je nach Modell und Sprache abweichen."
+    - q: "Was ändert die Optimierung an meinem Fernseher?"
+      a: "Von selbst nichts. Die Optimierung zeigt dir den Menüpfad für jede Einstellung, etwa die, mit der dein Fernseher teilt, was du siehst, und sagt dir, was du verlierst, wenn du sie ausschaltest. Du änderst sie mit der Fernbedienung, und der Kamera-Assistent kann dir die nächste Taste zeigen. Im automatischen Modus von Pro drückt TameTV die Tasten und fragt vor der letzten Änderung nach."
+    - q: "Welche Daten erhebt TameTV?"
+      a: "Kein Konto und keine Werbung. Befehle gehen direkt vom Handy zum Fernseher, Kopplungsdaten bleiben auf deinem Gerät. Unter iOS sind Firebase-Nutzungsstatistiken und Absturzberichte standardmäßig an und lassen sich unter Einstellungen > Datenschutz > Nutzungsdaten teilen ausschalten; unter Android werden sie nur gesendet, wenn du diese Einstellung einschaltest. Google Cast erhebt eigene Diagnosedaten. Details stehen in der Datenschutzerklärung."
 cta:
   title: Leg die Fernbedienung weg.
   meta: Android 8.0+ · iOS 17+ · iPadOS 17+

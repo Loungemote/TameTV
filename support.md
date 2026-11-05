@@ -43,7 +43,7 @@ If the TV still does not appear, choose **Add by IP address** in the app and typ
 
 The first time you connect, Samsung and LG TVs show a prompt on the screen. Select **Allow**. If you do not have the TV remote, use the buttons on the TV.
 
-Android TV, Google TV, Fire TV, Vizio, Sony, Hisense and Philips Titan OS TVs and Apple TV show a code on the screen. Type this code in the app.
+Android TV, Google TV, Fire TV, Vizio, Sony, Hisense and Philips Titan OS TVs and Apple TV show a code on the screen, and so do Panasonic TVs from about 2019 on. Type this code in the app.
 
 ## The app cannot turn on my TV
 
@@ -52,6 +52,7 @@ Turn on the TV setting that lets the TV start from the network:
 - **Samsung:** Power On with Mobile
 - **LG:** Turn on via Wi-Fi, or Mobile TV On
 - **Roku TV:** Fast TV start
+- **Panasonic:** Powered On by Apps, in TV Remote App Settings
 
 The setting names and menu locations can be different on your TV model.
 

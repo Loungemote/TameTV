@@ -6,7 +6,7 @@
   pairing: Connects directly
 - name: Samsung
   page: /samsung-tv-remote/
-  detail: Smart TVs with Tizen, 2016 and later
+  detail: Smart TVs from 2016 on, and from 2010 to 2013
   pairing: Select Allow on the TV
 - name: LG
   page: /lg-tv-remote/
@@ -28,6 +28,10 @@
   page: /sony-tv-remote/
   detail: Bravia TVs
   pairing: Code on the TV
+- name: Panasonic
+  page: /panasonic-tv-remote/
+  detail: VIERA TVs from 2011 on
+  pairing: Code on newer TVs
 - name: Xiaomi
   page: /xiaomi-tv-remote/
   detail: TVs with PatchWall

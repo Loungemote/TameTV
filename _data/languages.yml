@@ -1,14 +1,18 @@
 # Translated home pages. Each has its text in _data/home/<i18n>.yml and a page in <url>index.html.
-# The English home page is the default (x-default). Add a row here and the hreflang links and the footer follow.
+# The English home page is the default (x-default). Add a row here and the hreflang links, the header's language menu
+# (`short` is its label there) and the footer follow.
 - i18n: zh
   hreflang: zh-Hans
   label: 简体中文
+  short: 中文
   url: /zh/
 - i18n: ja
   hreflang: ja
   label: 日本語
+  short: 日本語
   url: /ja/
 - i18n: de
   hreflang: de
   label: Deutsch
+  short: DE
   url: /de/
