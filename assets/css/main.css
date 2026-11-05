@@ -64,6 +64,9 @@
   --container: 1200px;
   --gutter: clamp(16px, 5vw, 48px);
   --header-h: 64px;
+  /* The room above and below each home page section, and under a section's heading. */
+  --section-y: clamp(48px, 6.5vw, 96px);
+  --head-gap: clamp(28px, 4vw, 52px);
   --font: "Inter Var", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI Variable Display",
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
     "Noto Sans CJK SC", "Noto Sans JP", "Microsoft YaHei", "Yu Gothic UI", sans-serif;
@@ -610,7 +613,7 @@ ol {
 
 .hero {
   position: relative;
-  padding: clamp(28px, 6vw, 72px) 0 clamp(40px, 6vw, 72px);
+  padding: clamp(28px, 6vw, 72px) 0 clamp(16px, 2.5vw, 32px);
   margin-top: calc(var(--header-h) * -1);
   padding-top: calc(var(--header-h) + clamp(24px, 6vw, 72px));
   isolation: isolate;
@@ -755,7 +758,9 @@ ol {
 
 .demo {
   position: relative;
-  height: clamp(560px, 47vw, 660px);
+  /* As tall as the remote and its glow, so no empty band sits under the hero. */
+  --remote-w: clamp(230px, 18.6vw, 270px);
+  height: calc(var(--remote-w) * 2.08 + 28px);
   --fa: #ff6b7f;
   --fb: #b3203f;
   transition: --fa 0.6s var(--ease), --fb 0.6s var(--ease);
@@ -1421,7 +1426,7 @@ ol {
 }
 
 .phone--remote {
-  --pw: clamp(230px, 18.6vw, 270px);
+  --pw: var(--remote-w);
   position: absolute;
   left: 0;
   top: 2%;
@@ -2158,12 +2163,12 @@ ol {
 
 .section {
   position: relative;
-  padding: clamp(88px, 12vw, 168px) 0;
+  padding: var(--section-y) 0;
 }
 
 .section__head {
   max-width: 760px;
-  margin: 0 auto clamp(40px, 6vw, 72px);
+  margin: 0 auto var(--head-gap);
   text-align: center;
 }
 
@@ -2198,7 +2203,7 @@ ol {
 
 .footnote {
   max-width: 760px;
-  margin: 32px auto 0;
+  margin: 24px auto 0;
   color: var(--text-3);
   font-size: 14px;
   line-height: 1.6;
@@ -2223,7 +2228,7 @@ ol {
   justify-content: center;
   gap: 10px;
   max-width: 760px;
-  margin: 40px auto 0;
+  margin: 28px auto 0;
   color: var(--text-2);
   font-size: 15.5px;
   text-align: center;
@@ -2483,7 +2488,7 @@ ol {
   gap: 28px;
   justify-items: center;
   text-align: center;
-  padding: 24px 0 64px;
+  padding: 12px 0 40px;
 }
 
 .chapter__media .phone {
@@ -2535,11 +2540,11 @@ ol {
 
   .js .story__chapters {
     order: 1;
-    padding: 6vh 0 18vh;
+    padding: 4vh 0;
   }
 
   .js .chapter {
-    min-height: 64vh;
+    min-height: 42vh;
     align-content: center;
     justify-items: start;
     text-align: left;
@@ -2614,7 +2619,7 @@ ol {
   display: grid;
   grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
   align-items: center;
-  gap: clamp(40px, 6vw, 96px);
+  gap: clamp(32px, 5vw, 72px);
 }
 
 .tune__items {
@@ -2732,7 +2737,7 @@ ol {
 }
 
 .family__sheet {
-  padding: clamp(80px, 11vw, 150px) 0;
+  padding: clamp(56px, 7.5vw, 108px) 0;
   border-radius: clamp(28px, 4vw, 56px);
   background: radial-gradient(90% 60% at 50% 0%, rgba(255, 186, 108, 0.28) 0%, rgba(255, 186, 108, 0) 60%), var(--paper);
   color: var(--ink);
@@ -3297,6 +3302,7 @@ ol {
 
 .cta {
   padding-top: 40px;
+  padding-bottom: clamp(16px, 2vw, 24px);
 }
 
 .cta__card {
@@ -3304,7 +3310,7 @@ ol {
   display: grid;
   justify-items: center;
   gap: 24px;
-  padding: clamp(56px, 8vw, 104px) clamp(20px, 4vw, 48px);
+  padding: clamp(44px, 6vw, 80px) clamp(20px, 4vw, 48px);
   border-radius: clamp(30px, 4vw, 48px);
   overflow: hidden;
   text-align: center;
@@ -3360,7 +3366,7 @@ ol {
 /* ------------------------------------------------------------------ footer */
 
 .site-footer {
-  padding: clamp(64px, 8vw, 104px) 0 40px;
+  padding: clamp(40px, 5vw, 64px) 0 32px;
   color: var(--text-2);
   font-size: 15px;
 }
@@ -3446,7 +3452,7 @@ ol {
 
 .page__head {
   position: relative;
-  padding: clamp(40px, 7vw, 96px) 0 clamp(32px, 5vw, 56px);
+  padding: clamp(28px, 5vw, 64px) 0 clamp(24px, 3.5vw, 40px);
   overflow: hidden;
 }
 
@@ -3532,7 +3538,7 @@ ol {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
   gap: clamp(32px, 5vw, 72px);
-  padding-bottom: clamp(64px, 8vw, 112px);
+  padding-bottom: clamp(32px, 4vw, 56px);
 }
 
 .toc {
@@ -3605,7 +3611,7 @@ ol {
 }
 
 .prose h2 {
-  margin-top: 2.4em;
+  margin-top: 1.8em;
   color: var(--text);
   font-size: clamp(26px, 2.6vw, 32px);
   line-height: 1.15;
@@ -3618,7 +3624,7 @@ ol {
 }
 
 .prose h3 {
-  margin-top: 1.8em;
+  margin-top: 1.5em;
   color: var(--text);
   font-size: 20px;
   letter-spacing: -0.015em;
@@ -3751,7 +3757,7 @@ ol {
   display: grid;
   justify-items: center;
   gap: 20px;
-  padding: clamp(80px, 14vw, 180px) var(--gutter);
+  padding: clamp(56px, 9vw, 120px) var(--gutter);
   text-align: center;
 }
 
