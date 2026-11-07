@@ -2,7 +2,6 @@
 layout: page
 title: Support
 permalink: /support/
-eyebrow: Help
 lead: Answers to the most common questions about TameTV, and how to reach us when you need a person.
 description: Get help with TameTV. Supported TVs, fixes for discovery, pairing and power-on problems, purchases and how to contact support.
 ---
@@ -44,7 +43,7 @@ If the TV still does not appear, choose **Add by IP address** in the app and typ
 
 The first time you connect, Samsung and LG TVs show a prompt on the screen. Select **Allow**. If you do not have the TV remote, use the buttons on the TV.
 
-Android TV, Google TV, Fire TV, Vizio, Sony, Hisense and Philips Titan OS TVs and Apple TV show a code on the screen. Type this code in the app.
+Android TV, Google TV, Fire TV, Vizio, Sony, Hisense and Philips Titan OS TVs and Apple TV show a code on the screen, and so do Panasonic TVs from about 2019 on. Type this code in the app.
 
 ## The app cannot turn on my TV
 
@@ -53,6 +52,7 @@ Turn on the TV setting that lets the TV start from the network:
 - **Samsung:** Power On with Mobile
 - **LG:** Turn on via Wi-Fi, or Mobile TV On
 - **Roku TV:** Fast TV start
+- **Panasonic:** Powered On by Apps, in TV Remote App Settings
 
 The setting names and menu locations can be different on your TV model.
 
@@ -82,7 +82,7 @@ Use the store that processed your payment: [Google Play refund help](https://sup
 
 ## Privacy and terms
 
-TameTV has no accounts and no ads, and remote commands stay on your local network. The iOS version has optional usage and crash reports controlled by **Share Usage Data**. The Android release has no Firebase configuration. Google Cast processing is separate from that switch. Read the [Privacy Policy]({{ '/privacy/' | relative_url }}) and the [Terms of Use]({{ '/terms/' | relative_url }}).
+TameTV has no accounts and no ads. Remote commands go from your phone to the TV on your local network, except while you help family over FaceTime. On iPhone and iPad, usage statistics and crash reports are on by default; turn them off in **Settings > Privacy > Share Usage Data**. On Android they're sent only if you turn that setting on. Google Cast and Google's text recognition send their own diagnostics to Google. Read the [Privacy Policy]({{ '/privacy/' | relative_url }}) and the [Terms of Use]({{ '/terms/' | relative_url }}).
 
 ---
 

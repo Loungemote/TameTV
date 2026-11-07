@@ -1,14 +1,20 @@
 ---
 layout: default
 ---
-{%- comment -%} Text pages. The table of contents is built from the page's h2 headings (kramdown gives each an id). {%- endcomment -%}
+{%- comment -%} Text pages. The head starts with a link back (to the TV list on a platform page, to the home page
+elsewhere). The table of contents is built from the page's h2 headings (kramdown gives each an id). {%- endcomment -%}
 <article class="page">
-  {%- comment -%} `hero_screen` (the platform pages) adds the app, the download badge and the trust line to the head. {%- endcomment %}
+  {%- comment -%}
+    `hero_screen` (the platform pages) adds the app, the download badge and the trust line to the head. A page can set its
+    own `trust` line and `hero_alt`, the screen's description; both default to the home page's.
+  {%- endcomment %}
   <header class="page__head{% if page.hero_screen %} page__head--hero{% endif %}">
     <div class="container">
       {%- if page.hero_screen %}<div class="page__hero-copy">{% endif %}
-      {%- if page.eyebrow %}
-      <p class="eyebrow">{{ page.eyebrow }}</p>
+      {%- if page.collection == "remotes" %}
+      <a class="page__crumb" href="{{ '/' | relative_url }}#tvs">{% include icon.html name="arrow" %}{{ site.data.home.en.footer.all_tvs }}</a>
+      {%- else %}
+      <a class="page__crumb" href="{{ '/' | relative_url }}">{% include icon.html name="arrow" %}{{ site.title }}</a>
       {%- endif %}
       <h1>{{ page.title }}</h1>
       {%- if page.lead %}
@@ -20,13 +26,15 @@ layout: default
       {%- if page.hero_screen %}
       {% include store-badge.html %}
       <ul class="hero__trust">
-        {%- for item in site.data.home.en.hero.trust %}
+        {%- assign trust = page.trust | default: site.data.home.en.hero.trust %}
+        {%- for item in trust %}
         <li>{% include icon.html name="check" %}{{ item }}</li>
         {%- endfor %}
       </ul>
       </div>
       <div class="page__hero-art">
-        {% include phone.html screen=page.hero_screen alt=site.data.home.en.hero.alt priority=true %}
+        {%- assign hero_alt = page.hero_alt | default: site.data.home.en.hero.alt %}
+        {% include phone.html screen=page.hero_screen alt=hero_alt priority=true %}
       </div>
       {%- endif %}
     </div>

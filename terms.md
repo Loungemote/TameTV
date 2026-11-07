@@ -2,7 +2,6 @@
 layout: page
 title: Terms of Use
 permalink: /terms/
-eyebrow: Legal
 dated: true
 lead: These terms apply when you download or use TameTV. They cover your license, TameTV Pro purchases and what to expect from the app.
 description: The terms for using TameTV, including the license, TameTV Pro subscriptions and purchases, supported devices and trademarks.

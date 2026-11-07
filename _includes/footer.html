@@ -1,52 +1,57 @@
 {%- assign home = '/' | relative_url -%}
+{%- assign f = site.data.home[page.i18n].footer | default: site.data.home.en.footer -%}
+{%- assign n = site.data.home[page.i18n].nav | default: site.data.home.en.nav -%}
+{%- assign here = home -%}
+{%- if page.i18n %}{% assign here = page.url | relative_url %}{% endif -%}
 <footer class="site-footer">
   <div class="container">
     <div class="site-footer__grid">
       <div class="site-footer__brand">
-        <a class="brand" href="{{ home }}" aria-label="{{ site.title | escape }} home">
+        <a class="brand" href="{{ here }}" aria-label="{{ site.title | escape }}">
           {% include logo.html id="footer" size=30 %}
           <span>{{ site.title | escape }}</span>
         </a>
-        <p>A Wi-Fi TV remote for Android, iPhone and iPad.</p>
+        <p>{{ f.tagline }}</p>
       </div>
-      <nav aria-label="Product">
-        <h2>Product</h2>
+      <nav aria-label="{{ f.product }}">
+        <h2>{{ f.product }}</h2>
         <ul>
-          <li><a href="{{ home }}#download">Get the app</a></li>
-          <li><a href="{{ home }}#features">Features</a></li>
-          <li><a href="{{ home }}#how-it-works">How it works</a></li>
-          <li><a href="{{ home }}#devices">Supported devices</a></li>
-          <li><a href="{{ '/samsung-tv-remote/' | relative_url }}">Samsung TV remote</a></li>
-          <li><a href="{{ '/lg-tv-remote/' | relative_url }}">LG TV remote</a></li>
-          <li><a href="{{ '/roku-remote/' | relative_url }}">Roku remote</a></li>
-          <li><a href="{{ '/fire-tv-remote/' | relative_url }}">Fire TV remote</a></li>
-          <li><a href="{{ '/apple-tv-remote/' | relative_url }}">Apple TV remote</a></li>
-          <li><a href="{{ home }}#faq">FAQ</a></li>
+          <li><a href="{{ here }}#download">{{ n.get }}</a></li>
+          <li><a href="{{ here }}#tune-up">{{ n.tune }}</a></li>
+          <li><a href="{{ here }}#family">{{ n.family }}</a></li>
+          <li><a href="{{ here }}#features">{{ n.features }}</a></li>
+          <li><a href="{{ here }}#pro">{{ n.pro }}</a></li>
+          <li><a href="{{ here }}#faq">{{ n.faq }}</a></li>
         </ul>
       </nav>
-      <nav aria-label="Help">
-        <h2>Help</h2>
+      <nav aria-label="{{ n.tvs }}">
+        <h2>{{ n.tvs }}</h2>
         <ul>
-          <li><a href="{{ '/support/' | relative_url }}">Support</a></li>
-          <li><a href="{{ '/support/' | relative_url }}#contact">Contact</a></li>
+          {%- for p in site.data.platforms limit: 6 %}
+          <li><a href="{{ p.page | relative_url }}" hreflang="en">{{ p.name }}</a></li>
+          {%- endfor %}
+          <li><a href="{{ here }}#tvs">{{ f.all_tvs }}</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="{{ f.help }}">
+        <h2>{{ f.help }}</h2>
+        <ul>
+          <li><a href="{{ '/support/' | relative_url }}" hreflang="en">{{ n.support }}</a></li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Legal">
-        <h2>Legal</h2>
-        <ul>
-          <li><a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a></li>
-          <li><a href="{{ '/terms/' | relative_url }}">Terms of Use</a></li>
+          <li><a href="{{ '/privacy/' | relative_url }}" hreflang="en">Privacy Policy</a></li>
+          <li><a href="{{ '/terms/' | relative_url }}" hreflang="en">Terms of Use</a></li>
         </ul>
       </nav>
     </div>
-    <nav class="site-footer__legal" aria-label="Language">
-      <a href="{{ home }}" hreflang="en" lang="en"{% if page.i18n == nil or page.i18n == "en" %} aria-current="page"{% endif %}>English</a>
-      {%- for lang in site.data.languages %} ·
-      <a href="{{ lang.url | relative_url }}" hreflang="{{ lang.hreflang }}" lang="{{ lang.hreflang }}"{% if page.i18n == lang.i18n %} aria-current="page"{% endif %}>{{ lang.label }}</a>
-      {%- endfor %}
-    </nav>
-    <p class="site-footer__legal">{% include trademarks.html %}</p>
-    <p class="site-footer__legal">&copy; {{ site.time | date: "%Y" }} {{ site.title | escape }}. Apple, iPhone, iPad and App Store are trademarks of Apple Inc.</p>
+    <div class="site-footer__bottom">
+      <nav class="site-footer__langs" aria-label="{{ f.language }}">
+        {% include icon.html name="globe" %}
+        <a href="{{ home }}" hreflang="en" lang="en"{% if page.i18n == nil or page.i18n == "en" %} aria-current="page"{% endif %}>English</a>
+        {%- for lang in site.data.languages %}
+        <a href="{{ lang.url | relative_url }}" hreflang="{{ lang.hreflang }}" lang="{{ lang.hreflang }}"{% if page.i18n == lang.i18n %} aria-current="page"{% endif %}>{{ lang.label }}</a>
+        {%- endfor %}
+      </nav>
+      <p class="site-footer__legal">{% include trademarks.html %} &copy; {{ site.time | date: "%Y" }} {{ site.title | escape }}. Apple, iPhone, iPad and App Store are trademarks of Apple Inc. Google Play is a trademark of Google LLC.</p>
+    </div>
   </div>
 </footer>

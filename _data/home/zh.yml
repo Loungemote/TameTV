@@ -1,96 +1,192 @@
-# Home page copy. Keep release status, platform features and privacy facts in step across all languages.
-title: TameTV - 万能电视遥控器：三星、LG、索尼、Roku 手机遥控
-description: Android、iPhone 和 iPad 电视遥控器，已登陆 Google Play 和 App Store。通过 Wi-Fi 控制三星、LG、索尼、Roku、Google TV、Apple TV 等，无需红外、账号，没有广告。
+# 首页文案（简体中文），对应 TameTV 1.5.0。键与 en.yml 完全一致；发布状态、平台功能和隐私事实要与其他语言、
+# 以及 1.5.0 商店文案（App 仓库的 docs/app-store/metadata.json 和 android/docs/play-store）保持一致。
+# 正文里的品牌名和 App 一样用拉丁字母；只有给搜索引擎看的 title 和 description 沿用中文品牌名（三星、索尼）。
+title: TameTV：免费电视遥控器 App，支持三星、LG、索尼、Roku 和 Fire TV
+description: 适用于 Android、iPhone 和 iPad 的免费 Wi-Fi 电视遥控器。控制三星、LG、索尼、Roku、Fire TV、Google TV、Apple TV、松下等电视，没有广告，无需账号。
+skip: 跳到正文
 nav:
+  tune: 调校
+  family: 家人
   features: 功能
-  how: 使用方法
-  devices: 支持的电视
-  privacy: 隐私
+  tvs: 电视
+  pro: 免费与 Pro
   faq: 常见问题
   support: 支持
   get: 获取 App
-badge:
-  play_label: 在 Google Play 下载 TameTV Android 版
-  app_store_label: 在 App Store 下载 TameTV iPhone 和 iPad 版
-  ios_soon: iPhone 和 iPad 版即将推出
+  menu: 菜单
 hero:
-  eyebrow: 支持 Android、iPhone 和 iPad
-  title: 手机就是<br><em>电视遥控器</em>。
-  lead: 用手机或平板通过 Wi-Fi 控制智能电视。无需红外发射器，无需账号，没有广告。
-  how_link: 看看怎么用
-  works_with: 支持
-  trust: ["免费试用 3 天", "没有广告", "无需账号"]
-  alt: TameTV 遥控界面：方向键和确认键、媒体键、音量和频道。
-features:
-  title: 遥控器能做的，它都能做。
-  lead: 完整按键遥控，加上触控板、手机键盘、一键打开应用和投屏，让你把旧遥控器收起来。
-  footnote: 功能取决于电视型号、软件和手机平台。Siri、快捷指令和 AirPlay 引导仅适用于 iOS。
-  items:
-    - { icon: "dpad", title: "完整遥控", text: "方向键、确认、返回、主页、音量、频道、播放控制和电源键。自动发现 Wi-Fi 里的电视，打开 App 即自动重连。" }
-    - { icon: "hand", title: "滑动触控板", text: "单手滑动浏览菜单，轻点确认。LG 电视还能控制屏幕指针。" }
-    - { icon: "keyboard", title: "手机键盘", text: "在支持的电视上，用手机键盘输入搜索内容和登录信息，不用再逐个字母选择。" }
-    - { icon: "grid", title: "一键打开应用", text: "电视上的应用排成一页，从手机直接打开。" }
-    - { icon: "cast", title: "投屏到电视", text: "把照片、幻灯片、视频、文件和链接投到电视、Chromecast 或 Roku。" }
-    - { icon: "bolt", title: "用 Wi-Fi 开机", text: "在支持的电视上，用手机唤醒待机的电视。" }
-how:
-  title: 几秒钟就能用。
-  lead: 不用注册，不用额外硬件。电视连上 Wi-Fi 就差不多准备好了。
+  title: 手机就是<wbr><em>电视遥控器</em>。
+  lead: 免费的 Wi-Fi 遥控器，支持 Samsung、LG、Roku、Fire&nbsp;TV、Google&nbsp;TV、Apple&nbsp;TV、Panasonic 等电视。
+  works_with: 适用于
+  trust: ["基础按键免费", "没有广告", "无需账号"]
+  alt: "TameTV 遥控器：带 OK 键的方向键，以及音量、频道和播放键。"
+# 首屏里可以玩的遥控器。电视按类型命名，不按房间（大多数家庭只有一台电视），也不用真实品牌的型号。
+demo:
+  label: 试试遥控器
+  tv_label: 会回应遥控器的电视
+  tv: OLED 电视
+  status: 已连接
+  model: 4K
+  heard: 电视收到了
+  volume: 音量 {n}
+  muted: 已静音
+  asleep: 待机
+  press: 按 OK
+  listening: 正在听…
+  said: 美食节目
+  said_note: "“美食节目”"
+  typed: 纪录片
+  typed_note: 在手机上输入
+  search: 搜索
+  touch_hint: 滑动移动 · 轻点确认
+  more: 睡眠定时器、查找遥控器、场景等
+  keys:
+    power: 电源
+    back: 返回
+    home: 主页
+    channel: 下一个频道
+    mute: 静音
+    up: 上
+    down: 下
+    left: 左
+    right: 右
+    ok: OK
+    voldown: 调低音量
+    volup: 调高音量
+    rewind: 快退
+    playpause: 播放或暂停
+    forward: 快进
+    mic: 语音搜索
+    dpad: 方向键
+    touchpad: 触控板
+    keyboard: 键盘
+    apps: 应用
+    more: 更多
+connect:
+  title: 打开<wbr>就能用。
+  lead: TameTV 会在 Wi-Fi 上自己找到你的电视。允许一次，之后每晚都要按的键全部免费。
+  searching: 正在搜索这个 Wi-Fi
+  awake: 已开机
+  others: ["4K 电视", "高清电视"]
   steps:
-    - { screen: "choose-tv", title: "在 Wi-Fi 下打开 App", text: "TameTV 自动扫描网络，列出找到的电视和电视盒子。", alt: "选择电视：这个 Wi-Fi 网络中找到的电视。" }
-    - { screen: "pair", title: "在电视上确认一次", text: "在电视上选择“允许”，或输入电视显示的配对码。只需第一次。", alt: "配对界面预览：电视询问是否信任这台手机。" }
-    - { screen: "apps", title: "开始遥控", text: "手机就是遥控器了。下次打开 App 会自动重连。", alt: "一键打开应用：客厅电视上的应用。" }
-devices:
-  title: 十一个电视平台，一个 App。
-  lead: TameTV 使用各电视自己的网络协议，不需要红外发射器或网关。手机或平板和电视必须连接同一个 Wi-Fi。
-  footnote: TCL 等其他品牌的 Roku TV 和 Google TV 机型同样适用。Fire TV 不支持投屏；Apple TV 通过 AirPlay 接收照片和视频。不支持只能用红外遥控的电视。
+    - { title: "它自己找到电视", text: "连同一个 Wi-Fi 就够了。不用红外发射器，不用网关，也不用注册。" }
+    - { title: "允许一次", text: "在电视上选择“允许”，或者用相机扫一下电视上显示的配对码。" }
+    - { title: "基础按键<wbr>全部免费", text: "方向键、音量、电源和播放键，没有试用期限。很多电视还会告诉手机：它收到了。" }
+  note: 找不到电视？选择电视品牌，TameTV 会告诉你该打开哪个设置。
+tune:
+  title: 让电视<wbr><em>重新听你的</em>。
+  lead: 智能电视会分享你看了什么，还把广告塞满主屏幕。调校带你一步步走进电视自己的菜单，把这些关掉。在 Samsung、LG、Roku、Google TV 等电视上免费使用。
+  checks: ["停止分享你的观看内容", "限制广告跟踪", "关闭动态平滑", "网络调试已关闭"]
+  alt: "调校：十项已完成七项，包含隐私、画面和声音检查，以及下一步要做的事。"
   items:
-    - { name: "三星 Samsung", detail: "Tizen 智能电视，2016 年及以后机型" }
-    - { name: "LG", detail: "webOS 智能电视" }
-    - { name: "索尼 Sony", detail: "Bravia 电视" }
-    - { name: "小米 Xiaomi", detail: "PatchWall 电视" }
-    - { name: "海信 Hisense", detail: "VIDAA 电视" }
-    - { name: "飞利浦 Philips", detail: "Titan OS 和 Saphi 电视" }
-    - { name: "Android TV 和 Google TV", detail: "电视和电视盒子，包括 Chromecast with Google TV" }
-    - { name: "Roku", detail: "Roku TV 和 Roku 播放器" }
-    - { name: "Amazon Fire TV", detail: "Fire TV Stick、Fire TV Cube 和 Fire TV 电视" }
-    - { name: "Vizio", detail: "SmartCast 电视" }
-    - { name: "Apple TV", detail: "Apple TV HD 和 Apple TV 4K" }
+    - { icon: "camera", title: "相机辅助", text: "把手机对准电视菜单，它会告诉你下一步按哪个键。" }
+    - { icon: "eyeoff", title: "清理这台电视", text: "在 Google TV 和 Android TV 上，关掉你用不到的广告和跟踪应用。不会删除任何东西。" }
+    - { icon: "shield", title: "看看路由器<wbr>拦住了什么", text: "查一查家里的网络已经拦住了电视的哪些跟踪地址，剩下的又该怎么拦。" }
+    - { icon: "bell", title: "该提醒时<wbr>才提醒", text: "用 ADB 工具清理之后，检查投屏是否还正常；网络调试忘了关，也会提醒你。" }
+family:
+  title: 家里每个人<wbr>都会用。
+  lead: 给只想把电视打开的人，也给电视一出问题就打电话找你的人。
+  cards:
+    - { kind: "help", title: "通过 FaceTime<wbr>帮助家人", text: "通话时，用你的手机按亲人电视上的键。被帮助的一方免费。", note: "iPhone 和 iPad" }
+    - { kind: "simple", title: "长辈模式", text: "大按键上写着名字，屏幕上没有别的东西让人迷路。", key: "大声点" }
+    - { kind: "kids", title: "孩子的电视时间", text: "上学前一晚和周末各设一个就寝时间，到点电视自动关机。", time: "20:30", note: "iPhone 上通过“快捷指令”自动化完成" }
+features:
+  title: 不止是<wbr>一个遥控器。
+  lead: TameTV Pro 能做到塑料遥控器做不到的事。
+  watch:
+    title: 一键开播
+    text: TameTV 打开电视、切到正确的信号源，再唤醒你的 Apple TV 或 Roku。音量仍然调电视的。
+    button: 观看
+    steps: ["电视已开机", "HDMI 2", "Apple TV 已唤醒"]
+  cells:
+    - { screen: "talk", title: "点一下说话", text: "说一个应用、一部剧，或者一次说两件事。", alt: "点一下说话：听到的字词会实时出现。" }
+    - { screen: "keyboard", title: "键盘<wbr>自己弹出来", text: "电视要你输入时，直接在手机上打字，支持自动填充。", alt: "电视的搜索框需要输入文字时，手机键盘自动打开。" }
+    - { screen: "lock-screen", title: "锁定屏幕上的<wbr>遥控器", text: "不用解锁就能暂停、调小音量。Android 上在快捷设置里。", alt: "iPhone 锁定屏幕上的迷你遥控器，带静音、音量和播放键。" }
+    - { screen: "quiet-ads", title: "广告小声点", text: "广告一响就把电视调小，节目回来再调回去。它只听响度。", alt: "广告小声点：响度曲线，以及被调低两格的广告。" }
+    - { art: "scenes", title: "电影之夜", text: "电视、电视盒子，还有 iPhone 上的灯光，一点就好。", pills: ["电影之夜", "睡前", "全部关机"] }
+    - { art: "link", title: "发到电视上", text: "在手机上分享一个 YouTube 视频，它会在电视自己的 App 里播放。" }
+    - { art: "devices", title: "配对一次", text: "在 iPhone 上配对，iPad 和 Mac 通过 iCloud 也能用这台电视。" }
+pro:
+  title: 该免费的，<wbr>都免费。
+  lead: 每晚都要按的键全部免费。TameTV Pro 补上其余的。
+  free_title: 免费
+  free:
+    - 方向键、OK、返回和主页
+    - 音量、静音和频道
+    - 电源和播放键
+    - 大按键的简洁布局
+    - 家中每台电视，一点就换
+    - 调校和相机辅助指引
+    - 通过 FaceTime 接受帮助
+  pro_title: TameTV Pro
+  pro_intro: 上面的全部功能，再加上
+  pro:
+    - 一键打开应用
+    - 滑动触控板
+    - 投屏照片、视频和链接
+    - 数字键、信号源和菜单
+    - 用手机听 Roku 的声音
+    - Siri 和快捷指令
+    - 查找遥控器和睡眠定时器
+    - 比赛和节目开始前提醒
+  note: 帮助家人、锁定屏幕遥控器、Siri 和快捷指令仅适用于 iPhone 和 iPad。Pro 可选周订阅（符合条件的新订阅用户免费试用 3 天）、年订阅或一次性终身买断，价格在付款前显示。
 privacy:
-  title: 从设计上<em>保护隐私</em>。
-  lead: 遥控器没有理由知道你是谁。TameTV 没有账号，也没有自己的服务器，遥控指令直接从手机发到电视。
+  title: 无需账号。<wbr><em>没有广告。</em>
+  lead: 遥控器没有理由知道你是谁。
   link: 阅读隐私政策（英文）
   items:
-    - { icon: "useroff", title: "无需账号", text: "不用注册，不用邮箱，没有需要登录的东西。" }
-    - { icon: "eyeoff", title: "没有广告", text: "没有广告代码，不使用广告标识符。" }
-    - { icon: "wifi", title: "留在你的网络里", text: "指令通过 Wi-Fi 直接发送到你选择的电视。" }
-    - { icon: "lock", title: "密钥留在设备上", text: "配对记录由 Android Keystore 或 iOS 钥匙串保护，不会发送给我们。" }
-  note: Android 的“共享使用数据”默认关闭，当前发布版本未配置 Firebase。iOS 的 Firebase 使用统计和崩溃报告默认开启，可在“设置 > 隐私 > 共享使用数据”中关闭，报告不包含电视名称、网络地址、输入文字或投放内容。Google Cast 有独立的诊断数据收集，不受这个开关控制。
+    - { icon: "wifi", title: "按键只走你的 Wi-Fi", text: "指令从手机直接发到电视，只有通过 FaceTime 帮助家人时例外。" }
+    - { icon: "mic", title: "相机和麦克风<wbr>在手机上工作", text: "相机辅助和广告小声点在手机上运行，不保存任何画面或声音。语音搜索使用手机自带的语音识别。" }
+    - { icon: "lock", title: "配对信息<wbr>留在你手里", text: "配对密钥保存在 iOS 钥匙串或 Android Keystore 中，绝不会发送给我们。" }
+  note: 在 iPhone 和 iPad 上，使用统计和崩溃报告默认开启，可在“设置 > 隐私 > 共享使用数据”中关闭。在 Android 上，只有你打开这个设置后才会发送。Google Cast 和 Android 上 Google 的文字识别会向 Google 发送它们自己的诊断数据。
+tvs:
+  title: 你现在的电视<wbr>就能用。
+  lead: TameTV 用每台电视自己的网络协议沟通，不需要插任何东西。
+  footnote: TCL、Insignia、Toshiba、Sharp 等品牌的 Roku TV、Google TV 和 Fire TV 机型同样适用。Fire TV 不支持投屏；Apple TV 通过 AirPlay 接收照片和视频。不支持 2014 和 2015 年的 Samsung 电视，也不支持只能用红外遥控的电视。
+  # In the order of _data/platforms.yml.
+  items:
+    - { name: "Roku", detail: "Roku TV 和 Roku 播放器" }
+    - { name: "Samsung", detail: "2016 年起的智能电视，以及 2010 至 2013 年的机型" }
+    - { name: "LG", detail: "webOS 智能电视" }
+    - { name: "Android TV 和 Google TV", detail: "电视和电视盒子，包括搭载 Google TV 的 Philips 电视" }
+    - { name: "Amazon Fire TV", detail: "Fire TV 电视盒子和电视" }
+    - { name: "Vizio", detail: "SmartCast 电视" }
+    - { name: "Sony", detail: "Bravia 电视" }
+    - { name: "Panasonic", detail: "2011 年起的 VIERA 电视" }
+    - { name: "Xiaomi", detail: "PatchWall 电视" }
+    - { name: "Hisense", detail: "VIDAA 电视" }
+    - { name: "Philips", detail: "Titan OS 和 Saphi 电视" }
+    - { name: "Apple TV", detail: "Apple TV HD 和 Apple TV 4K" }
 faq:
   title: 常见问题
   more: 还有其他问题？请发邮件至
   items:
-    - q: TameTV 免费吗？
-      a: 下载、设置、用于确认连接的首次按键和演示电视免费，没有广告。控制电视、触控板、手机键盘、应用启动和媒体投放需要 TameTV Pro。可选周订阅（符合条件的新用户免费试用 3 天）、无试用期的年订阅或一次性买断，价格和优惠在付款前显示。Android 通过 Google Play 购买，iOS 通过 App Store 购买。Siri 和快捷指令仅适用于 iOS。
-    - q: 支持哪些电视？
-      a: 三星 Tizen 智能电视（2016 年及以后）、LG webOS 电视、索尼 Bravia、小米 PatchWall 电视、海信 VIDAA 电视、飞利浦 Titan OS 和 Saphi 电视、Android TV 和 Google TV 设备、Roku、Amazon Fire TV、Vizio SmartCast，以及 Apple TV HD 和 Apple TV 4K。TCL 等品牌的 Roku TV 和 Google TV 机型同样适用。不支持只能用红外遥控的电视。
-    - q: TameTV 支持 Apple TV 吗？
-      a: 支持 Apple TV HD 和 Apple TV 4K，Android、iPhone 和 iPad 都能用。输入 Apple TV 显示的配对码，只需一次。可以使用遥控按键、用手机键盘输入、打开应用，还能看到正在播放的内容和封面，播放、暂停、快进快退和静音。照片和视频请用 AirPlay 发送到 Apple TV，不经过 TameTV。
-    - q: 需要红外发射器或万能遥控器吗？
-      a: 不需要。TameTV 通过家里的 Wi-Fi 控制智能电视，不使用红外，所以无法控制只能用红外遥控的老电视。
-    - q: 找不到电视怎么办？
-      a: 确认电视已开机，和手机连接同一个 Wi-Fi；访客网络可能阻止设备互连。Android 请在 App 请求时允许“附近的设备”权限；iOS 请在“设置 > 隐私与安全性 > 本地网络”中打开 TameTV。仍找不到时，可按 IP 地址添加电视。
-    - q: 能用手机开机吗？
-      a: 很多电视可以。先在电视上打开网络唤醒设置，例如三星的 Power On with Mobile、LG 的 Turn on via Wi-Fi、Roku TV 的 Fast TV start。
-    - q: TameTV 收集哪些数据？
-      a: 无需账号，没有广告，遥控指令从手机直接发到电视，配对记录留在设备上。Android 当前版本未配置 Firebase；iOS 提供默认开启、可关闭的 Firebase 使用统计和崩溃报告。Google Cast 另有 SDK 诊断数据收集，详情见隐私政策。
-    - q: Android 和 iPhone 版都上线了吗？
-      a: 都已上线。Android 版在 Google Play，支持 Android 8.0 及以上的手机和平板。iPhone 和 iPad 版在 App Store，需要 iOS 17 或 iPadOS 17 及以上版本。App 支持简体中文、繁体中文、英语、日语、韩语、德语、法语、西班牙语、葡萄牙语（巴西）、俄语和印尼语。
-    - q: 媒体投放就是屏幕镜像吗？
-      a: 媒体投放将选定的照片、视频、文件或支持的链接发送到兼容设备。屏幕镜像使用手机系统功能：Android 系统投屏或 iOS AirPlay，是否可用取决于手机和电视。TameTV 不提供独立的屏幕镜像服务。
-    - q: 如何恢复购买或取消 Pro 订阅？
-      a: 使用付款时的商店账号，在 App 中选择“恢复购买”。Android 订阅在 Google Play 管理，iOS 订阅在 Apple 系统设置管理。删除 App 不会取消订阅，Google Play 和 App Store 之间的购买不互通。
+    - q: "TameTV 免费吗？"
+      a: "免费。基础遥控器不收费，没有广告，也没有试用期限。方向键、OK、返回、主页、音量、静音、频道、电源和播放键、简洁布局、调校以及相机辅助的引导模式都免费。TameTV Pro 增加语音搜索、手机键盘、应用、触控板、投屏、广告小声点等功能，可选周订阅（符合条件的新订阅用户免费试用 3 天）、年订阅或一次性终身买断。价格和优惠在付款前显示。"
+    - q: "支持哪些电视？"
+      a: "Samsung 智能电视（2010 至 2013 年，以及 2016 年起）、LG webOS 电视、Sony Bravia、2011 年起的 Panasonic VIERA、搭载 PatchWall 的 Xiaomi 电视、搭载 VIDAA 的 Hisense 电视、搭载 Titan OS 或 Saphi 的 Philips 电视、Android TV 和 Google TV 设备、Roku、Amazon Fire TV、Vizio SmartCast，以及 Apple TV HD 和 Apple TV 4K。TCL、Insignia、Toshiba、Sharp 等其他品牌的 Roku TV、Google TV 和 Fire TV 机型同样适用。不支持 2014 和 2015 年的 Samsung 电视，也不支持只能用红外遥控的电视。"
+    - q: "App 找不到电视怎么办？"
+      a: "让电视保持开机，并和手机连接同一个 Wi-Fi；访客网络可能会阻止设备发现。Android 上，在 App 请求时允许“附近的设备”。iOS 上，在“设置 > 隐私与安全性 > 本地网络”中打开 TameTV。仍然找不到时，在 App 里选择电视品牌，看看要打开哪个设置，或者按 IP 地址添加电视。"
+    - q: "能用手机打开电视吗？"
+      a: "很多电视可以。先在电视上打开网络唤醒设置，例如 Samsung 的 Power On with Mobile、LG 的 Turn on via Wi-Fi、Roku TV 的 Fast TV start、Panasonic 的 Powered On by Apps。2010 至 2013 年的 Samsung 电视无法通过网络开机。"
+    - q: "调校会改动我的电视吗？"
+      a: "它自己不会改动任何设置。调校会显示每项设置的菜单路径，例如分享观看内容的那一项，并说明关掉它会失去什么。由你用遥控器动手修改，相机辅助可以告诉你下一个要按的键。在 Pro 的自动模式下，TameTV 会替你按键，并在最后一步修改前先征求你的同意。"
+    - q: "TameTV 收集哪些数据？"
+      a: "无需账号，没有广告。遥控指令从手机直接发到电视，配对记录留在你的设备上。iOS 上，Firebase 使用统计和崩溃报告默认开启，可在“设置 > 隐私 > 共享使用数据”中关闭；Android 上，只有你打开这个设置后才会发送。Google Cast 另有自己的诊断数据收集。详情见隐私政策。"
 cta:
+  title: 把遥控器<wbr>收起来吧。
+  meta: Android 8.0 及以上 · iOS 17 及以上 · iPadOS 17 及以上
   scan_android: Android · 扫码下载
   scan_ios: iPhone 和 iPad · 扫码下载
-  title: 把遥控器收起来吧。
-  meta: Android 8.0 及以上 · iOS 17 / iPadOS 17 及以上
+badge:
+  stores_label: 下载 App
+  play_label: 在 Google Play 下载 TameTV Android 版
+  app_store_label: 在 App Store 下载 TameTV iPhone 和 iPad 版
+  ios_soon: iPhone 和 iPad 版即将推出
+footer:
+  tagline: 适用于 Android、iPhone 和 iPad 的免费 Wi-Fi 遥控器。
+  product: 产品
+  help: 帮助
+  legal: 法律信息
+  language: 语言
+  all_tvs: 所有电视

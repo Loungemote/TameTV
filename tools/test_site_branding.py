@@ -41,6 +41,12 @@ class SiteBrandingTests(unittest.TestCase):
                     html = re.sub(re.escape(identifier), "", html, flags=re.IGNORECASE)
                 self.assertNotRegex(html, re.compile(r"\bloungemote\b", re.IGNORECASE))
 
+    def test_pages_show_no_pro_marks(self):
+        # The site names Pro in words, in its Free and Pro section, and puts no PRO mark on features or keys.
+        for path in sorted(SITE.rglob("*.html")):
+            with self.subTest(page=path.relative_to(SITE)):
+                self.assertNotRegex(path.read_text(encoding="utf-8"), r">\s*PRO\s*<")
+
     def test_web_manifest_uses_the_new_brand_and_path(self):
         manifest = json.loads((SITE / "site.webmanifest").read_text(encoding="utf-8"))
         self.assertEqual(manifest["name"], "TameTV")

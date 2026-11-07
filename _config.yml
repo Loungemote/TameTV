@@ -43,7 +43,7 @@ defaults:
   - scope: { path: "" }
     values: { layout: default, image: /assets/img/og.jpg }
   - scope: { path: "", type: remotes }
-    values: { layout: remote, eyebrow: TV remote app, hero_screen: remote }
+    values: { layout: remote, hero_screen: remote }
 
 # Jekyll 3 replaces its default exclude list with this one, so list the Ruby files too.
 exclude:

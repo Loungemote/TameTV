@@ -14,24 +14,26 @@ faq:
 
 ## What you can do
 
-Free:
+Free, with no ads:
 
-- Find and pair your TV, then press a first key to check that it responds
-- Demo TV to try every feature without a TV
-
-With TameTV Pro (eligible new subscribers can try the weekly plan free for 3 days):
-
-- Directional pad, OK, Back and Home, volume, mute, channels and playback keys
+- D-pad, OK, Back and Home, volume, mute, channel, power and playback keys
 - Turn the TV on over Wi-Fi, on TVs that support it
-- Switch HDMI inputs
-- Simple layout with big buttons
-- Apps in one tap: open the apps on the TV from your phone
-- Swipe touchpad for one-handed navigation
-- Every TV at home: save several TVs and switch in a tap
-- Casting: photos, slideshows, videos, files and links
-- Siri and Shortcuts (iOS only): turn the TV on or off, mute it or open an app by voice
+- A simple layout with big keys
+- Every TV at home, a tap apart
+- Tune-up: stop the TV sharing what you watch and turn off personalized ads, step by step in the TV's own menus
+- Camera Assist: point your phone at the TV's menu and it shows which key to press next
+- Demo TV, to try the remote without a TV
 
-Some features depend on the TV model and its software.
+With TameTV Pro:
+
+- Apps in one tap: open the TV's apps from your phone
+- Swipe touchpad for one-handed navigation
+- Casting: photos, slideshows, videos, files and links
+- Quiet Ads: turns the TV down when a loud ad starts, listening for loudness only
+- Number keys and HDMI inputs
+- On iPhone and iPad: a Lock Screen remote, Help Family over FaceTime, and Siri and Shortcuts to turn the TV on or off, mute it or open an app by voice
+
+TameTV Pro is a weekly plan with a 3-day free trial for eligible new subscribers, a yearly plan or a one-time lifetime purchase. Prices appear before you pay. Some features depend on the TV model and its software.
 
 ## Set up in three steps
 
